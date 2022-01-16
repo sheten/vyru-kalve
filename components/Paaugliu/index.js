@@ -83,6 +83,7 @@ const CoverImage = styled.img`
   display: flex;
   height: auto;
   margin-top: 20px;
+  min-height: 550px;
   width: 100%;
 `;
 const MarginWrap = styled.div`
