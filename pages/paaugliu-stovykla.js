@@ -1,21 +1,21 @@
 import Head from 'next/head'
 import styled from 'styled-components';
 
-import Homepage from "../components/Homepage"
+import Paaugliu from "../components/Paaugliu"
 import { PRIMARY_COLOR, MAX_PAGE_WIDTH } from "../config"
 
-export default function Home() {
+export default function PaaugliuCamp() {
   return (
     <>
       <Head>
-        <title>Vyrų kalvė - vyrai vyrams!</title>
+        <title>Vyrų kalvė - paauglių stovykla!</title>
         <meta name="description" content="Atsakomybė už žodžius, mintis ir poelgius." />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <Wrap>
         <ComponentWrap>
-          <Homepage />
+          <Paaugliu />
         </ComponentWrap>
       </Wrap>
     </>

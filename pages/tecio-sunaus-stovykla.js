@@ -1,21 +1,21 @@
 import Head from 'next/head'
 import styled from 'styled-components';
 
-import Homepage from "../components/Homepage"
+import Tecio_sunaus from "../components/Tecio_sunaus"
 import { PRIMARY_COLOR, MAX_PAGE_WIDTH } from "../config"
 
-export default function Home() {
+export default function TecioSunausCamp() {
   return (
     <>
       <Head>
-        <title>Vyrų kalvė - vyrai vyrams!</title>
+        <title>Vyrų kalvė - tėčio - sūnaus stovykla!</title>
         <meta name="description" content="Atsakomybė už žodžius, mintis ir poelgius." />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <Wrap>
         <ComponentWrap>
-          <Homepage />
+          <Tecio_sunaus />
         </ComponentWrap>
       </Wrap>
     </>
