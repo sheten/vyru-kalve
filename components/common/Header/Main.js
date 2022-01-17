@@ -1,23 +1,37 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
+import Link from 'next/link';
+
+import { MOBILE_SIZE } from "../../../config"
 
 const Main = () => {
+  const [windowWidth, setWindowWidth] = useState(0);
+
+  useEffect(() => {
+    setWindowWidth(window.innerWidth);
+  });
 
   return (
     <Wrap>
       <div style={{width: "200px"}}></div>
 
-      <LogoImageWrap href={"/"}>
-        <LogoImage src={"/images/LOGO.png"} alt="LOGO" />
-      </LogoImageWrap>
+      <Link href={"/"}>
+        <LogoImageWrap>
+          <LogoImage src={"/images/LOGO.png"} alt="LOGO" />
+        </LogoImageWrap>
+      </Link>
 
-      <CalendarWrap>
-        Artimiausia Stovykla:
-        <CampTimeWrap>
-          <CalendarImage src={"/images/KALENDORIUS.png"} alt="Kalendoriaus nuotrauka" style={{marginRight: "5px"}} />
-          Sausio 28 - 30d.
-        </CampTimeWrap>
-      </CalendarWrap>
+      { windowWidth < MOBILE_SIZE ?
+        <div style={{width: "200px"}}></div>
+        :
+        <CalendarWrap>
+          Artimiausia Stovykla:
+          <CampTimeWrap>
+            <CalendarImage src={"/images/KALENDORIUS.png"} alt="Kalendoriaus nuotrauka" style={{marginRight: "5px"}} />
+            Sausio 28 - 30d.
+          </CampTimeWrap>
+        </CalendarWrap>
+      }
     </Wrap>
   )
 }
@@ -33,12 +47,16 @@ const Wrap = styled.div`
 `;
 
 // LOGO IMAGE
-const LogoImageWrap = styled.a`
+const LogoImageWrap = styled.div`
   border-radius: 5px;
   display: flex;
   height: 150px;
   text-decoration: none;
   width: auto;
+
+  @media (max-width: ${MOBILE_SIZE}px) {
+    height: 70px;
+  }
 `;
 const LogoImage = styled.img`
   display: flex;

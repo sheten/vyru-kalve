@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import { MOBILE_SIZE } from "../../config"
+
 const Gallery_block = () => {
 
   return (
@@ -23,6 +25,12 @@ const Wrap = styled.div`
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+
+  @media (max-width: ${MOBILE_SIZE}px) {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    overflow: auto;
+  }
 `;
 const Image = styled.img`
   height: 275px;

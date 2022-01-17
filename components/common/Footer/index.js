@@ -1,7 +1,15 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
+import Link from 'next/link';
+
+import { MOBILE_SIZE, PRIMARY_MOBILE_FONT_SIZE } from "../../../config"
 
 const Footer = () => {
+  const [windowWidth, setWindowWidth] = useState(0);
+
+  useEffect(() => {
+    setWindowWidth(window.innerWidth);
+  });
 
   return (
     <Wrap>
@@ -9,20 +17,28 @@ const Footer = () => {
 
       <InfoBlock>
         <div>Kontaktai kontaktai</div>
-        <div>Tel. nr.: +37067409472</div>
-        <div>Rekvizitai rekvizitai rekvizitai</div>
-        <div>Rekvizitai rekvizitai</div>
-        <div>t.t.</div>
+        <Text>Tel. nr.: +37067409472</Text>
+        <Text>Rekvizitai rekvizitai rekvizitai</Text>
+        <Text>Rekvizitai rekvizitai</Text>
+        { windowWidth < MOBILE_SIZE ? null : <Text>t.t.</Text>}
       </InfoBlock>
 
       <InfoBlock>
         <div>Stovyklos:</div>
-        <A href="/paaugliu-stovykla">Stovykla paaugliams</A>
-        <A href="/tecio-sunaus-stovykla">Tėčio - sūnaus stovykla</A>
-        <A href="/online-kursai">Online kursai</A>
+        <Link href="/paaugliu-stovykla">
+          <Text>Stovykla paaugliams</Text>
+        </Link>
+
+        <Link href="/tecio-sunaus-stovykla">
+        <Text>Tėčio - sūnaus stovykla</Text>
+        </Link>
+
+        <Link href="/online-kursai">
+          <Text>Online kursai</Text>
+        </Link>
       </InfoBlock>
 
-      <EmptyBlock />
+      { windowWidth < MOBILE_SIZE ? null : <EmptyBlock />}
     </Wrap>
   )
 }
@@ -39,15 +55,29 @@ const Wrap = styled.div`
 const Image = styled.img`
   height: 120px;
   width: 120px;
+
+  @media (max-width: ${MOBILE_SIZE}px) {
+    height: 80px;
+    width: 80px;
+  }
 `;
 const InfoBlock = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
+`;
+const Text = styled.div`
+  @media (max-width: ${MOBILE_SIZE}px) {
+    font-size: ${PRIMARY_MOBILE_FONT_SIZE}px;
+  }
 `;
 const A = styled.a`
   cursor: pointer;
   text-decoration: none;
+
+  @media (max-width: ${MOBILE_SIZE}px) {
+    font-size: ${PRIMARY_MOBILE_FONT_SIZE}px;
+  }
 `;
 const EmptyBlock = styled.div`
   width: 320px;

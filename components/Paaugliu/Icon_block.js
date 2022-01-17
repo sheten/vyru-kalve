@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import { MOBILE_SIZE, PRIMARY_MOBILE_FONT_SIZE } from "../../config"
+
 const Icon_block = ({ title, imageSrc }) => {
 
   return (
@@ -22,6 +24,12 @@ const Wrap = styled.div`
 const Image = styled.img`
   height: 250px;
   width: 250px;
+
+  @media (max-width: ${MOBILE_SIZE}px) {
+    height: 180px;
+    margin-top: 25px;
+    width: 180px;
+  }
 `;
 const Title = styled.div`
   font-size: 20px;
@@ -29,5 +37,9 @@ const Title = styled.div`
 `;
 const Description = styled.div`
   font-size: 14px;
+
+  @media (max-width: ${MOBILE_SIZE}px) {
+    font-size: ${PRIMARY_MOBILE_FONT_SIZE}px;
+  }
 `;
 export default Icon_block;

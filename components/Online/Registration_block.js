@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import Primary_button from "../common/Primary_button"
+import { MOBILE_SIZE } from "../../config"
 
 const Registration_block = () => {
 
@@ -25,8 +26,8 @@ const Registration_block = () => {
           <DescriptionWrap>
             <DescriptionTitle>KAINOS:</DescriptionTitle>
 
-            <Description>tekstas, tekstas - 000000 €. </Description>
-            <Description>tekstas, tekstas - 000000 €. </Description>
+            <Description>tekstas, tekstas - 00000€.</Description>
+            <Description>tekstas, tekstas - 00000€.</Description>
           </DescriptionWrap>
         </InfoWrap>
       </InfoWraps>
@@ -51,14 +52,27 @@ const InfoWraps = styled.div`
   height: auto;
   justify-content: space-around;
   width: 100%;
+
+  @media (max-width: ${MOBILE_SIZE}px) {
+    flex-direction: column;
+  }
 `;
 const InfoWrap = styled.div`
   display: flex;
+
+  @media (max-width: ${MOBILE_SIZE}px) {
+    margin-top: 25px;
+  }
 `;
 const Image = styled.img`
   height: 200px;
   margin-right: 15px;
   width: 200px;
+
+  @media (max-width: ${MOBILE_SIZE}px) {
+    height: 150px;
+    width: 150px;
+  }
 `;
 
 // DESCRIPTION

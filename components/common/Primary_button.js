@@ -19,7 +19,9 @@ const Wrap = styled.div`
   cursor: pointer;
   display: flex;
   height: 100%;
-  justify-content: center;  
+  justify-content: center;
+  padding: 4px;
+  text-align: center;
   width: 100%;
 `;
 

@@ -5,18 +5,20 @@ import Header from "../common/Header"
 import Icon_block from "./Icon_block"
 import Registration_block from "./Registration_block"
 import Gallery_block from "./Gallery_block"
+import Cover_image from "../common/Cover_image"
 import Footer from "../common/Footer"
-import { MARGIN_WRAP_MARGIN } from "../../config"
+import Block_layout from "../common/Block_layout"
+import { MOBILE_SIZE, HEADER_MOBILE_FONT_SIZE, PRIMARY_MOBILE_FONT_SIZE } from "../../config"
 
-const Tecio_sunaus = () => {
+const Online = () => {
 
   return (
     <Wrap>
       <Header />
 
-      <CoverImage src={"/images/ABOUT_CAMP_COVER.png"} alt="Titulinė nuotrauka" />
+      <Cover_image imageSrc={"/images/ABOUT_CAMP_COVER.png"} />
 
-      <MarginWrap>
+      <Block_layout>
         <BlockWrap>
           <Title>
             Tėčio - sūnaus stovykla
@@ -28,17 +30,17 @@ const Tecio_sunaus = () => {
             TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTA TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTA TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTA TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTA TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTA TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTA TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTA TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTA TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTA TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTA TEKSTAS TEKSTA TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTA 
           </AboutCampsDescription>
         </BlockWrap>
-      </MarginWrap>
+      </Block_layout>
 
-      <MarginWrap>
+      <Block_layout>
         <IconsWrap>
           <Icon_block title="GYVENIMAS" imageSrc="/images/GYVENIMAS_ICON.png" />
           <Icon_block title="MAITINIMAS" imageSrc="/images/MAITINIMAS_ICON.png" />
           <Icon_block title="SAUGUMAS" imageSrc="/images/SAUGUMAS_ICON.png" />
         </IconsWrap>
-      </MarginWrap>
+      </Block_layout>
 
-      <MarginWrap>
+      <Block_layout>
         <BlockWrap>
           <Title>
             Informacija / Tikslai
@@ -50,13 +52,13 @@ const Tecio_sunaus = () => {
             TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTA TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTA TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTA TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTA TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTA TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTA TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTA TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTA TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTA TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTA TEKSTAS TEKSTA TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTA 
           </AboutCampsDescription>
         </BlockWrap>
-      </MarginWrap>
+      </Block_layout>
 
-      <MarginWrap>
+      <Block_layout>
         <Registration_block />
-      </MarginWrap>
+      </Block_layout>
 
-      <MarginWrap>
+      <Block_layout>
         <BlockWrap>
           <Title>
             Galerija
@@ -64,7 +66,7 @@ const Tecio_sunaus = () => {
           
           <Gallery_block />
         </BlockWrap>
-      </MarginWrap>
+      </Block_layout>
 
       <Footer />
     </Wrap>
@@ -79,20 +81,15 @@ const Wrap = styled.div`
   height: auto;
   width: 100%;
 `;
-const CoverImage = styled.img`
-  display: flex;
-  height: auto;
-  margin-top: 20px;
-  min-height: 550px;
-  width: 100%;
-`;
-const MarginWrap = styled.div`
-  margin: ${MARGIN_WRAP_MARGIN}px;
-`;
 const Title = styled.div`
   font-size: 30px;
   font-weight: bold;
   margin: 18px 0;
+
+  @media (max-width: ${MOBILE_SIZE}px) {
+    font-size: ${HEADER_MOBILE_FONT_SIZE}px;
+    margin: 10px 0;
+  }
 `;
 
 // ABOUT CAMPS
@@ -102,6 +99,10 @@ const BlockWrap = styled.div`
 `;
 const AboutCampsDescription = styled.div`
   font-size: 14px;
+
+  @media (max-width: ${MOBILE_SIZE}px) {
+    font-size: ${PRIMARY_MOBILE_FONT_SIZE}px;
+  }
 `;
 
 // ICON BLOCKS
@@ -110,6 +111,10 @@ const IconsWrap = styled.div`
   flex-direction: row;
   justify-content: space-around;
   width: 100%;
+
+  @media (max-width: ${MOBILE_SIZE}px) {
+    flex-direction: column;
+  }
 `;
 
-export default Tecio_sunaus;
+export default Online;

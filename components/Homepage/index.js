@@ -3,8 +3,9 @@ import styled from 'styled-components';
 
 import Header from "../common/Header"
 import Camp_block from "./Camp_block"
+import Cover_image from "../common/Cover_image"
 import Footer from "../common/Footer"
-import { MARGIN_WRAP_MARGIN } from "../../config"
+import { PAGE_LAYOUT_MARGINS, MOBILE_SIZE, PAGE_LAYOUT_MARGINS_MOBILE, HEADER_MOBILE_FONT_SIZE, PRIMARY_MOBILE_FONT_SIZE } from "../../config"
 
 const Homepage = () => {
   const video = useRef();
@@ -24,7 +25,7 @@ const Homepage = () => {
     <Wrap>
       <Header />
 
-      <CoverImage src={"/images/HOMEPAGE_COVER.png"} alt="Titulinė nuotrauka" />
+      <Cover_image imageSrc={"/images/HOMEPAGE_COVER.png"} />
 
       <MarginWrap>
         <AboutCampsWrap>
@@ -70,24 +71,25 @@ const Wrap = styled.div`
   display: flex;
   color: white;
   flex-direction: column;
-  font-family: math;
   height: auto;
-  width: 100%;
-`;
-const CoverImage = styled.img`
-  display: flex;
-  height: auto;
-  margin-top: 20px;
-  min-height: 550px;
   width: 100%;
 `;
 const MarginWrap = styled.div`
-  margin: ${MARGIN_WRAP_MARGIN}px;
+  margin: ${PAGE_LAYOUT_MARGINS}px;
+
+  @media (max-width: ${MOBILE_SIZE}px) {
+    margin: ${PAGE_LAYOUT_MARGINS_MOBILE}px;
+  }
 `;
 const Title = styled.div`
   font-size: 30px;
   font-weight: bold;
   margin: 18px 0;
+
+  @media (max-width: ${MOBILE_SIZE}px) {
+    font-size: ${HEADER_MOBILE_FONT_SIZE}px;
+    margin: 10px 0;
+  }
 `;
 
 // ABOUT CAMPS
@@ -97,6 +99,10 @@ const AboutCampsWrap = styled.div`
 `;
 const AboutCampsDescription = styled.div`
   font-size: 14px;
+
+  @media (max-width: ${MOBILE_SIZE}px) {
+    font-size: ${PRIMARY_MOBILE_FONT_SIZE}px;
+  }
 `;
 
 // CAMPS BLOCK
@@ -108,6 +114,11 @@ const BlocksWrap = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+
+  @media (max-width: ${MOBILE_SIZE}px) {
+    align-items: center;
+    flex-direction: column;
+  }
 `;
 
 // VIDEO

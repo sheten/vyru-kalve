@@ -2,7 +2,7 @@ import Head from 'next/head'
 import styled from 'styled-components';
 
 import Tecio_sunaus from "../components/Tecio_sunaus"
-import { PRIMARY_COLOR, MAX_PAGE_WIDTH } from "../config"
+import { PRIMARY_COLOR, DESKTOPS_SIZE, MOBILE_SIZE } from "../config"
 
 export default function TecioSunausCamp() {
   return (
@@ -30,5 +30,9 @@ const Wrap = styled.div`
 `;
 const ComponentWrap = styled.div`
   flex: 1;
-  max-width: ${MAX_PAGE_WIDTH};
+  max-width: ${DESKTOPS_SIZE};
+
+  @media (max-width: ${MOBILE_SIZE}px) {
+    width: 90%;
+  }
 `;
