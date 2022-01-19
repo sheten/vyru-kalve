@@ -11,24 +11,24 @@ const Subheader = ({ isRegistrationButton }) => {
 
   useEffect(() => {
     setWindowWidth(window.innerWidth);
-  });
+  }, []);
 
   return (
     <Wrap>
       <InnerWrap>
-        <Link href="/paaugliu-stovykla">
+        <Link href="/paaugliu-stovykla" passHref>
           <ButtonWrap>
             <Primary_button title="Stovykla paaugliams" />
           </ButtonWrap>
         </Link>
 
-        <Link href="/tecio-sunaus-stovykla">
+        <Link href="/tecio-sunaus-stovykla" passHref>
           <ButtonWrap>
             <Primary_button title="Tėčio - sūnaus stovykla" />
           </ButtonWrap>
         </Link>
 
-        <Link href="/online-kursai">
+        <Link href="/online-kursai" passHref>
           <ButtonWrap>
             <Primary_button title="Online kursai" />
           </ButtonWrap>

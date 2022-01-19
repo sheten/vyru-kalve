@@ -15,7 +15,7 @@ const Online = () => {
 
   useEffect(() => {
     setWindowWidth(window.innerWidth);
-  });
+  }, []);
 
   const dates = [
     {id: 0, year: "2022", month: "sausio", days: "28 — 30 d."},

@@ -8,7 +8,7 @@ import { MOBILE_SIZE } from "../../config"
 const Camp_block = ({ campUrl, title, imageSrc }) => {
 
   return (
-    <Link href={campUrl}>
+    <Link href={campUrl} passHref>
       <Wrap>
         <Image src={imageSrc} alt="Stovyklos nuotrauka" />
         <Title>{title}</Title>

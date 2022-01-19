@@ -17,7 +17,7 @@ const Registration_block = ({dates, prices}) => {
 
             {dates.map((date) => {
               return (
-                <Description>{date.month} {date.days}</Description>
+                <Description key={date.id}>{date.month} {date.days}</Description>
               )
             })}
           </DescriptionWrap>
@@ -31,7 +31,7 @@ const Registration_block = ({dates, prices}) => {
 
             {prices.map((price) => {
               return (
-                <Description>{price.option}</Description>
+                <Description key={price.id}>{price.option}</Description>
               )
             })}
           </DescriptionWrap>

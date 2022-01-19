@@ -9,13 +9,13 @@ const Main = ({ isCalendar }) => {
 
   useEffect(() => {
     setWindowWidth(window.innerWidth);
-  });
+  }, []);
 
   return (
     <Wrap>
       <div style={{width: "200px"}}></div>
 
-      <Link href={"/"}>
+      <Link href={"/"} passHref>
         <LogoImageWrap>
           <LogoImage src={"/images/LOGO.png"} alt="LOGO" />
         </LogoImageWrap>

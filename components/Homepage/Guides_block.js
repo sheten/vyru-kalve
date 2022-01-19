@@ -8,7 +8,7 @@ const Guides_block = () => {
 
   useEffect(() => {
     setWindowWidth(window.innerWidth);
-  });
+  }, []);
 
   return (
     <Wrap>

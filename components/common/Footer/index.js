@@ -9,7 +9,7 @@ const Footer = () => {
 
   useEffect(() => {
     setWindowWidth(window.innerWidth);
-  });
+  }, []);
 
   return (
     <Wrap>
@@ -25,15 +25,15 @@ const Footer = () => {
 
       <InfoBlock>
         <div>Stovyklos:</div>
-        <Link href="/paaugliu-stovykla">
+        <Link href="/paaugliu-stovykla" passHref>
           <Text>Stovykla paaugliams</Text>
         </Link>
 
-        <Link href="/tecio-sunaus-stovykla">
+        <Link href="/tecio-sunaus-stovykla" passHref>
         <Text>Tėčio - sūnaus stovykla</Text>
         </Link>
 
-        <Link href="/online-kursai">
+        <Link href="/online-kursai" passHref>
           <Text>Online kursai</Text>
         </Link>
       </InfoBlock>

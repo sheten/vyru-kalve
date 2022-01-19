@@ -28,37 +28,37 @@ const Online = () => {
             <div style={{textAlign: "center"}}>Išsamus 6 savaičių kursas, padėsiantis suprasti ir išmokti tai, koks iš tiesų turi būti tėtis. Kursas skirtas norintiems turėti stiprią šeimą, kurioje vyrauja harmonija, pagarba bei supratimas.</div>
             <br/><br/>
 
-            <Highlighted>1. SAVAITĖ "Ryšys - ryšio kūrimas"</Highlighted>
+            <Highlighted>1. SAVAITĖ &quot;Ryšys - ryšio kūrimas&quot;</Highlighted>
             Bendravimo ir bendradarbiavimo strategijos - suprasite, kaip atpažinti esminius poreikius, megzti ryšį šeimoje bei darbo aplinkoje.<br/>
-            Naudosite principą “mažiau yra daugiau”.<br/>
-            Atpažinsite panašumus ir skirtumus bei rasite kelią į artimesnį "tėvo - sūnaus" ryšį.
+            Naudosite principą &ldquo;mažiau yra daugiau&ldquo;.<br/>
+            Atpažinsite panašumus ir skirtumus bei rasite kelią į artimesnį &quot;tėvo - sūnaus&quot; ryšį.
             <br/><br/>
 
-            <Highlighted>2. SAVAITĖ "Pasitikėjimas"</Highlighted>
+            <Highlighted>2. SAVAITĖ &quot;Pasitikėjimas&quot;</Highlighted>
             Išmoksite nubrėžti aiškias ribas ir jų laikytis<br/>
-            Atsakysime į klausimą - "Geriau tiesa ar baltas melas"?<br/>
-            "Sūnus - ne tėvo kopija, o atskira ir kitokia asmenybė" - asmenybių skirtumai, dialogo kūrimas.
+            Atsakysime į klausimą - &quot;Geriau tiesa ar baltas melas&quot;?<br/>
+            &quot;Sūnus - ne tėvo kopija, o atskira ir kitokia asmenybė&quot; - asmenybių skirtumai, dialogo kūrimas.
             <br/><br/>
 
-            <Highlighted>3. SAVAITĖ "Pagarba" </Highlighted>
+            <Highlighted>3. SAVAITĖ &quot;Pagarba&quot; </Highlighted>
             Mokymas per pavyzdį.<br/>
-            "Sūnus atspindi tai, ką aš iš tikrųjų darau" - pažeidžiamumas, savivertė.
+            &quot;Sūnus atspindi tai, ką aš iš tikrųjų darau&quot; - pažeidžiamumas, savivertė.
             <br/><br/>
 
-            <Highlighted>4. SAVAITĖ "Atsakomybė"</Highlighted>
+            <Highlighted>4. SAVAITĖ &quot;Atsakomybė&quot;</Highlighted>
             Išmoksite nustatyti ribas ir suprasite, kodėl reikia tvirtai jų laikytis.<br/>
             Atskirsite, kada kontrolė pasidaro perdėta ir įdiegstie savarankiškumą.<br/>
             Aptarsime žodžio laikymosi svarbą bei kokios pasekmės atsiranda tada, kai jo nesilaikome.<br/>
             Paaiškinsime kaip sukurti aiškią struktūrą atsakomybėms namuose.  Bendravimas ir bendradarbiavimas, atsakomybės.
             <br/><br/>
 
-            <Highlighted>5. SAVAITĖ "Laikas kartu ir disciplina"</Highlighted>
+            <Highlighted>5. SAVAITĖ &quot;Laikas kartu ir disciplina&quot;</Highlighted>
             Autoriteto kūrimas kasdienių įpročių pagalba.<br/>
             Mokymasis per žaidimą. 10 veiklų, kurios padės sukurti tėčio autoritetą.<br/>
             Kokybiškas laikas kartu. Ką daryti, jog vaikas norėtų būti kartu ir to lauktų?
             <br/><br/>
 
-            <Highlighted>6. SAVAITĖ "Emocijos"</Highlighted>
+            <Highlighted>6. SAVAITĖ &quot;Emocijos&quot;</Highlighted>
             Emocinio intelekto lavinimo principai.<br/>
             Disciplina. Maži kasdieniai įpročiai.
           </AboutCampsDescription>
@@ -80,11 +80,11 @@ const Online = () => {
             <Li>✔️ Suprasi, kiek sūnus yra panašus arba kitoks nei Tu.</Li>
             <Li>✔️ Suvoksi, kas yra tikroji tarpusavio pagarba.</Li>
             <Li>✔️ Išmoksi, kaip įsivertinti ir ugdyti atskaitomybę kiekvieną dieną.</Li>
-            <Li>✔️ Sūnus jaus, “Kad tėčiui aš rūpiu, esu svarbus ir matomas”.</Li>
+            <Li>✔️ Sūnus jaus, &ldquo;Kad tėčiui aš rūpiu, esu svarbus ir matomas&ldquo;.</Li>
             <Li>✔️ Rasi jėgų veikti taip, kad Tavo ir sūnaus santykis taps daug geresnis, nei buvo Tavo ir Tavo tėčio.</Li>
             <Li>✔️ Susidūrus su emocija/elgsena - Tau taps aiškiau, kas iš tiesų vyksta su sunumi ir ką daryti. Rasi emocijos/elgsenos priežastis.</Li>
             <Li>✔️ Suprasi, kodėl klausti svarbiau nei patarinėti.</Li>
-            <Li>✔️ Vietoj atsakymų “gerai, blogai arba normaliai” į Tavo užduodamus klausimus, išgirsi, kuo iš tikrųjų gyvena Tavo sūnus.</Li>
+            <Li>✔️ Vietoj atsakymų &ldquo;gerai, blogai arba normaliai&ldquo; į Tavo užduodamus klausimus, išgirsi, kuo iš tikrųjų gyvena Tavo sūnus.</Li>
             <Li>✔️ Jūsų abiejų pokalbis taps dialogu, kuris kuria pasitikėjimą.</Li>
             <Li>✔️ Gausi daug būdų/metodų kaip leisti laiką su savo sūnumi kokybiškai.</Li>
           </Ul>
@@ -115,11 +115,11 @@ const Online = () => {
         <LecturerBlock>          
           <LecturerDescription>
             <strong>Profesionalus lektorius</strong>, vidinės organizacijų kultūros formavimo, krizių valdymo ir asmeninio tobulėjimo ekspertas, stovintis už:<br/>
-            <strong>„Masters of Calm“ - „Vyrų kalvė” - „Whatansu“ iniciatyvų. </strong><br/><br/>
+            <strong>&ldquo;Masters of Calm&ldquo; - &ldquo;Vyrų kalvė&ldquo; - &ldquo;Whatansu&ldquo; iniciatyvų. </strong><br/><br/>
 
             (Re)formavo ir žaidė su daugiau nei 250 Lietuvos ir užsienio organizacijų.<br/><br/>
 
-            <strong>“Nėra kada auklėti sūnų, vadinasi, nėra kada būti žmogumi.”</strong> - Vasilijus Suchomlinskis. Vadovaujuosi šiuo posakiu. O santykiai su vyriausiuoju sūnumi padėjo užauginti Vyrų kalvės projektą. Tai patys didžiausi mokymai mano gyvenime.<br/><br/>
+            <strong>&ldquo;Nėra kada auklėti sūnų, vadinasi, nėra kada būti žmogumi.&ldquo;</strong> - Vasilijus Suchomlinskis. Vadovaujuosi šiuo posakiu. O santykiai su vyriausiuoju sūnumi padėjo užauginti Vyrų kalvės projektą. Tai patys didžiausi mokymai mano gyvenime.<br/><br/>
 
             Suprantu, kad tėčio - sūnaus santykiai guli gyvenimo paraštėse daugelyje šeimų. Todėl Vyrų kalvės projektu noriu gražinti tėčio svarbą į vaikų, o ypač berniukų ugdymą. <br/><br/>
 
@@ -127,7 +127,7 @@ const Online = () => {
 
             Tikslas – padėti kompanijoms ne nuspėti ateitį, bet ją kurti.<br/><br/>
 
-            Moto: „Leiskite jums nepritarti“.<br/><br/>
+            Moto: „Leiskite jums nepritarti&ldquo;.<br/><br/>
           </LecturerDescription>
 
           <LecturerImage src="/images/APIE_LEKTORIU.png" alt="Lektoriaus nuotrauka" />
@@ -138,12 +138,12 @@ const Online = () => {
         <BlockTitle>ŽINIASKLAIDA APIE MINDAUGĄ</BlockTitle>
 
         <NewslettersWrap>
-          <div>🌐 <strong>DELFI.LT</strong> <a style={{textDecoration: "underline"}} target="_blank" href="https://www.delfi.lt/gyvenimas/istorijos/gyvenima-kardinaliai-pakeites-m-vidugiris-neslepia-neturejau-likti-gyvas.d?id=68601700">Gyvenimą kardinaliai pakeitęs M. Vidugiris neslepia: neturėjau likti gyvas</a><br/><br/></div>
-          <div>🌐 <strong>15MIN.LT</strong> <a style={{textDecoration: "underline"}} target="_blank" href="https://www.15min.lt/gyvenimas/naujiena/santykiai/m-vidugiris-vyras-namuose-tik-del-kvapo-moterims-nera-reikalingas-1024-1051188">M.Vidugiris: „Vyras namuose tik dėl kvapo moterims nėra reikalingas“</a><br/><br/></div>
-          <div>🌐 <strong>EUROBLOGAS.LT</strong> <a style={{textDecoration: "underline"}} target="_blank" href="https://euroblogas.lt/2015/07/28/alkoholio-atsisakes-mindaugas-vidugiris-i-sveikata-is-tiesu-yra-linkejimas-mirti/">Alkoholio atsisakęs Mindaugas Vidugiris: „Į sveikatą“ iš tiesų yra linkėjimas mirti“</a><br/><br/></div>
-          <div>🌐 <strong>KAUNO.DIENA.LT</strong> <a style={{textDecoration: "underline"}} target="_blank" href="https://kauno.diena.lt/naujienos/sveikata/psichologija/m-vidugiris-turime-ismokti-vel-ziureti-vienas-kitam-i-akis-992369">M. Vidugiris: turime išmokti vėl žiūrėti vienas kitam į akis</a><br/><br/></div>
-          <div>🌐 <strong>LRT.LT</strong> <a style={{textDecoration: "underline"}} target="_blank" href="https://www.lrt.lt/mediateka/irasas/2000125119/tetis-mindaugas-vidugiris-mano-vaiku-ugdymas-mano-reikalas-ne-darzelio-ne-mokyklos">Tėtis Mindaugas Vidugiris: Mano vaikų ugdymas - mano reikalas, ne darželio, ne mokyklos"</a><br/><br/></div>
-          <div>🌐 <strong>Žmonės.lt</strong> <a style={{textDecoration: "underline"}} target="_blank" href="https://www.zmones.lt/naujiena/mindaugas-vidugiris-ka-esminio-pamirsome-siuolaikineje-svietimo-sistemoje.b85f73c7-e654-11e8-86a7-aa000054c883">Mindaugas Vidugiris: ką esminio pamiršome šiuolaikinėje švietimo sistemoje?</a></div>
+          <div>🌐 <strong>DELFI.LT</strong> <a style={{textDecoration: "underline"}} rel="noreferrer" target="_blank" href="https://www.delfi.lt/gyvenimas/istorijos/gyvenima-kardinaliai-pakeites-m-vidugiris-neslepia-neturejau-likti-gyvas.d?id=68601700">Gyvenimą kardinaliai pakeitęs M. Vidugiris neslepia: neturėjau likti gyvas</a><br/><br/></div>
+          <div>🌐 <strong>15MIN.LT</strong> <a style={{textDecoration: "underline"}} rel="noreferrer"target="_blank" href="https://www.15min.lt/gyvenimas/naujiena/santykiai/m-vidugiris-vyras-namuose-tik-del-kvapo-moterims-nera-reikalingas-1024-1051188">M.Vidugiris: „Vyras namuose tik dėl kvapo moterims nėra reikalingas&ldquo;</a><br/><br/></div>
+          <div>🌐 <strong>EUROBLOGAS.LT</strong> <a style={{textDecoration: "underline"}} rel="noreferrer" target="_blank" href="https://euroblogas.lt/2015/07/28/alkoholio-atsisakes-mindaugas-vidugiris-i-sveikata-is-tiesu-yra-linkejimas-mirti/">Alkoholio atsisakęs Mindaugas Vidugiris: „Į sveikatą&ldquo; iš tiesų yra linkėjimas mirti&ldquo;</a><br/><br/></div>
+          <div>🌐 <strong>KAUNO.DIENA.LT</strong> <a style={{textDecoration: "underline"}} rel="noreferrer" target="_blank" href="https://kauno.diena.lt/naujienos/sveikata/psichologija/m-vidugiris-turime-ismokti-vel-ziureti-vienas-kitam-i-akis-992369">M. Vidugiris: turime išmokti vėl žiūrėti vienas kitam į akis</a><br/><br/></div>
+          <div>🌐 <strong>LRT.LT</strong> <a style={{textDecoration: "underline"}} rel="noreferrer" target="_blank" href="https://www.lrt.lt/mediateka/irasas/2000125119/tetis-mindaugas-vidugiris-mano-vaiku-ugdymas-mano-reikalas-ne-darzelio-ne-mokyklos">Tėtis Mindaugas Vidugiris: Mano vaikų ugdymas - mano reikalas, ne darželio, ne mokyklos</a><br/><br/></div>
+          <div>🌐 <strong>Žmonės.lt</strong> <a style={{textDecoration: "underline"}} rel="noreferrer" target="_blank" href="https://www.zmones.lt/naujiena/mindaugas-vidugiris-ka-esminio-pamirsome-siuolaikineje-svietimo-sistemoje.b85f73c7-e654-11e8-86a7-aa000054c883">Mindaugas Vidugiris: ką esminio pamiršome šiuolaikinėje švietimo sistemoje?</a></div>
         </NewslettersWrap>
       </Block_layout>
 
@@ -162,7 +162,7 @@ const Online = () => {
 
           <div style={{color: "#F7D824", textAlign: "center", width: "100%", flexDirection: "column", display: "flex", marginTop: "20px", lineHeight: 1.6}}>
             <div>Įsigydami šį kursą, jūs taip paremsite fondus:</div>
-            <div>“Padėk gatvės vaikams”. Sudaro sąlygas sportuoti draugiškoje aplinkoje mažiau pasiturintiems, iš ne pilnų šeimų, bei globos namų vaikams.</div>
+            <div>&ldquo;Padėk gatvės vaikams&ldquo;. Sudaro sąlygas sportuoti draugiškoje aplinkoje mažiau pasiturintiems, iš ne pilnų šeimų, bei globos namų vaikams.</div>
             <div>IR</div>
             <div>Radhasyamasundar maistas - sąmoningai sielai.</div>
           </div>
