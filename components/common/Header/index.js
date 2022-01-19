@@ -4,13 +4,13 @@ import styled from 'styled-components';
 import Main from "./Main"
 import Subheader from "./Subheader"
 
-const Header = () => {
+const Header = ({ isRegistrationButton, isCalendar }) => {
 
   return (
     <Wrap>
-      <Main />
+      <Main isCalendar={isCalendar} />
 
-      <Subheader />
+      <Subheader isRegistrationButton={isRegistrationButton} />
     </Wrap>
   )
 }

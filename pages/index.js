@@ -10,7 +10,6 @@ export default function Home() {
       <Head>
         <title>Vyrų kalvė - vyrai vyrams!</title>
         <meta name="description" content="Atsakomybė už žodžius, mintis ir poelgius." />
-        <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap" rel="stylesheet" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -27,12 +26,11 @@ const Wrap = styled.div`
   align-items: center;
   background-color: ${PRIMARY_COLOR};
   display: flex;
-  font-family: Amatic SC;
   justify-content: center;
 `;
 const ComponentWrap = styled.div`
   flex: 1;
-  max-width: ${DESKTOPS_SIZE};
+  max-width: ${DESKTOPS_SIZE}px;
 
   @media (max-width: ${MOBILE_SIZE}px) {
     width: 90%;

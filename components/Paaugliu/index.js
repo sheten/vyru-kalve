@@ -2,8 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 
 import Header from "../common/Header"
-import Icon_block from "./Icon_block"
-import Registration_block from "./Registration_block"
+import Icons_block from "../common/Icons_block"
+import Registration_block from "../common/Registration_block"
 import Gallery_block from "./Gallery_block"
 import Cover_image from "../common/Cover_image"
 import Footer from "../common/Footer"
@@ -12,50 +12,58 @@ import { MOBILE_SIZE, HEADER_MOBILE_FONT_SIZE, PRIMARY_MOBILE_FONT_SIZE } from "
 
 const Online = () => {
 
+  const dates = [
+    {id: 0, year: "2022", month: "vasario", days: "25 — 27 d."},
+  ]
+
+  const prices = [
+    {id: 0, option: "250 € vienam paaugliui"},
+  ]
+
   return (
     <Wrap>
-      <Header />
+      <Header isRegistrationButton={true} isCalendar={true} />
 
-      <Cover_image imageSrc={"/images/ABOUT_CAMP_COVER.png"} />
+      <Cover_image imageSrc={"/images/PAAUGLIU_COVER.png"} />
 
       <Block_layout>
         <BlockWrap>
           <Title>
-            Paauglių stovykla
+            KODĖL VYRŲ KALVĖ PAAUGLIAMS?
           </Title>
 
           <AboutCampsDescription>
-            TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTA TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTA TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTA TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTA TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTA TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTA TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTA TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTA TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTA TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTA TEKSTAS TEKSTA TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTA 
+            Nes nuo pat vaikystės nuolat girdint „Būk vyras“ tampa neaišku, apie ką buvimas vyru yra iš tiesų. O mes padėsime suprasti, ką tai reiškia ir kaip juo tapti. Padėsime berniukams suprasti jų pačių bei juos supančio pasaulio emocijas. Padėsime jiems emocijas atpažinti, įvardinti ir suvokti, iš kur jos ateina. To moko emocinis raštingumas.
             <br/><br/>
-            TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTA TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTA TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTA TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTA TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTA TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTA TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTA TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTA TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTA TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTA TEKSTAS TEKSTA TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTA 
+            Turime pripažinti ir suprasti, kad kiekvienas berniukas turi vidinį pasaulį. Kad kiekvienas berniukas yra jautrus ir kenčia. Dažnai suaugusiems – tiek sąmoningai, tiek pasąmoningai nelengva pripažinti berniukų emocinį pažeidžiamumą. Kai mes pradėsime mokyti savo sūnus vertinti ir gerbti jų emocinį pasaulį, kai pradėsime juose ugdyti emocinį raštingumą, pamatysime, kaip atsiveria jų širdys…
+            <br/><br/>
+            Kiekvienas berniukas turi pamatyti ir patikėti, kad vyriškumas – tai atsakomybė už žodžius, mintis ir poelgius. Kad tai tvirta valia, skvarbus mąstymas, pagarba aplinkai, aštrus protas ir karšta, mylinti širdis, o visos emocijos yra svarbi gyvenimo dalis.
+            <br/><br/>
+            Viso šito išmokti ir pamatyti realius pavyzdžius kviečiame Vyrų kalvėje paaugliams.
           </AboutCampsDescription>
         </BlockWrap>
       </Block_layout>
 
       <Block_layout>
-        <IconsWrap>
-          <Icon_block title="GYVENIMAS" imageSrc="/images/GYVENIMAS_ICON.png" />
-          <Icon_block title="MAITINIMAS" imageSrc="/images/MAITINIMAS_ICON.png" />
-          <Icon_block title="SAUGUMAS" imageSrc="/images/SAUGUMAS_ICON.png" />
-        </IconsWrap>
+        <Icons_block />
       </Block_layout>
 
       <Block_layout>
         <BlockWrap>
           <Title>
-            Informacija / Tikslai
+            KO TIKĖTIS WHATANSU VYRŲ KALVĖJE?
           </Title>
 
           <AboutCampsDescription>
-            TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTA TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTA TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTA TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTA TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTA TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTA TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTA TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTA TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTA TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTA TEKSTAS TEKSTA TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTA 
+            Prasmingos ir įsimintinos stovyklos su bendraamžiais ir vyrais, kurie ne tik moko, kaip gyventi,
             <br/><br/>
-            TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTA TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTA TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTA TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTA TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTA TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTA TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTA TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTA TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTA TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTA TEKSTAS TEKSTA TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTA 
+            bet patys taip ir gyvena. Kurie patys yra pavyzdžiai savo šeimoje, aplinkoje, visuomenėje.
           </AboutCampsDescription>
         </BlockWrap>
       </Block_layout>
 
       <Block_layout>
-        <Registration_block />
+        <Registration_block dates={dates} prices={prices} />
       </Block_layout>
 
       <Block_layout>
@@ -77,7 +85,6 @@ const Wrap = styled.div`
   display: flex;
   color: white;
   flex-direction: column;
-  font-family: math;
   height: auto;
   width: 100%;
 `;
@@ -98,22 +105,8 @@ const BlockWrap = styled.div`
   flex-direction: column;
 `;
 const AboutCampsDescription = styled.div`
-  font-size: 14px;
-
   @media (max-width: ${MOBILE_SIZE}px) {
     font-size: ${PRIMARY_MOBILE_FONT_SIZE}px;
-  }
-`;
-
-// ICON BLOCKS
-const IconsWrap = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  width: 100%;
-
-  @media (max-width: ${MOBILE_SIZE}px) {
-    flex-direction: column;
   }
 `;
 

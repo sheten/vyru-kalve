@@ -4,8 +4,10 @@ import styled from 'styled-components';
 import Header from "../common/Header"
 import Camp_block from "./Camp_block"
 import Cover_image from "../common/Cover_image"
+import Block_layout from "../common/Block_layout"
+import Guides_block from "./Guides_block"
 import Footer from "../common/Footer"
-import { PAGE_LAYOUT_MARGINS, MOBILE_SIZE, PAGE_LAYOUT_MARGINS_MOBILE, HEADER_MOBILE_FONT_SIZE, PRIMARY_MOBILE_FONT_SIZE } from "../../config"
+import { MOBILE_SIZE, HEADER_MOBILE_FONT_SIZE, PRIMARY_MOBILE_FONT_SIZE } from "../../config"
 
 const Homepage = () => {
   const video = useRef();
@@ -23,12 +25,12 @@ const Homepage = () => {
 
   return (
     <Wrap>
-      <Header />
+      <Header/>
 
       <Cover_image imageSrc={"/images/HOMEPAGE_COVER.png"} />
 
-      <MarginWrap>
-        <AboutCampsWrap>
+      <Block_layout>
+        <BlockWrap>
           <Title>
             Apie Stovyklas
           </Title>
@@ -36,15 +38,12 @@ const Homepage = () => {
           <AboutCampsDescription>
             TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTA TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTA TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTA TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTA TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTA TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTA TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTA TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTA TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTA TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTA TEKSTAS TEKSTA TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTA 
             <br/><br/>
-            TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTA TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTA TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTA TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTA TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTA TEKSTAS 
-            <br/><br/>
-            TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTA TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTA TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTA TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTA TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTA TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTA TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTA TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTA TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTA TEKSTAS 
           </AboutCampsDescription>
-        </AboutCampsWrap>
-      </MarginWrap>
+        </BlockWrap>
+      </Block_layout>
 
-      <MarginWrap>
-        <CampsBlockWraps>
+      <Block_layout>
+        <BlockWrap>
           <Title>
             Stovyklos
           </Title>
@@ -54,8 +53,18 @@ const Homepage = () => {
             <Camp_block campUrl="/tecio-sunaus-stovykla" title="Tėčio - sūnaus stovykla" imageSrc="/images/CAMP2.png" />
             <Camp_block campUrl="/online-kursai" title="Online kursai" imageSrc="/images/CAMP3.png" />
           </BlocksWrap>
-        </CampsBlockWraps>
-      </MarginWrap>
+        </BlockWrap>
+      </Block_layout>
+
+      <Block_layout>
+        <BlockWrap>
+          <Title>
+            Vadovai
+          </Title>
+
+          <Guides_block />
+        </BlockWrap>
+      </Block_layout>
 
       <VideoWrap controls ref={video} onClick={handleVideoClick}>
         <source src="/images/VIDEO.mov" type="video/mp4" />
@@ -74,13 +83,6 @@ const Wrap = styled.div`
   height: auto;
   width: 100%;
 `;
-const MarginWrap = styled.div`
-  margin: ${PAGE_LAYOUT_MARGINS}px;
-
-  @media (max-width: ${MOBILE_SIZE}px) {
-    margin: ${PAGE_LAYOUT_MARGINS_MOBILE}px;
-  }
-`;
 const Title = styled.div`
   font-size: 30px;
   font-weight: bold;
@@ -91,12 +93,12 @@ const Title = styled.div`
     margin: 10px 0;
   }
 `;
-
-// ABOUT CAMPS
-const AboutCampsWrap = styled.div`
+const BlockWrap = styled.div`
   display: flex;
   flex-direction: column;
 `;
+
+// ABOUT CAMPS
 const AboutCampsDescription = styled.div`
   font-size: 14px;
 
@@ -106,10 +108,6 @@ const AboutCampsDescription = styled.div`
 `;
 
 // CAMPS BLOCK
-const CampsBlockWraps = styled.div`
-  display: flex;
-  flex-direction: column;
-`;
 const BlocksWrap = styled.div`
   display: flex;
   flex-direction: row;

@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import Primary_button from "../common/Primary_button"
-import { MOBILE_SIZE } from "../../config"
+import Primary_button from "./Primary_button"
+import { MOBILE_SIZE, PRIMARY_MOBILE_FONT_SIZE } from "../../config"
 
-const Registration_block = () => {
+const Registration_block = ({dates, prices}) => {
 
   return (
     <Wrap>
@@ -15,8 +15,11 @@ const Registration_block = () => {
           <DescriptionWrap>
             <DescriptionTitle>DATOS:</DescriptionTitle>
 
-            <Description>Sausio 28 - 30 d.</Description>
-            <Description>Rugpjūčio 12 - 16 d.</Description>
+            {dates.map((date) => {
+              return (
+                <Description>{date.month} {date.days}</Description>
+              )
+            })}
           </DescriptionWrap>
         </InfoWrap>
 
@@ -26,8 +29,11 @@ const Registration_block = () => {
           <DescriptionWrap>
             <DescriptionTitle>KAINOS:</DescriptionTitle>
 
-            <Description>tekstas, tekstas - 00000€.</Description>
-            <Description>tekstas, tekstas - 00000€.</Description>
+            {prices.map((price) => {
+              return (
+                <Description>{price.option}</Description>
+              )
+            })}
           </DescriptionWrap>
         </InfoWrap>
       </InfoWraps>
@@ -90,7 +96,7 @@ const DescriptionTitle = styled.div`
 `;
 const Description = styled.div`
   display: flex;
-  font-size: 16px;
+  font-size: ${PRIMARY_MOBILE_FONT_SIZE};
   margin: 10px;
 `;
 

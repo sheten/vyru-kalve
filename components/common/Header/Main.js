@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 import { MOBILE_SIZE } from "../../../config"
 
-const Main = () => {
+const Main = ({ isCalendar }) => {
   const [windowWidth, setWindowWidth] = useState(0);
 
   useEffect(() => {
@@ -24,13 +24,16 @@ const Main = () => {
       { windowWidth < MOBILE_SIZE ?
         <div style={{width: "200px"}}></div>
         :
-        <CalendarWrap>
-          Artimiausia Stovykla:
-          <CampTimeWrap>
-            <CalendarImage src={"/images/KALENDORIUS.png"} alt="Kalendoriaus nuotrauka" style={{marginRight: "5px"}} />
-            Sausio 28 - 30d.
-          </CampTimeWrap>
-        </CalendarWrap>
+        isCalendar ?
+          <CalendarWrap>
+            Artimiausia Stovykla:
+            <CampTimeWrap>
+              <CalendarImage src={"/images/KALENDORIUS.png"} alt="Kalendoriaus nuotrauka" style={{marginRight: "5px"}} />
+              Sausio 28 - 30d.
+            </CampTimeWrap>
+          </CalendarWrap>
+          :
+          <div style={{width: "200px"}}></div>
       }
     </Wrap>
   )
@@ -55,10 +58,12 @@ const LogoImageWrap = styled.div`
   width: auto;
 
   @media (max-width: ${MOBILE_SIZE}px) {
-    height: 70px;
+    height: 100px;
+    margin-bottom: 10px;
   }
 `;
 const LogoImage = styled.img`
+  cursor: pointer;
   display: flex;
   height: 100%;
   object-fit: cover;

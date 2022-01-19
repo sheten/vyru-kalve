@@ -30,7 +30,7 @@ const Wrap = styled.div`
 `;
 const ComponentWrap = styled.div`
   flex: 1;
-  max-width: ${DESKTOPS_SIZE};
+  max-width: ${DESKTOPS_SIZE}px;
 
   @media (max-width: ${MOBILE_SIZE}px) {
     width: 90%;

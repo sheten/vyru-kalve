@@ -1,8 +1,13 @@
 export const PRIMARY_COLOR = "#15263D";
 export const PAGE_LAYOUT_MARGINS = 35;
 export const PAGE_LAYOUT_MARGINS_MOBILE = 10;
+
+export const PRIMARY_FONT_SIZE = 16;
+
+
 export const HEADER_MOBILE_FONT_SIZE = 22;
-export const PRIMARY_MOBILE_FONT_SIZE = 11;
+export const PRIMARY_MOBILE_FONT_SIZE = 16;
+export const SECONDARY_MOBILE_FONT_SIZE = 10;
 
 
 

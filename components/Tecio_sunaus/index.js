@@ -1,9 +1,9 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import styled from 'styled-components';
 
 import Header from "../common/Header"
-import Icon_block from "./Icon_block"
-import Registration_block from "./Registration_block"
+import Icons_block from "../common/Icons_block"
+import Registration_block from "../common/Registration_block"
 import Gallery_block from "./Gallery_block"
 import Cover_image from "../common/Cover_image"
 import Footer from "../common/Footer"
@@ -11,51 +11,73 @@ import Block_layout from "../common/Block_layout"
 import { MOBILE_SIZE, HEADER_MOBILE_FONT_SIZE, PRIMARY_MOBILE_FONT_SIZE } from "../../config"
 
 const Online = () => {
+  const [windowWidth, setWindowWidth] = useState(0);
+
+  useEffect(() => {
+    setWindowWidth(window.innerWidth);
+  });
+
+  const dates = [
+    {id: 0, year: "2022", month: "sausio", days: "28 — 30 d."},
+    {id: 1, year: "2022", month: "rugpjūčio", days: "12 — 16 d."}
+  ]
+
+  const prices = [
+    {id: 0, option: "320 € vienam vyrui"},
+    {id: 1, option: "420 € tėčiui ir sūnui"},
+    {id: 2, option: "520 € (trims šeimos vyrams)"}
+  ]
 
   return (
     <Wrap>
-      <Header />
+      <Header isRegistrationButton={true} isCalendar={true} />
 
-      <Cover_image imageSrc={"/images/ABOUT_CAMP_COVER.png"} />
+      <Cover_image imageSrc={"/images/TEVU_SUNU_COVER.png"} />
 
       <Block_layout>
         <BlockWrap>
           <Title>
-            Tėčio - sūnaus stovykla
+            KODĖL TĖČIO IR SŪNAUS STOVYKLA?
           </Title>
 
           <AboutCampsDescription>
-            TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTA TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTA TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTA TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTA TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTA TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTA TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTA TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTA TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTA TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTA TEKSTAS TEKSTA TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTA 
+            Sūnau, neturiu dabar laiko. Ar galim pasikalbėti vėliau? Dabar turiu labai svarbų darbą, tada pasikalbėsim.
             <br/><br/>
-            TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTA TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTA TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTA TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTA TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTA TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTA TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTA TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTA TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTA TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTA TEKSTAS TEKSTA TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTA 
+            Girdėti posakiai? Nerandi laiko pabūti kartu su savo sūnumi? Sunku sugalvoti, kaip turiningai ir prasmingai praleisti laiką drauge? Nežinai, apie ką su juo kalbėtis? O jam tik kompiuteris ir internetas rūpi… 
+            <br/><br/>
+            Supranti, kad santykis su sūnumi slysta iš rankų.
+            <br/><br/>
+            Matai, kad greitu laiku visai nebebus apie ką kalbėtis.
+            <br/><br/>
+            Matai jį linksmą visur, išskyrus namus.
+            <br/><br/>
+            Daugelis tėčių susiduria su tokiomis problemomis ir iššūkiais. Sunkiai randa bendrą kalbą, nežino nuo ko pradėti auginti santykį, pritrūksta laiko po darbų turiningai praleisti laiką kartu…
           </AboutCampsDescription>
         </BlockWrap>
       </Block_layout>
 
       <Block_layout>
-        <IconsWrap>
-          <Icon_block title="GYVENIMAS" imageSrc="/images/GYVENIMAS_ICON.png" />
-          <Icon_block title="MAITINIMAS" imageSrc="/images/MAITINIMAS_ICON.png" />
-          <Icon_block title="SAUGUMAS" imageSrc="/images/SAUGUMAS_ICON.png" />
-        </IconsWrap>
+        <Icons_block />
       </Block_layout>
 
       <Block_layout>
         <BlockWrap>
           <Title>
-            Informacija / Tikslai
+            KO TIKĖTIS WHATANSU VYRŲ KALVĖJE?
           </Title>
 
           <AboutCampsDescription>
-            TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTA TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTA TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTA TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTA TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTA TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTA TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTA TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTA TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTA TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTA TEKSTAS TEKSTA TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTA 
-            <br/><br/>
-            TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTA TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTA TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTA TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTA TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTA TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTA TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTA TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTA TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTA TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTA TEKSTAS TEKSTA TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTAS TEKSTA 
+            Vyrų kalvės tėčio ir sūnaus stovykloje mes kuriame santykį, auginame tėčio ir sūnaus ryšį, išgyvename nuotykius, sunkumus ir džiugesį kartu.
+            { windowWidth < MOBILE_SIZE ? null : <><br/><br/></>}
+             Semiamės patirties vieni iš kitų, mokomės laiką drauge leisti prasmingai.
+            { windowWidth < MOBILE_SIZE ? null : <><br/><br/></>}
+             Kartu žaidžiame, veikiame, dirbame, laimime, kalbamės, klausomės, atjaučiame, liūdime, dainuojame ir mokomės visa tai perkelti į kasdienybę.
           </AboutCampsDescription>
         </BlockWrap>
       </Block_layout>
 
       <Block_layout>
-        <Registration_block />
+        <Registration_block dates={dates} prices={prices} />
       </Block_layout>
 
       <Block_layout>
@@ -77,7 +99,6 @@ const Wrap = styled.div`
   display: flex;
   color: white;
   flex-direction: column;
-  font-family: math;
   height: auto;
   width: 100%;
 `;
@@ -98,22 +119,8 @@ const BlockWrap = styled.div`
   flex-direction: column;
 `;
 const AboutCampsDescription = styled.div`
-  font-size: 14px;
-
   @media (max-width: ${MOBILE_SIZE}px) {
     font-size: ${PRIMARY_MOBILE_FONT_SIZE}px;
-  }
-`;
-
-// ICON BLOCKS
-const IconsWrap = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  width: 100%;
-
-  @media (max-width: ${MOBILE_SIZE}px) {
-    flex-direction: column;
   }
 `;
 

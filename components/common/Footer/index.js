@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import Link from 'next/link';
 
-import { MOBILE_SIZE, PRIMARY_MOBILE_FONT_SIZE } from "../../../config"
+import { MOBILE_SIZE, SECONDARY_MOBILE_FONT_SIZE } from "../../../config"
 
 const Footer = () => {
   const [windowWidth, setWindowWidth] = useState(0);
@@ -16,7 +16,7 @@ const Footer = () => {
       <Image src={"/images/FOOTER_LOGO.png"} alt="LOGO nuotrauka" />
 
       <InfoBlock>
-        <div>Kontaktai kontaktai</div>
+        <div>Kontaktai</div>
         <Text>Tel. nr.: +37067409472</Text>
         <Text>Rekvizitai rekvizitai rekvizitai</Text>
         <Text>Rekvizitai rekvizitai</Text>
@@ -68,7 +68,7 @@ const InfoBlock = styled.div`
 `;
 const Text = styled.div`
   @media (max-width: ${MOBILE_SIZE}px) {
-    font-size: ${PRIMARY_MOBILE_FONT_SIZE}px;
+    font-size: ${SECONDARY_MOBILE_FONT_SIZE}px;
   }
 `;
 const A = styled.a`
@@ -76,7 +76,7 @@ const A = styled.a`
   text-decoration: none;
 
   @media (max-width: ${MOBILE_SIZE}px) {
-    font-size: ${PRIMARY_MOBILE_FONT_SIZE}px;
+    font-size: ${SECONDARY_MOBILE_FONT_SIZE}px;
   }
 `;
 const EmptyBlock = styled.div`
