@@ -56,6 +56,11 @@ const Homepage = () => {
         </BlockWrap>
       </Block_layout>
 
+      <VideoWrap controls ref={video} onClick={handleVideoClick}>
+        <source src="/images/VIDEO.mov" type="video/mp4" />
+        Your browser does not support the video tag.
+      </VideoWrap>
+
       <Block_layout>
         <BlockWrap>
           <Title>
@@ -65,11 +70,6 @@ const Homepage = () => {
           <Guides_block />
         </BlockWrap>
       </Block_layout>
-
-      <VideoWrap controls ref={video} onClick={handleVideoClick}>
-        <source src="/images/VIDEO.mov" type="video/mp4" />
-        Your browser does not support the video tag.
-      </VideoWrap>
 
       <Footer />
     </Wrap>
