@@ -1,4 +1,3 @@
-import Head from 'next/head'
 import styled from 'styled-components';
 
 import Online from "../components/Online"
@@ -7,12 +6,6 @@ import { PRIMARY_COLOR, DESKTOPS_SIZE, MOBILE_SIZE } from "../config"
 export default function OnlineCamp() {
   return (
     <>
-      <Head>
-        <title>Vyrų kalvė - online stovykla!</title>
-        <meta name="description" content="Atsakomybė už žodžius, mintis ir poelgius." />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
       <Wrap>
         <ComponentWrap>
           <Online />

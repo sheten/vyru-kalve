@@ -1,6 +1,8 @@
 export const PRIMARY_COLOR = "#15263D";
 export const PAGE_LAYOUT_MARGINS = 35;
 export const PAGE_LAYOUT_MARGINS_MOBILE = 10;
+export const TEST = true;
+export const DOMAIN_URL = "https://localhost:3000/"
 
 export const PRIMARY_FONT_SIZE = 16;
 

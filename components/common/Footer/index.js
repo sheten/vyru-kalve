@@ -16,11 +16,14 @@ const Footer = () => {
       <Image src={"/images/FOOTER_LOGO.png"} alt="LOGO nuotrauka" />
 
       <InfoBlock>
-        <div>Kontaktai</div>
+        <div>Informacija:</div>
+        <Link href="/kontaktai" passHref>
+          <Text>Kontaktai</Text>
+        </Link>
         <Text>Tel. nr.: +37067409472</Text>
-        <Text>Rekvizitai rekvizitai rekvizitai</Text>
-        <Text>Rekvizitai rekvizitai</Text>
-        { windowWidth < MOBILE_SIZE ? null : <Text>t.t.</Text>}
+        <Text>Email: blauskas@gmail.com</Text>
+        {/* <Text>Rekvizitai rekvizitai</Text>
+        { windowWidth < MOBILE_SIZE ? null : <Text>t.t.</Text>} */}
       </InfoBlock>
 
       <InfoBlock>

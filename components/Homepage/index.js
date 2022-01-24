@@ -29,7 +29,7 @@ const Homepage = () => {
 
       <Cover_image imageSrc={"/images/HOMEPAGE_COVER.png"} />
 
-      <Block_layout>
+      {/* <Block_layout>
         <BlockWrap>
           <Title>
             Apie Stovyklas
@@ -40,7 +40,7 @@ const Homepage = () => {
             <br/><br/>
           </AboutCampsDescription>
         </BlockWrap>
-      </Block_layout>
+      </Block_layout> */}
 
       <Block_layout>
         <BlockWrap>
@@ -83,6 +83,10 @@ const Wrap = styled.div`
   height: auto;
   width: 100%;
 `;
+const BlockWrap = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
 const Title = styled.div`
   font-size: 30px;
   font-weight: bold;
@@ -93,19 +97,15 @@ const Title = styled.div`
     margin: 10px 0;
   }
 `;
-const BlockWrap = styled.div`
-  display: flex;
-  flex-direction: column;
-`;
 
 // ABOUT CAMPS
-const AboutCampsDescription = styled.div`
-  font-size: 14px;
+// const AboutCampsDescription = styled.div`
+//   font-size: 14px;
 
-  @media (max-width: ${MOBILE_SIZE}px) {
-    font-size: ${PRIMARY_MOBILE_FONT_SIZE}px;
-  }
-`;
+//   @media (max-width: ${MOBILE_SIZE}px) {
+//     font-size: ${PRIMARY_MOBILE_FONT_SIZE}px;
+//   }
+// `;
 
 // CAMPS BLOCK
 const BlocksWrap = styled.div`

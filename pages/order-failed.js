@@ -1,22 +1,13 @@
-import Head from 'next/head'
 import styled from 'styled-components';
 
-import Homepage from "../components/Homepage"
 import { PRIMARY_COLOR, DESKTOPS_SIZE, MOBILE_SIZE } from "../config"
 
-export default function Home() {
+export default function OrderFailed() {
   return (
     <>
-      <Head>
-        <title>Vyrų kalvė - vyrai vyrams!</title>
-        <meta name="description" content="Atsakomybė už žodžius, mintis ir poelgius." />
-        <meta name="verify-paysera" content="88ddc13861a2540d70cca808f09a3769" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
       <Wrap>
         <ComponentWrap>
-          <Homepage />
+          <div>Fail</div>
         </ComponentWrap>
       </Wrap>
     </>
