@@ -1,11 +1,10 @@
 import Paysera from 'paysera-nodejs';
 import { useEffect, useState } from 'react';
-// import { customAlphabet } from 'nanoid';
 import { DOMAIN_URL, TEST } from '../../config';
 
 var options = {
-  projectid: '224050',
-  sign_password: '07a2470081a8add64439de078c6a974b',
+  projectid: '227680',
+  sign_password: 'c94bb1bbd9c2b4a9c93fcf140c18e20e',
   accepturl: DOMAIN_URL + '/order-confirmation',
   cancelurl: DOMAIN_URL + '/order-failed',
   callbackurl: 'https://us-central1-next-typescript-f0ae2.cloudfunctions.net/acceptCallback',
