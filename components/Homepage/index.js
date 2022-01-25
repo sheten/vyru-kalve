@@ -7,7 +7,7 @@ import Cover_image from "../common/Cover_image"
 import Block_layout from "../common/Block_layout"
 import Guides_block from "./Guides_block"
 import Footer from "../common/Footer"
-import { MOBILE_SIZE, HEADER_MOBILE_FONT_SIZE, PRIMARY_MOBILE_FONT_SIZE } from "../../config"
+import { MOBILE_SIZE, HEADER_MOBILE_FONT_SIZE, PRIMARY_MOBILE_FONT_SIZE, SECONDARY_FONT_SIZE } from "../../config"
 
 const Homepage = () => {
   const video = useRef();
@@ -57,7 +57,7 @@ const Homepage = () => {
       </Block_layout>
 
       <VideoWrap controls ref={video} onClick={handleVideoClick}>
-        <source src="/images/VIDEO.mov" type="video/mp4" />
+        <source src="/images/COVER_VIDEO.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </VideoWrap>
 
@@ -100,7 +100,7 @@ const Title = styled.div`
 
 // ABOUT CAMPS
 // const AboutCampsDescription = styled.div`
-//   font-size: 14px;
+//   font-size: ${SECONDARY_FONT_SIZE}px;
 
 //   @media (max-width: ${MOBILE_SIZE}px) {
 //     font-size: ${PRIMARY_MOBILE_FONT_SIZE}px;

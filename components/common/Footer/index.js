@@ -20,10 +20,12 @@ const Footer = () => {
         <Link href="/kontaktai" passHref>
           <Text>Kontaktai</Text>
         </Link>
-        <Text>Tel. nr.: +37067409472</Text>
-        <Text>Email: blauskas@gmail.com</Text>
-        {/* <Text>Rekvizitai rekvizitai</Text>
-        { windowWidth < MOBILE_SIZE ? null : <Text>t.t.</Text>} */}
+        <Link href="/pinigu-grazinimo-salygos" passHref>
+          <Text>Pinigų grąžinimo sąlygos</Text>
+        </Link>
+        <Link href="/privatumo-politika" passHref>
+          <Text>Privatumo politika</Text>
+        </Link>
       </InfoBlock>
 
       <InfoBlock>
@@ -70,6 +72,7 @@ const InfoBlock = styled.div`
   justify-content: space-between;
 `;
 const Text = styled.div`
+  cursor: pointer;
   @media (max-width: ${MOBILE_SIZE}px) {
     font-size: ${SECONDARY_MOBILE_FONT_SIZE}px;
   }

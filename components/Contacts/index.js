@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import Header from "../common/Header"
 import Footer from "../common/Footer"
 import Block_layout from "../common/Block_layout"
-import { MOBILE_SIZE, HEADER_MOBILE_FONT_SIZE } from "../../config"
+import { MOBILE_SIZE, HEADER_MOBILE_FONT_SIZE, PRIMARY_FONT_SIZE } from "../../config"
 
 const Contacts = () => {
 
@@ -20,14 +20,37 @@ const Contacts = () => {
 
           <Section>
             <Icon src={"/images/phone.svg"} />
-            <Description></Description>
+            <Description>
+              Stovyklos +37067409472<br/>
+              Bendrasis +37065073886
+              </Description>
           </Section>
 
-          {/* <BlocksWrap>
-            <Camp_block campUrl="/paaugliu-stovykla" title="Stovykla paaugliams" imageSrc="/images/CAMP1.png" />
-            <Camp_block campUrl="/tecio-sunaus-stovykla" title="Tėčio - sūnaus stovykla" imageSrc="/images/CAMP2.png" />
-            <Camp_block campUrl="/online-kursai" title="Online kursai" imageSrc="/images/CAMP3.png" />
-          </BlocksWrap> */}
+          <Section>
+            <Icon src={"/images/mail.svg"} />
+            <Description>info@whatansu.lt</Description>
+          </Section>
+
+          <Section>
+            <Icon src={"/images/address.svg"} />
+            <Description>Auksinė Giria, Liudgardos k., Dubingių s., Molėtų r.</Description>
+          </Section>
+
+          <Section>
+            <Icon src={"/images/company_details.svg"} />
+            <Description style={{color: "grey"}}>REKVIZITAI</Description>
+          </Section>
+
+          <Section>
+            <div style={{height: "30px", width: "30px"}}/>
+            <Description>
+              VŠĮ “Bundam” 193194949<br/>
+              Staniūnų 66, Panevėžys<br/>
+              AB “SEB Bankas”<br/>
+              Banko Kodas<br/>
+              LT357044060007737449
+            </Description>
+          </Section>
         </Block>
       </Block_layout>
 
@@ -62,8 +85,20 @@ const Title = styled.div`
 
 // SECTION
 const Section = styled.div`
+  align-items: center;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  margin-bottom: 15px;
+`;
+const Icon = styled.img`
+  height: 30px;
+  width: 30px;
+`;
+const Description = styled.div`
+  display: flex;
+  font-size: ${PRIMARY_FONT_SIZE}px;
+  margin-left: 15px;
+  
 `;
 
 export default Contacts;
