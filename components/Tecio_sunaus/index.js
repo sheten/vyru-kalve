@@ -8,9 +8,9 @@ import Gallery_block from "./Gallery_block"
 import Cover_image from "../common/Cover_image"
 import Footer from "../common/Footer"
 import Block_layout from "../common/Block_layout"
-import { MOBILE_SIZE, HEADER_MOBILE_FONT_SIZE, PRIMARY_MOBILE_FONT_SIZE } from "../../config"
+import { MOBILE_SIZE, HEADER_MOBILE_FONT_SIZE, PRIMARY_MOBILE_FONT_SIZE, PRIMARY_FONT_SIZE } from "../../config"
 
-const Online = () => {
+const Tecio_sunaus = () => {
   const [windowWidth, setWindowWidth] = useState(0);
 
   useEffect(() => {
@@ -18,8 +18,9 @@ const Online = () => {
   }, []);
 
   const dates = [
-    {id: 0, year: "2022", month: "sausio", days: "28 — 30 d."},
-    {id: 1, year: "2022", month: "rugpjūčio", days: "12 — 16 d."}
+    {id: 0, year: "2022", month: "sausio", days: "28 — 30 d.", dateToCheck: "2022-01-18"},
+    {id: 1, year: "2022", month: "balandžio", days: "01 — 03 d.", dateToCheck: "2022-04-01"},
+    {id: 1, year: "2022", month: "rugpjūčio", days: "12 — 16 d.", dateToCheck: "2022-08-12"}
   ]
 
   const prices = [
@@ -30,7 +31,7 @@ const Online = () => {
 
   return (
     <Wrap>
-      <Header isRegistrationButton={true} isCalendar={true} />
+      <Header isRegistrationButton={true} isCalendar={true} dates={dates} />
 
       <Cover_image imageSrc={"/images/TEVU_SUNU_COVER.png"} />
 
@@ -73,6 +74,41 @@ const Online = () => {
             { windowWidth < MOBILE_SIZE ? null : <><br/><br/></>}
              Kartu žaidžiame, veikiame, dirbame, laimime, kalbamės, klausomės, atjaučiame, liūdime, dainuojame ir mokomės visa tai perkelti į kasdienybę.
           </AboutCampsDescription>
+        </BlockWrap>
+      </Block_layout>
+
+      <Block_layout>
+        <BlockWrap>
+          <IconsWrap>
+            <IconWrap>
+              <Icon src={"/images/axe.svg"} />
+              <IconDescription>Rasite bendrų veiklų, kartu patirsite įvairias užduotis, žaidimus, vyriškumo pamokas, mankštas, žygius.</IconDescription>            
+            </IconWrap>
+            <IconWrap>
+              <Icon src={"/images/bendravimas.svg"} />
+              <IconDescription>Mokysitės išgirsti vienas kitą ir kurti dialogą, kuriame girdi abu.</IconDescription>            
+            </IconWrap>
+            <IconWrap>
+              <Icon src={"/images/teamwork-2.svg"} />
+              <IconDescription>Susirasite bendraminčių.</IconDescription>            
+            </IconWrap>
+            <IconWrap>
+              <Icon src={"/images/prasmingas-darbas.svg"} />
+              <IconDescription>Kursite stiprų, vyrišką tėčio ir sūnaus santykį</IconDescription>            
+            </IconWrap>
+            <IconWrap>
+              <Icon src={"/images/compassion.svg"} />
+              <IconDescription>Sustiprinsite tarpusavio ryšį.</IconDescription>            
+            </IconWrap>
+            <IconWrap>
+              <Icon src={"/images/atjauta.svg"} />
+              <IconDescription>Pažinsite vienas kitą, įgysite pagarbos ir atjautos pamokų bei didžiulės, žodžiais sunkiai apibūdinamos patirties.</IconDescription>            
+            </IconWrap>
+            <IconWrap>
+              <Icon src={"/images/loop.svg"} />
+              <IconDescription>Įsimintino savaitgalio su tikrais vyrais, kurie gyvena svajonėmis, dega idėjomis ir patys atsakingai kuria savo gyvenimą. Bonusas – JOKIŲ moterų</IconDescription>            
+            </IconWrap>
+          </IconsWrap>
         </BlockWrap>
       </Block_layout>
 
@@ -124,4 +160,41 @@ const AboutCampsDescription = styled.div`
   }
 `;
 
-export default Online;
+// ICONS BLOCK
+const IconsWrap = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  @media (max-width: ${MOBILE_SIZE}px) {
+    flex-direction: column;
+  }
+`;
+const IconWrap = styled.div`
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  margin: 10px 0;
+  width: 500px;
+
+  @media (max-width: ${MOBILE_SIZE}px) {
+    width: 100%;
+  }
+`;
+const Icon = styled.img`
+  height: 80px;
+  width: 80px;
+
+  @media (max-width: ${MOBILE_SIZE}px) {
+    height: 40px;
+    width: 40px;
+  }
+`;
+const IconDescription = styled.div`
+  display: flex;
+  font-size: ${PRIMARY_FONT_SIZE}px;
+  margin-left: 15px;
+`;
+
+export default Tecio_sunaus;

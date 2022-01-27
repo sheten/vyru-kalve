@@ -13,7 +13,7 @@ const Registration_block = ({dates, prices}) => {
   const dispatch = useDispatch();
   const [openModal, setOpenModal] = useState(false);
   const [buyerDataMissing, setBuyerDataMissing] = useState(false);
-  const [buyerData, setBuyerData] = useState({ email: "", name: "", phone: "", campDate: "Vasario 2d.", campPrice: {title: "260Eur", price: 260} });
+  const [buyerData, setBuyerData] = useState({ email: "", name: "", phone: "", campDate: "Vasario 2d.", campPrice: {title: "5Eur", price: 5} });
 
   const handlePurchaseClick = async () => {
     const buyerDataCheck = buyerData.email !== '' && buyerData.name !== '' && buyerData.phone !== '';
@@ -32,7 +32,7 @@ const Registration_block = ({dates, prices}) => {
         console.log(url);
         window.open(url, "_self");
       } else {
-        alert("Įvyko klaida, pabandykite dar kartą vėliau arba susisiekite su juliana@abrikosas.eu.");
+        alert("Įvyko klaida, pabandykite dar kartą vėliau arba susisiekite su blauskas@gmail.com.");
       };
     } else {
       console.log("YOU NEED TO FILL IN EVERYTHING");
@@ -59,7 +59,7 @@ const Registration_block = ({dates, prices}) => {
 
             {dates.map((date) => {
               return (
-                <Description key={date.id}>{date.month} {date.days}</Description>
+                <Description key={date.id}>{date.year} {date.month} {date.days}</Description>
               )
             })}
           </DescriptionWrap>

@@ -7,8 +7,8 @@ var options = {
   sign_password: 'c94bb1bbd9c2b4a9c93fcf140c18e20e',
   accepturl: DOMAIN_URL + '/order-confirmation',
   cancelurl: DOMAIN_URL + '/order-failed',
-  callbackurl: 'https://us-central1-next-typescript-f0ae2.cloudfunctions.net/acceptCallback',
-  test: TEST ? 1 : 0,
+  callbackurl: 'https://us-central1-vyru-kalve.cloudfunctions.net/acceptCallback',
+  test: 1,
 };
 
 const getPayseraPaymentUrl = (buyerData, orderid) => {

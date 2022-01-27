@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.7.1",
+    "codolab-functions": "https://github.com/codolab/codolab-functions/tarball/master",
     "babel-plugin-styled-components": "^2.0.2",
     "babel-preset-next": "^1.4.0",
     "firebase": "^8.6.2",
@@ -23,6 +24,7 @@
   },
   "devDependencies": {
     "eslint": "8.6.0",
-    "eslint-config-next": "12.0.8"
+    "eslint-config-next": "12.0.8",
+    "eslint-plugin-promise": "^6.0.0"
   }
 }

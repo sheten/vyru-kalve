@@ -10,7 +10,7 @@ import Footer from "../common/Footer"
 import Block_layout from "../common/Block_layout"
 import { MOBILE_SIZE, HEADER_MOBILE_FONT_SIZE, PRIMARY_MOBILE_FONT_SIZE } from "../../config"
 
-const Online = () => {
+const Paaugliu = () => {
 
   const dates = [
     {id: 0, year: "2022", month: "vasario", days: "25 — 27 d."},
@@ -110,4 +110,4 @@ const AboutCampsDescription = styled.div`
   }
 `;
 
-export default Online;
+export default Paaugliu;

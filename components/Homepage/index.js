@@ -25,7 +25,7 @@ const Homepage = () => {
 
   return (
     <Wrap>
-      <Header/>
+      <Header isHomepage={true} />
 
       <Cover_image imageSrc={"/images/HOMEPAGE_COVER.png"} />
 

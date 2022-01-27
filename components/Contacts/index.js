@@ -98,7 +98,6 @@ const Description = styled.div`
   display: flex;
   font-size: ${PRIMARY_FONT_SIZE}px;
   margin-left: 15px;
-  
 `;
 
 export default Contacts;
