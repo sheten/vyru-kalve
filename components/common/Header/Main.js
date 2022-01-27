@@ -6,33 +6,30 @@ import { MOBILE_SIZE } from "../../../config"
 
 const Main = ({ isCalendar, isHomepage, dates }) => {
   const [windowWidth, setWindowWidth] = useState(0);
+  const [upcomingDate, setUpcomingDate] = useState("");
 
   useEffect(() => {
     setWindowWidth(window.innerWidth);
-    // closeCampDate();
+    {isCalendar? closeCampDate() : undefined}
   }, []);
 
   const closeCampDate = () => {
     for (var i = 0; i < dates.length; i++) {
-      var GivenDate = date.dateToCheck;
+      var GivenDate = dates[i].dateToCheck;
       var CurrentDate = new Date();
       GivenDate = new Date(GivenDate);
   
       if(GivenDate > CurrentDate){
-          alert('Given date is  YES  greater than the current date.');
-          break;
-      }else{
-          alert('Given date is  NOT  greater than the current date.');
+        setUpcomingDate(dates[i].year + " " + dates[i].month + " " + dates[i].days)
+        break;
       }
     }
-
-    console.log("Setstate")
   }
 
   return (
     <Wrap>
       <TopWrap>
-        <div style={{width: "200px"}}></div>
+        <div style={{width: "250px"}}></div>
 
         <Link href={"/"} passHref>
           <LogoImageWrap>
@@ -41,18 +38,18 @@ const Main = ({ isCalendar, isHomepage, dates }) => {
         </Link>
 
         { windowWidth < MOBILE_SIZE ?
-          <div style={{width: "200px"}}></div>
+          <div style={{width: "250px"}}></div>
           :
           isCalendar ?
             <CalendarWrap>
               Artimiausia Stovykla:
               <CampTimeWrap>
                 <CalendarImage src={"/images/KALENDORIUS.png"} alt="Kalendoriaus nuotrauka" style={{marginRight: "5px"}} />
-                Sausio 28 - 30d.
+                {upcomingDate}
               </CampTimeWrap>
             </CalendarWrap>
             :
-            <div style={{width: "200px"}}></div>
+            <div style={{width: "250px"}}></div>
         }
       </TopWrap>
       
@@ -114,7 +111,7 @@ const CalendarWrap = styled.div`
   display: flex;
   flex-direction: column;
   height: max-content;
-  width: 200px;
+  width: 250px;
 `;
 const CampTimeWrap = styled.div`
   align-items: center;

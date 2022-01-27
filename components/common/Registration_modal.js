@@ -3,7 +3,8 @@ import styled from 'styled-components'
 
 import { PRIMARY_COLOR } from "../../config"
 
-const Registration_modal = ({ handleConfirmation, handleModalClose, handleBuyerDataChange, buyerDataMissing, buyerData }) => {
+const Registration_modal = ({ dates, handleConfirmation, handleModalClose, handleBuyerDataChange, buyerDataMissing, buyerData }) => {
+  const [selectedDate, setSelectedDate] = useState();
   const [missingInputTitle, setMissingInputTitle] = useState();
 
   useEffect(() => {
@@ -19,6 +20,10 @@ const Registration_modal = ({ handleConfirmation, handleModalClose, handleBuyerD
   const handleHighlightInput = (inputName) => {
     setMissingInputTitle(inputName);
   };
+  
+  const handleOmnivaLocationChange = (e) => {
+    setSelectedDate(e.target.value);
+  };
 
   return (
     <Wrap key={missingInputTitle ? missingInputTitle : 1}>
@@ -28,9 +33,13 @@ const Registration_modal = ({ handleConfirmation, handleModalClose, handleBuyerD
       <Input id="email" value={buyerData.email} placeholder={"EL. PAŠTAS *"} onChange={e => handleBuyerDataChange(e)} error={buyerData.email === '' && buyerDataMissing} />
       <Input id="name" value={buyerData.name} placeholder={"VARDAS PAVARDĖ *"} onChange={e => handleBuyerDataChange(e)} error={buyerData.name === '' && buyerDataMissing} />
       <Input id="phone" value={buyerData.phone} placeholder={"TELEFONAS *"} onChange={e => handleBuyerDataChange(e)} error={buyerData.phone === '' && buyerDataMissing} />
+      <Select onChange={handleOmnivaLocationChange} name="camps-dates" id="camps">
+        <option value="Pasirinkite data..." selected>Pasirinkite data...</option>
+        {dates.map((date) => (<option key={date.id}>{date.year} {date.month} {date.days}</option>))}
+      </Select>
 
       <ButtonWrap>
-        <Delete onClick={() => handleConfirmation()}>Registruotis</Delete>
+        <Register onClick={() => handleConfirmation()}>Registruotis</Register>
       </ButtonWrap>
     </Wrap>
   )
@@ -80,7 +89,14 @@ const Input = styled.input`
   height: 30px;
   margin-bottom: 5px;
   padding-left: 10px;
-  border: ${props => props.error ? '2px solid red' : ''}
+  border: ${props => props.error ? '2px solid red' : ''};
+  width: 250px;
+`;
+const Select = styled.select`
+  border: 1px solid #D1C3B4;
+  height: 35px;
+  outline: none;
+  width: 250px;
 `;
 
 // BUTTONS
@@ -90,27 +106,16 @@ const ButtonWrap = styled.div`
   flex-direction: row;
   justify-content: center;
 `;
-const Cancel = styled.button`
-  background-color: #C4C4C4;
+const Register = styled.button`
+  background-color: #F0774B;
   border: none;
-  border-radius: 10px;
+  border-radius: 6px;
   color: white;
   cursor: pointer;
   font-size: 14px;
   margin-top: 20px;
-  margin-right: 20px;
-  padding: 5px 15px;
-  width: 100px;
+  padding: 10px 15px;
+  width: 150px;
 `;
-const Delete = styled.button`
-  background-color: #EA4041;
-  border: none;
-  border-radius: 10px;
-  color: white;
-  cursor: pointer;
-  font-size: 14px;
-  margin-top: 20px;
-  padding: 5px 15px;
-  width: 100px;
-`;
+
 export default Registration_modal

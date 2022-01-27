@@ -38,7 +38,6 @@ const Registration_block = ({dates, prices}) => {
       console.log("YOU NEED TO FILL IN EVERYTHING");
       setBuyerDataMissing(true);
     };
-    alert("Registracija teskite Paysera apmokejimu!")
   };
 
   const handleBuyerDataChange = (e) => {
@@ -48,7 +47,7 @@ const Registration_block = ({dates, prices}) => {
 
   return (
     <>
-    {openModal ? <Registration_modal handleBuyerDataChange={handleBuyerDataChange} buyerData={buyerData} buyerDataMissing={buyerDataMissing} handleConfirmation={handlePurchaseClick} handleModalClose={()=> setOpenModal(false)} /> : null}
+    {openModal ? <Registration_modal dates={dates} handleBuyerDataChange={handleBuyerDataChange} buyerData={buyerData} buyerDataMissing={buyerDataMissing} handleConfirmation={handlePurchaseClick} handleModalClose={()=> setOpenModal(false)} /> : null}
     <Wrap>
       <InfoWraps>
         <InfoWrap>

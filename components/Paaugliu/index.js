@@ -13,7 +13,7 @@ import { MOBILE_SIZE, HEADER_MOBILE_FONT_SIZE, PRIMARY_MOBILE_FONT_SIZE } from "
 const Paaugliu = () => {
 
   const dates = [
-    {id: 0, year: "2022", month: "vasario", days: "25 — 27 d."},
+    {id: 0, year: "2022", month: "vasario", days: "25 — 27 d.", dateToCheck: "2022-02-25"},
   ]
 
   const prices = [
@@ -22,7 +22,7 @@ const Paaugliu = () => {
 
   return (
     <Wrap>
-      <Header isRegistrationButton={true} isCalendar={true} />
+      <Header isRegistrationButton={true} isCalendar={true} dates={dates}/>
 
       <Cover_image imageSrc={"/images/PAAUGLIU_COVER.png"} />
 

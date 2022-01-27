@@ -18,9 +18,9 @@ const Tecio_sunaus = () => {
   }, []);
 
   const dates = [
-    {id: 0, year: "2022", month: "sausio", days: "28 — 30 d.", dateToCheck: "2022-01-18"},
+    {id: 0, year: "2022", month: "sausio", days: "28 — 30 d.", dateToCheck: "2022-01-28"},
     {id: 1, year: "2022", month: "balandžio", days: "01 — 03 d.", dateToCheck: "2022-04-01"},
-    {id: 1, year: "2022", month: "rugpjūčio", days: "12 — 16 d.", dateToCheck: "2022-08-12"}
+    {id: 2, year: "2022", month: "rugpjūčio", days: "12 — 16 d.", dateToCheck: "2022-08-12"}
   ]
 
   const prices = [
