@@ -105,26 +105,35 @@ const Wrap = styled.div`
   height: auto;
   justify-content: space-between;
   width: 100%;
+
+  @media (max-width: ${MOBILE_SIZE}px) {
+    flex-wrap: nowrap;
+    overflow: scroll;
+  }
 `;
 const GuideWrap = styled.div`
   align-items: center;
   display: flex;
   cursor: pointer;
   flex-direction: column;
-  height: auto;
+  height: 400px;
   margin: 20px;
   width: 320px;
 `;
 const Image = styled.img`
-  height: auto;
-  width: 100%;
+  height: 300px;
+  width: 300px;
+
+  @media (max-width: ${MOBILE_SIZE}px) {
+    height: 250px;
+    width: 250px;
+  }
 `;
 const Title = styled.div`
   font-size: 20px;
   margin: 10px 0;
 `;
 const Ul = styled.ul`
-  height: 40px;
   margin: 0;
   width: 100%;
 `;

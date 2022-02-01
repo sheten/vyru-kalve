@@ -10,7 +10,7 @@ export default function Home() {
       <Head>
         <title>Vyrų kalvė - vyrai vyrams!</title>
         <meta name="description" content="Atsakomybė už žodžius, mintis ir poelgius." />
-        <meta name="verify-paysera" content="deebe7eb0c1717bf8705bb9783447433"/>
+        <meta name="verify-paysera" content="a6d97433603d23bb65b0b7efa5d82801"/>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 

@@ -32,8 +32,12 @@ const Main = ({ isCalendar, isHomepage, dates }) => {
         <div style={{width: "250px"}}></div>
 
         <Link href={"/"} passHref>
-          <LogoImageWrap>
+          <LogoImageWrap isHomepage={isHomepage}>
+          {isHomepage ?
             <LogoImage src={"/images/VYRU_KALVE_3.png"} alt="LOGO" />
+            :
+            <LogoImage src={"/images/VYRU_KALVE_1.png"} alt="LOGO" />
+          }
           </LogoImageWrap>
         </Link>
 
@@ -52,12 +56,6 @@ const Main = ({ isCalendar, isHomepage, dates }) => {
             <div style={{width: "250px"}}></div>
         }
       </TopWrap>
-      
-      {isHomepage ?
-        <Title>Aš esu tėtis - meilė sūnui yra nuotykis</Title>
-        :
-        <Title>Vyrų kalvė - atsakomybė už žodžius mintis ir poelgius</Title>
-      }
     </Wrap>
   )
 }
@@ -79,18 +77,13 @@ const TopWrap = styled.div`
   justify-content: space-around;
   width: 100%;
 `;
-const Title = styled.div`
-  font-size: 30px;
-  font-weight: bold;
-  margin: 20px 0;
-  text-align: center;
-`;
 
 // LOGO IMAGE
 const LogoImageWrap = styled.div`
   border-radius: 5px;
   display: flex;
-  height: 150px;
+  height: ${props => props.isHomepage ? '150px' : '200px'};
+  margin-top: ${props => props.isHomepage ? '0' : '10px'};
   text-decoration: none;
   width: auto;
 

@@ -44,11 +44,11 @@ const Contacts = () => {
           <Section>
             <div style={{height: "30px", width: "30px"}}/>
             <Description>
-              VŠĮ “Bundam” 193194949<br/>
-              Staniūnų 66, Panevėžys<br/>
-              AB “SEB Bankas”<br/>
+              VŠĮ "Arbūzų cukrus" 303086961<br/>
+              Algirdo g. 10-17, Vilnius<br/>
+              {/* AB “SEB Bankas”<br/>
               Banko Kodas<br/>
-              LT357044060007737449
+              LT357044060007737449 */}
             </Description>
           </Section>
         </Block>
