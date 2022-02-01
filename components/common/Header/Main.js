@@ -33,7 +33,7 @@ const Main = ({ isCalendar, isHomepage, dates }) => {
 
         <Link href={"/"} passHref>
           <LogoImageWrap>
-            <LogoImage src={"/images/FOOTER_LOGO.png"} alt="LOGO" />
+            <LogoImage src={"/images/VYRU_KALVE_3.png"} alt="LOGO" />
           </LogoImageWrap>
         </Link>
 
