@@ -44,7 +44,7 @@ const Contacts = () => {
           <Section>
             <div style={{height: "30px", width: "30px"}}/>
             <Description>
-              VŠĮ "Arbūzų cukrus" 303086961<br/>
+              VŠĮ Arbūzų cukrus 303086961<br/>
               Algirdo g. 10-17, Vilnius<br/>
               {/* AB “SEB Bankas”<br/>
               Banko Kodas<br/>
