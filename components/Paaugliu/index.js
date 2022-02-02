@@ -8,7 +8,7 @@ import Gallery_block from "./Gallery_block"
 import Cover_image from "../common/Cover_image"
 import Footer from "../common/Footer"
 import Block_layout from "../common/Block_layout"
-import { MOBILE_SIZE, HEADER_MOBILE_FONT_SIZE, PRIMARY_MOBILE_FONT_SIZE } from "../../config"
+import { MOBILE_SIZE, HEADER_MOBILE_FONT_SIZE, PRIMARY_FONT_SIZE, PRIMARY_MOBILE_FONT_SIZE } from "../../config"
 
 const Paaugliu = () => {
 
@@ -29,17 +29,15 @@ const Paaugliu = () => {
       <Block_layout>
         <BlockWrap>
           <Title>
-            KODĖL VYRŲ KALVĖ PAAUGLIAMS?
+            STOVYKLOS METU, MES:
           </Title>
 
           <AboutCampsDescription>
-            Nes nuo pat vaikystės nuolat girdint „Būk vyras“ tampa neaišku, apie ką buvimas vyru yra iš tiesų. O mes padėsime suprasti, ką tai reiškia ir kaip juo tapti. Padėsime berniukams suprasti jų pačių bei juos supančio pasaulio emocijas. Padėsime jiems emocijas atpažinti, įvardinti ir suvokti, iš kur jos ateina. To moko emocinis raštingumas.
+            Vyrų kalvės išskirtinumas - mes neatskleidžiame programos.
             <br/><br/>
-            Turime pripažinti ir suprasti, kad kiekvienas berniukas turi vidinį pasaulį. Kad kiekvienas berniukas yra jautrus ir kenčia. Dažnai suaugusiems – tiek sąmoningai, tiek pasąmoningai nelengva pripažinti berniukų emocinį pažeidžiamumą. Kai mes pradėsime mokyti savo sūnus vertinti ir gerbti jų emocinį pasaulį, kai pradėsime juose ugdyti emocinį raštingumą, pamatysime, kaip atsiveria jų širdys…
+            Skaitydamas programą, žmogus susiformuoja išankstines nuostatas ir susideda vaizdinį “kaip bus”. Ir jei vyksta kitaip, nei iš anksto sudarytas vaizdinys, gali prasidėti vidinis konfliktas - “aš ne to tikėjausi”. 
             <br/><br/>
-            Kiekvienas berniukas turi pamatyti ir patikėti, kad vyriškumas – tai atsakomybė už žodžius, mintis ir poelgius. Kad tai tvirta valia, skvarbus mąstymas, pagarba aplinkai, aštrus protas ir karšta, mylinti širdis, o visos emocijos yra svarbi gyvenimo dalis.
-            <br/><br/>
-            Viso šito išmokti ir pamatyti realius pavyzdžius kviečiame Vyrų kalvėje paaugliams.
+            Tai padeda mokytis susidraugauti su nežinomybe ir neapibrėžtumu. Taip pat pačios stovyklos metu, esant reikalui, darome programos pakeitimus - atliepiam ir taikomės prie grupės dinamikos.
           </AboutCampsDescription>
         </BlockWrap>
       </Block_layout>
@@ -55,10 +53,53 @@ const Paaugliu = () => {
           </Title>
 
           <AboutCampsDescription>
-            Prasmingos ir įsimintinos stovyklos su bendraamžiais ir vyrais, kurie ne tik moko, kaip gyventi,
+            Jūsų sūnus patirs įvairių naujų patirčių saugioje, palaikančioje, vyriškoje aplinkoje. Šios patirtys ves jūsų sūnų link geresnio savęs bei aplinkinių pažinimo. 
             <br/><br/>
-            bet patys taip ir gyvena. Kurie patys yra pavyzdžiai savo šeimoje, aplinkoje, visuomenėje.
+            Jūsų sūnus mokysis reikšti savo bei atpažinti kitų žmonių jausmus. Visą savaitgalį jis bus globojamas vyrų mentorių kurie ne tik lydės jį per įvairias patirtis, bet ir patys šiose patirtyse dalyvaus. 
+            <br/><br/>
+            Taip jūsų sūnus pamatys kaip įvairiose situacijose (laimėjime, pralaimėjime, nepatogume ir t.t.) elgiasi, bei reaguoja suaugę vyrai. 
+            <br/><br/>
+            Po tokio patirčių kupino savaitgalio jūsų sūnus grįš įgijęs:
           </AboutCampsDescription>
+        </BlockWrap>
+      </Block_layout>
+
+      <Block_layout>
+        <BlockWrap>
+          <IconsWrap>
+            <IconWrap>
+              <Icon src={"/images/axe.svg"} />
+              <IconDescription>Pasitikėjimo savo jėgomis</IconDescription>            
+            </IconWrap>
+            <IconWrap>
+              <Icon src={"/images/bendravimas.svg"} />
+              <IconDescription>Atsakomybę veikti</IconDescription>            
+            </IconWrap>
+            <IconWrap>
+              <Icon src={"/images/teamwork-2.svg"} />
+              <IconDescription>Nuotykį</IconDescription>            
+            </IconWrap>
+            <IconWrap>
+              <Icon src={"/images/prasmingas-darbas.svg"} />
+              <IconDescription>Vyriškus pavyzdžius</IconDescription>            
+            </IconWrap>
+            <IconWrap>
+              <Icon src={"/images/compassion.svg"} />
+              <IconDescription>Naujus draugus </IconDescription>            
+            </IconWrap>
+            <IconWrap>
+              <Icon src={"/images/atjauta.svg"} />
+              <IconDescription>Nebesijaus vienišas savo aplinkoje</IconDescription>            
+            </IconWrap>
+            <IconWrap>
+              <Icon src={"/images/loop.svg"} />
+              <IconDescription>Tęstinumą: 3 online susitikimus.</IconDescription>            
+            </IconWrap>
+            <IconWrap>
+              <Icon src={"/images/loop.svg"} />
+              <IconDescription>Galimybę prisijungti prie palaikančios grupės, kuri reguliariai, ištisus metus susitikinės tiek gyvai tiek internetu.</IconDescription>            
+            </IconWrap>
+          </IconsWrap>
         </BlockWrap>
       </Block_layout>
 
@@ -108,6 +149,43 @@ const AboutCampsDescription = styled.div`
   @media (max-width: ${MOBILE_SIZE}px) {
     font-size: ${PRIMARY_MOBILE_FONT_SIZE}px;
   }
+`;
+
+// ICONS BLOCK
+const IconsWrap = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  @media (max-width: ${MOBILE_SIZE}px) {
+    flex-direction: column;
+  }
+`;
+const IconWrap = styled.div`
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  margin: 10px 0;
+  width: 500px;
+
+  @media (max-width: ${MOBILE_SIZE}px) {
+    width: 100%;
+  }
+`;
+const Icon = styled.img`
+  height: 80px;
+  width: 80px;
+
+  @media (max-width: ${MOBILE_SIZE}px) {
+    height: 40px;
+    width: 40px;
+  }
+`;
+const IconDescription = styled.div`
+  display: flex;
+  font-size: ${PRIMARY_FONT_SIZE}px;
+  margin-left: 15px;
 `;
 
 export default Paaugliu;
