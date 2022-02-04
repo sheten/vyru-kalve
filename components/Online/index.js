@@ -16,7 +16,7 @@ const Online = () => {
       <Block_layout>
         <BlockWrap>
           <Title>
-            TOBULAS TĖTIS - STRATEGIJOS, KURIOS PADĖS SUKURTI STIPRŲ RYŠĮ SU SŪNUMI
+            AŠ ESU TĖTIS - STRATEGIJOS, KURIOS PADĖS SUKURTI STIPRŲ RYŠĮ SU SŪNUMI
           </Title>
 
           <VideoWrap controls>

@@ -24,12 +24,10 @@ const PrivacyPolicy = () => {
           
           <Title>JŪSŲ ASMENS DUOMENŲ VALDYTOJAS</Title>
 
-          Jūsų asmens duomenų valdytojas yra Viešoji įstaiga „Bundam“. Mūsų rekvizitai:
+          Jūsų asmens duomenų valdytojas yra Viešoji įstaiga &quot;Arbūzų cukrus&quot;. Mūsų rekvizitai:
           <br/><br/>
-          VšĮ „Bundam“ 193194949 Staniūnų 66, Panevėžys<br/>
-          AB “SEB Bankas”<br/>
-          Banko Kodas  70440<br/>
-          a/s nr.: LT357044060007737449
+          VšĮ &quot;Arbūzų cukrus&quot; 303086961 <br/>
+          Algirdo g. 10-17, Vilnius
           <br/><br/>
           Jeigu turite kokių nors klausimų, susijusių su asmens duomenų tvarkymu ar šia Privatumo politika, arba turite pasiūlymų, prašome susisiekti su mumis el. paštu info@whatansu.lt, telefonu +370 650 73886.
 

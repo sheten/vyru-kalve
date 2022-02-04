@@ -3,8 +3,8 @@ import { useEffect, useState } from 'react';
 import { DOMAIN_URL, TEST } from '../../config';
 
 var options = {
-  projectid: '227680',
-  sign_password: 'c94bb1bbd9c2b4a9c93fcf140c18e20e',
+  projectid: '227920',
+  sign_password: '961f1e759d4e9cca6754b1477b3b491a',
   accepturl: DOMAIN_URL + '/order-confirmation',
   cancelurl: DOMAIN_URL + '/order-failed',
   callbackurl: 'https://us-central1-vyru-kalve.cloudfunctions.net/acceptCallback',
@@ -13,8 +13,6 @@ var options = {
 
 const getPayseraPaymentUrl = (buyerData, orderid) => {
   const paysera = new Paysera(options);
-  console.log("Order ID", orderid);
-
 
   var params = {
     orderid: orderid,

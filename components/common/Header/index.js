@@ -5,20 +5,13 @@ import Main from "./Main"
 import Subheader from "./Subheader"
 import { MOBILE_SIZE } from "../../../config"
 
-const Header = ({ isRegistrationButton, isCalendar, isHomepage, dates }) => {
+const Header = ({ isRegistrationButton, isCalendar, isHomepage, dates, logoType }) => {
 
   return (
     <Wrap>
-      <Main isCalendar={isCalendar} isHomepage={isHomepage} dates={dates} />
+      <Main isCalendar={isCalendar} isHomepage={isHomepage} dates={dates} logoType={logoType} />
 
       <Subheader isRegistrationButton={isRegistrationButton} />
-      
-      {isHomepage ?
-        <Title>Aš esu tėtis - meilė sūnui yra nuotykis</Title>
-        :
-        // <Title>Vyrų kalvė - atsakomybė už žodžius mintis ir poelgius</Title>
-        null
-      }
     </Wrap>
   )
 }

@@ -22,7 +22,7 @@ const Guides_block = () => {
           <div>Detalus vadovo aprasymas</div>
           :     
           <> 
-            <Image src={"/images/MINDAUGAS.png"} alt="Vadovo nuotrauka" />
+            <Image src={"/images/mindaugas.jpg"} alt="Vadovo nuotrauka" />
             <Title>Mindaugas Vidugiris</Title>
             <Ul>
               <Li>Komandos formavimo ir mikrokilimato ekspertas</Li>
@@ -32,13 +32,13 @@ const Guides_block = () => {
         }
       </GuideWrap>
 
-      <GuideWrap onClick={() => handleGuideClick("Deividas")}>
-        {guideOpened === "Deividas" ?
+      <GuideWrap onClick={() => handleGuideClick("Erikas")}>
+        {guideOpened === "Erikas" ?
           <div>Detalus vadovo aprasymas</div>
           :     
           <> 
-            <Image src={"/images/DEIVIDAS.png"} alt="Vadovo nuotrauka" />
-            <Title>Deividas Bubnelis</Title>
+            <Image src={"/images/erikas.jpg"} alt="Vadovo nuotrauka" />
+            <Title>Erikas Adomovič</Title>
             <Ul>
               <Li>Patirtinių žygių vadovas</Li>
               <Li>Sporto treneris</Li>
@@ -52,7 +52,7 @@ const Guides_block = () => {
           <div>Detalus vadovo aprasymas</div>
           :     
           <> 
-            <Image src={"/images/JONAS.png"} alt="Vadovo nuotrauka" />
+            <Image src={"/images/jonas.jpg"} alt="Vadovo nuotrauka" />
             <Title>Jonas Bagdonavičius</Title>
             <Ul>
               <Li>Kalvystės entuziastas, muzikantas</Li>
@@ -67,7 +67,7 @@ const Guides_block = () => {
           <div>Detalus vadovo aprasymas</div>
           :     
           <> 
-            <Image src={"/images/EDVINAS.png"} alt="Vadovo nuotrauka" />
+            <Image src={"/images/edvinas.jpg"} alt="Vadovo nuotrauka" />
             <Title>Edvinas Rupšys</Title>
             <Ul>
               <Li>Vyrų kalvės vadovas</Li>
@@ -82,8 +82,38 @@ const Guides_block = () => {
           <div>Detalus vadovo aprasymas</div>
           :     
           <> 
-            <Image src={"/images/DARIUS.png"} alt="Vadovo nuotrauka" />
+            <Image src={"/images/darius.jpg"} alt="Vadovo nuotrauka" />
             <Title>Darius Krasauskas</Title>
+            <Ul>
+              <Li>Vyrų kalvės vadovas</Li>
+              <Li>Sveikos gyvensenos propaguotojas</Li>
+            </Ul>
+          </>
+        }
+      </GuideWrap>
+
+      <GuideWrap onClick={() => handleGuideClick("Adomas")}>
+        {guideOpened === "Adomas" ?
+          <div>Detalus vadovo aprasymas</div>
+          :     
+          <> 
+            <Image src={"/images/adomas.jpg"} alt="Vadovo nuotrauka" />
+            <Title>Adomas Sviklas</Title>
+            <Ul>
+              <Li>Vyrų kalvės vadovas</Li>
+              <Li>Sveikos gyvensenos propaguotojas</Li>
+            </Ul>
+          </>
+        }
+      </GuideWrap>
+
+      <GuideWrap onClick={() => handleGuideClick("Marius")}>
+        {guideOpened === "Marius" ?
+          <div>Detalus vadovo aprasymas</div>
+          :     
+          <> 
+            <Image src={"/images/marius.jpg"} alt="Vadovo nuotrauka" />
+            <Title>Marius Kaitulis</Title>
             <Ul>
               <Li>Vyrų kalvės vadovas</Li>
               <Li>Sveikos gyvensenos propaguotojas</Li>
@@ -116,16 +146,14 @@ const GuideWrap = styled.div`
   display: flex;
   cursor: pointer;
   flex-direction: column;
-  height: 400px;
+  height: 550px;
   margin: 20px;
   width: 320px;
 `;
 const Image = styled.img`
-  height: 300px;
   width: 300px;
 
   @media (max-width: ${MOBILE_SIZE}px) {
-    height: 250px;
     width: 250px;
   }
 `;

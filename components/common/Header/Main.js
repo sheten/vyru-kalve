@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 import { MOBILE_SIZE } from "../../../config"
 
-const Main = ({ isCalendar, isHomepage, dates }) => {
+const Main = ({ isCalendar, isHomepage, dates, logoType }) => {
   const [windowWidth, setWindowWidth] = useState(0);
   const [upcomingDate, setUpcomingDate] = useState("");
 
@@ -36,7 +36,7 @@ const Main = ({ isCalendar, isHomepage, dates }) => {
           {isHomepage ?
             <LogoImage src={"/images/VYRU_KALVE_3.png"} alt="LOGO" />
             :
-            <LogoImage src={"/images/VYRU_KALVE_1.png"} alt="LOGO" />
+            logoType === "tetis" ? <LogoImage src={"/images/meileSunuiLOGO1.png"} alt="LOGO" /> :<LogoImage src={"/images/VYRU_KALVE_1.png"} alt="LOGO" />
           }
           </LogoImageWrap>
         </Link>

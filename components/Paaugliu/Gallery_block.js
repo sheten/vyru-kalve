@@ -7,14 +7,14 @@ const Gallery_block = () => {
 
   return (
     <Wrap>
-      <Image src="/images/CAMP1.png" alt="Nuotrauka" />
-      <Image src="/images/CAMP2.png" alt="Nuotrauka" />
-      <Image src="/images/CAMP3.png" alt="Nuotrauka" />
-      <Image src="/images/CAMP1.png" alt="Nuotrauka" />
-      <Image src="/images/CAMP1.png" alt="Nuotrauka" />
-      <Image src="/images/CAMP2.png" alt="Nuotrauka" />
-      <Image src="/images/CAMP3.png" alt="Nuotrauka" />
-      <Image src="/images/CAMP1.png" alt="Nuotrauka" />
+      <Image src="/images/paaugliu1.jpg" alt="Nuotrauka" />
+      <Image src="/images/paaugliu6.jpg" alt="Nuotrauka" />
+      <Image src="/images/paaugliu3.jpg" alt="Nuotrauka" />
+      <Image src="/images/paaugliu4.jpg" alt="Nuotrauka" />
+      <Image src="/images/paaugliu5.jpg" alt="Nuotrauka" />
+      <Image src="/images/paaugliu2.jpg" alt="Nuotrauka" />
+      <Image src="/images/paaugliu7.jpg" alt="Nuotrauka" />
+      <Image src="/images/paaugliu8.jpg" alt="Nuotrauka" />
     </Wrap>
   )
 }
@@ -34,8 +34,9 @@ const Wrap = styled.div`
 `;
 const Image = styled.img`
   height: 275px;
-  width: 275px;
+  object-fit: cover;
   margin: 10px;
+  width: 275px;
 `;
 
 export default Gallery_block;

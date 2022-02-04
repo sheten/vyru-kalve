@@ -6,6 +6,7 @@ import Icons_block from "../common/Icons_block"
 import Registration_block from "../common/Registration_block"
 import Gallery_block from "./Gallery_block"
 import Cover_image from "../common/Cover_image"
+import Primary_button from '../common/Primary_button';
 import Footer from "../common/Footer"
 import Block_layout from "../common/Block_layout"
 import { MOBILE_SIZE, HEADER_MOBILE_FONT_SIZE, PRIMARY_MOBILE_FONT_SIZE, PRIMARY_FONT_SIZE } from "../../config"
@@ -31,7 +32,7 @@ const Tecio_sunaus = () => {
 
   return (
     <Wrap>
-      <Header isRegistrationButton={true} isCalendar={true} dates={dates} />
+      <Header isRegistrationButton={true} isCalendar={true} dates={dates} logoType="tetis" />
 
       <Cover_image imageSrc={"/images/TEVU_SUNU_COVER.png"} />
 
@@ -77,6 +78,12 @@ const Tecio_sunaus = () => {
         </BlockWrap>
       </Block_layout>
 
+      <ButtonWrap>
+        <ButtonInnerWrap onClick={() => alert('Nuoroda i apmokejima')}>
+          <Primary_button title="Registracija" />
+        </ButtonInnerWrap>
+      </ButtonWrap>
+
       <Block_layout>
         <BlockWrap>
           <IconsWrap>
@@ -116,6 +123,11 @@ const Tecio_sunaus = () => {
         <Registration_block dates={dates} prices={prices} />
       </Block_layout>
 
+      <VideoWrap controls >
+        <source src="/images/tecioVideo.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </VideoWrap>
+
       <Block_layout>
         <BlockWrap>
           <Title>
@@ -125,6 +137,12 @@ const Tecio_sunaus = () => {
           <Gallery_block />
         </BlockWrap>
       </Block_layout>
+
+      <ButtonWrap>
+        <ButtonInnerWrap onClick={() => alert('Nuoroda i apmokejima')}>
+          <Primary_button title="Registracija" />
+        </ButtonInnerWrap>
+      </ButtonWrap>
 
       <Footer />
     </Wrap>
@@ -195,6 +213,31 @@ const IconDescription = styled.div`
   display: flex;
   font-size: ${PRIMARY_FONT_SIZE}px;
   margin-left: 15px;
+`;
+
+// REGISTRATION BUTTON
+const ButtonWrap = styled.div`
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin: 30px 0;
+  width: 100%;
+
+  @media (max-width: ${MOBILE_SIZE}px) {
+    margin: 10px 0;
+  }
+`;
+const ButtonInnerWrap = styled.div`
+  height: 45px;
+  width: 300px;
+`;
+
+// VIDEO
+const VideoWrap = styled.video`
+  display: flex;
+  height: auto;
+  margin-top: 30px;
+  width: 100%;
 `;
 
 export default Tecio_sunaus;
