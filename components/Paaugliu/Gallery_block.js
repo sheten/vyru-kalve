@@ -7,14 +7,14 @@ const Gallery_block = () => {
 
   return (
     <Wrap>
-      <Image src="/images/paaugliu1.jpg" alt="Nuotrauka" />
-      <Image src="/images/paaugliu6.jpg" alt="Nuotrauka" />
-      <Image src="/images/paaugliu3.jpg" alt="Nuotrauka" />
-      <Image src="/images/paaugliu4.jpg" alt="Nuotrauka" />
-      <Image src="/images/paaugliu5.jpg" alt="Nuotrauka" />
-      <Image src="/images/paaugliu2.jpg" alt="Nuotrauka" />
-      <Image src="/images/paaugliu7.jpg" alt="Nuotrauka" />
-      <Image src="/images/paaugliu8.jpg" alt="Nuotrauka" />
+      <Image src="/images/paaugliams1.jpg" alt="Nuotrauka" />
+      <Image src="/images/paaugliams6.jpg" alt="Nuotrauka" />
+      <Image src="/images/paaugliams3.jpg" alt="Nuotrauka" />
+      <Image src="/images/paaugliams4.jpg" alt="Nuotrauka" />
+      <Image src="/images/paaugliams5.jpg" alt="Nuotrauka" />
+      <Image src="/images/paaugliams2.jpg" alt="Nuotrauka" />
+      <Image src="/images/paaugliams7.jpg" alt="Nuotrauka" />
+      <Image src="/images/paaugliams8.jpg" alt="Nuotrauka" />
     </Wrap>
   )
 }
