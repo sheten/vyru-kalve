@@ -32,7 +32,7 @@ const Tecio_sunaus = () => {
 
   return (
     <Wrap>
-      <Header isRegistrationButton={true} isCalendar={true} dates={dates} logoType="tetis" />
+      <Header isRegistrationButton={true} isCalendar={true} dates={dates} prices={prices} logoType="tetis" />
 
       <Cover_image imageSrc={"/images/TEVU_SUNU_COVER.png"} />
 
@@ -78,11 +78,9 @@ const Tecio_sunaus = () => {
         </BlockWrap>
       </Block_layout>
 
-      <ButtonWrap>
-        <ButtonInnerWrap onClick={() => alert('Nuoroda i apmokejima')}>
-          <Primary_button title="Registracija" />
-        </ButtonInnerWrap>
-      </ButtonWrap>
+      <Block_layout>
+        <Registration_block dates={dates} prices={prices} />
+      </Block_layout>
 
       <Block_layout>
         <BlockWrap>
@@ -119,6 +117,36 @@ const Tecio_sunaus = () => {
         </BlockWrap>
       </Block_layout>
 
+      <PricesWrap>
+        <InfoWrap>
+          <Image src="/images/KALENDORIUS_ICON.png" alt="Ikonėlė" />
+
+          <DescriptionWrap>
+            <DescriptionTitle>DATOS:</DescriptionTitle>
+
+            {dates.map((date) => {
+              return (
+                <Description key={date.id}>{date.year} {date.month} {date.days}</Description>
+              )
+            })}
+          </DescriptionWrap>
+        </InfoWrap>
+
+        <InfoWrap>
+          <Image src="/images/KAINA_ICON.png" alt="Ikonėlė" />
+
+          <DescriptionWrap>
+            <DescriptionTitle>KAINOS:</DescriptionTitle>
+
+            {prices.map((price) => {
+              return (
+                <Description key={price.id}>{price.option}</Description>
+              )
+            })}
+          </DescriptionWrap>
+        </InfoWrap>
+      </PricesWrap>
+
       <Block_layout>
         <Registration_block dates={dates} prices={prices} />
       </Block_layout>
@@ -138,11 +166,7 @@ const Tecio_sunaus = () => {
         </BlockWrap>
       </Block_layout>
 
-      <ButtonWrap>
-        <ButtonInnerWrap onClick={() => alert('Nuoroda i apmokejima')}>
-          <Primary_button title="Registracija" />
-        </ButtonInnerWrap>
-      </ButtonWrap>
+      <Registration_block dates={dates} prices={prices} />
 
       <Footer />
     </Wrap>
@@ -215,21 +239,53 @@ const IconDescription = styled.div`
   margin-left: 15px;
 `;
 
-// REGISTRATION BUTTON
-const ButtonWrap = styled.div`
-  align-items: center;
+// PRICES WRAP
+const PricesWrap = styled.div`
   display: flex;
-  justify-content: center;
+  height: auto;
+  justify-content: space-around;
   margin: 30px 0;
   width: 100%;
 
   @media (max-width: ${MOBILE_SIZE}px) {
-    margin: 10px 0;
+    flex-direction: column;
   }
 `;
-const ButtonInnerWrap = styled.div`
-  height: 45px;
-  width: 300px;
+const InfoWrap = styled.div`
+  display: flex;
+
+  @media (max-width: ${MOBILE_SIZE}px) {
+    margin-top: 25px;
+  }
+`;
+const Image = styled.img`
+  height: 200px;
+  margin-right: 15px;
+  width: 200px;
+
+  @media (max-width: ${MOBILE_SIZE}px) {
+    height: 150px;
+    width: 150px;
+  }
+`;
+
+// DESCRIPTION
+const DescriptionWrap = styled.div`
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+`;
+const DescriptionTitle = styled.div`
+  display: flex;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 20px;
+`;
+const Description = styled.div`
+  display: flex;
+  font-size: ${PRIMARY_MOBILE_FONT_SIZE};
+  margin: 10px;
 `;
 
 // VIDEO

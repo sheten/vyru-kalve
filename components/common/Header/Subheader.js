@@ -5,8 +5,9 @@ import Link from 'next/link';
 import Primary_button from "../Primary_button"
 
 import { MOBILE_SIZE, PRIMARY_MOBILE_FONT_SIZE } from "../../../config"
+import Registration_block from '../Registration_block';
 
-const Subheader = ({ isRegistrationButton }) => {
+const Subheader = ({ isRegistrationButton, dates, prices }) => {
   const [windowWidth, setWindowWidth] = useState(0);
 
   useEffect(() => {
@@ -49,7 +50,7 @@ const Subheader = ({ isRegistrationButton }) => {
       {windowWidth < MOBILE_SIZE ?
         isRegistrationButton ?
           <ButtonWrap style={{marginTop: "20px", width: "300px"}}>
-            <Primary_button title="Registracija" />
+            <Registration_block title="Registracija" dates={dates} prices={prices} />
           </ButtonWrap>
           :
           null

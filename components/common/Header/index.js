@@ -5,13 +5,13 @@ import Main from "./Main"
 import Subheader from "./Subheader"
 import { MOBILE_SIZE } from "../../../config"
 
-const Header = ({ isRegistrationButton, isCalendar, isHomepage, dates, logoType }) => {
+const Header = ({ isRegistrationButton, isCalendar, isHomepage, dates, prices, logoType }) => {
 
   return (
     <Wrap>
       <Main isCalendar={isCalendar} isHomepage={isHomepage} dates={dates} logoType={logoType} />
 
-      <Subheader isRegistrationButton={isRegistrationButton} />
+      <Subheader isRegistrationButton={isRegistrationButton} dates={dates} prices={prices} />
     </Wrap>
   )
 }
