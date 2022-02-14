@@ -5,7 +5,7 @@ import { DOMAIN_URL, TEST } from '../../config';
 var options = {
   projectid: '227920',
   sign_password: '961f1e759d4e9cca6754b1477b3b491a',
-  accepturl: DOMAIN_URL + '/order-confirmation',
+  accepturl: "https://forms.gle/csvJK5WmuR4MM9om6",
   cancelurl: DOMAIN_URL + '/order-failed',
   callbackurl: 'https://us-central1-vyru-kalve.cloudfunctions.net/acceptCallback',
   test: 1,
@@ -18,8 +18,10 @@ const getPayseraPaymentUrl = (buyerData, orderid) => {
     orderid: orderid,
     p_email: buyerData.email,
     currency: 'EUR',
+    amount: parseFloat(buyerData.campPrice) * 100,
     p_firstname: buyerData.name,
   };
+  console.log("params",params)
   return paysera.buildRequestUrl(params)
 }
 

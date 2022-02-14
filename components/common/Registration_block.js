@@ -4,19 +4,19 @@ import { useDispatch } from 'react-redux'
 
 import Primary_button from "./Primary_button"
 import Registration_modal from "./Registration_modal"
-import { MOBILE_SIZE, PRIMARY_MOBILE_FONT_SIZE, TEST } from "../../config"
+import { TEST } from "../../config"
 import { createNewOrder } from "../../redux/paymentsSlice"
 import { getPayseraPaymentUrl } from "./Paysera_checkout"
 import { customAlphabet } from 'nanoid';
 
-const Registration_block = ({dates, prices}) => {
+const Registration_block = ({dates, prices, desktopDesign, online}) => {
   const dispatch = useDispatch();
   const [openModal, setOpenModal] = useState(false);
   const [buyerDataMissing, setBuyerDataMissing] = useState(false);
-  const [buyerData, setBuyerData] = useState({ email: "", name: "", phone: "", campDate: "Vasario 2d.", campPrice: {title: "5Eur", price: 5} });
+  const [buyerData, setBuyerData] = useState({ email: "", name: "", campDate: "", campPrice: undefined });
 
   const handlePurchaseClick = async () => {
-    const buyerDataCheck = buyerData.email !== '' && buyerData.name !== '' && buyerData.phone !== '';
+    const buyerDataCheck = buyerData.email !== '' && buyerData.name !== '' && buyerData.campDate !== '' && buyerData.campPrice;
 
     if (buyerDataCheck) {
       const nanoid = customAlphabet('123456789ABCDEFGHIJKLMNPQRSTUVWXYZ', TEST ? 4 : 6);
@@ -29,7 +29,7 @@ const Registration_block = ({dates, prices}) => {
       if (res.payload === "OK") {
         var url = "";
         url = getPayseraPaymentUrl(buyerData, orderid);
-        console.log(url);
+        console.log("URL'as:", url);
         window.open(url, "_self");
       } else {
         alert("Įvyko klaida, pabandykite dar kartą vėliau arba susisiekite su blauskas@gmail.com.");
@@ -45,11 +45,19 @@ const Registration_block = ({dates, prices}) => {
     setBuyerData({ ...buyerData, [id]: e.target.value });
   };
 
+  const handleCampSelection = (date) => {
+    setBuyerData({ ...buyerData, campDate: date });
+  };
+
+  const handlePriceSelection = (price) => {
+    setBuyerData({ ...buyerData, campPrice: price });
+  };
+
   return (
     <Wrap>
-    {openModal ? <Registration_modal dates={dates} handleBuyerDataChange={handleBuyerDataChange} buyerData={buyerData} buyerDataMissing={buyerDataMissing} handleConfirmation={handlePurchaseClick} handleModalClose={()=> setOpenModal(false)} /> : null}
+    {openModal ? <Registration_modal dates={dates} prices={prices} handleCampSelection={handleCampSelection} handlePriceSelection={handlePriceSelection} handleBuyerDataChange={handleBuyerDataChange} buyerData={buyerData} buyerDataMissing={buyerDataMissing} handleConfirmation={handlePurchaseClick} handleModalClose={()=> setOpenModal(false)} /> : null}
 
-      <ButtonWrap onClick={() => setOpenModal(true)}>
+      <ButtonWrap desktopDesign={desktopDesign} onClick={() => online ? undefined : setOpenModal(true)}>
         <Primary_button title="Registracija" />
       </ButtonWrap>
     </Wrap>
@@ -66,8 +74,8 @@ const Wrap = styled.div`
 
 // REGISTRATION BUTTON
 const ButtonWrap = styled.div`
-  height: 45px;
-  width: 300px;
+  height: ${props => props.desktopDesign ? 40 : 45}px;
+  width: ${props => props.desktopDesign ? 200 : 300}px;
 `;
 
 

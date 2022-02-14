@@ -13,13 +13,22 @@ import { MOBILE_SIZE, HEADER_MOBILE_FONT_SIZE, PRIMARY_FONT_SIZE, PRIMARY_MOBILE
 
 const Paaugliu = () => {
 
-  const dates = [
-    {id: 0, year: "2022", month: "vasario", days: "25 — 27 d.", dateToCheck: "2022-02-25"},
-  ]
+  const dates = []
 
   const prices = [
     {id: 0, option: "250 € vienam paaugliui"},
   ]
+
+  const defaultDates = [
+    {id: 0, year: "2022", month: "vasario", days: "25 — 27 d.", dateToCheck: "2022-02-25"},
+  ]
+
+  defaultDates.map(date => {
+    var CampDate = date.dateToCheck;
+    var CurrentDate = new Date();
+    CampDate = new Date(CampDate);
+    if (CampDate > CurrentDate) dates.push(date);
+  })
 
   return (
     <Wrap>
@@ -69,10 +78,6 @@ const Paaugliu = () => {
       </Block_layout>
 
       <Block_layout>
-        <Registration_block dates={dates} prices={prices} />
-      </Block_layout>
-
-      <Block_layout>
         <BlockWrap>
           <IconsWrap>
             <IconWrap>
@@ -97,6 +102,10 @@ const Paaugliu = () => {
             </IconWrap>
           </IconsWrap>
         </BlockWrap>
+      </Block_layout>
+
+      <Block_layout>
+        <Registration_block dates={dates} prices={prices} />
       </Block_layout>
 
       <Block_layout>
@@ -147,12 +156,15 @@ const Paaugliu = () => {
 
           <DescriptionWrap>
             <DescriptionTitle>DATOS:</DescriptionTitle>
-
-            {dates.map((date) => {
-              return (
-                <Description key={date.id}>{date.year} {date.month} {date.days}</Description>
-              )
-            })}
+            {dates.length === 0 ?
+              <Description>Šiuo metu nėra numatytų datų</Description>
+              :
+              dates.map((date) => {
+                return (
+                  <Description key={date.id}>{date.year} {date.month} {date.days}</Description>
+                )
+              })
+            }
           </DescriptionWrap>
         </InfoWrap>
 

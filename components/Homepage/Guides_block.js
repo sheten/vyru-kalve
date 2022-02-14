@@ -24,7 +24,9 @@ const Guides_block = () => {
           </MoreInfoWrap>
           :     
           <> 
+          <ImageWrap>
             <Image src={"/images/mindaugas.jpg"} alt="Vadovo nuotrauka" />
+            </ImageWrap>
             <Title>Mindaugas Vidugiris</Title>
             <Ul>
               <Li>Sertifikuotas Marshall Goldsmith koučeris</Li>
@@ -38,11 +40,13 @@ const Guides_block = () => {
       <GuideWrap onClick={() => handleGuideClick("Erikas")}>
         {guideOpened === "Erikas" ?
           <MoreInfoWrap>
-            <div style={{textAlign: "center"}}>Detalus vadovo aprašymas</div>
+            <div style={{textAlign: "center"}}>Į Vyrų Kalvę patekau žmonos ir draugo Igno Bakėjaus dėka. Nuo pirmosios stovyklos praėjo jau ketveri metai! Nuo to laiko pasikeitė viskas - darbai, aplinka, laisvalaikis, prioritetai ir suprantu, kad ir toliau dar daug kas keisis mano gyvenime. Bet šitas „branduolys“, kurį dabar turiu, šitoj bendruomenėj, kurioj esu, leidžia man visiškai būt savimi, visokiu: piktu, irzliu, geru, laimingu, tikru. Galiu čia būti visoks ir žinau, kad bet kada prireikus rimtos pagalbos, šitie vyrai man tikrai padės kuo galės. Jau po pirmosios Vyrų Kalvės žinojau, kad noriu būti vienas iš jų, būti tarp jų, būti su vyrais, kurie tuo metu man buvo labai nepatogūs, keisti, bet mačiau, kaip jų aplinkoje, jų šeimose tai veikia, tad...šiandien aš - vienas iš jų</div>
           </MoreInfoWrap>
           :     
           <> 
+          <ImageWrap>
             <Image src={"/images/erikas.jpg"} alt="Vadovo nuotrauka" />
+            </ImageWrap>
             <Title>Erikas Adomovičius</Title>
             <Ul>
               <Li>Trijų vaikų tėtis</Li>
@@ -61,7 +65,9 @@ const Guides_block = () => {
           </MoreInfoWrap>
           :     
           <> 
+          <ImageWrap>
             <Image src={"/images/jonas.jpg"} alt="Vadovo nuotrauka" />
+            </ImageWrap>
             <Title>Jonas Bagdonavičius</Title>
             <Ul>
               <Li>Žmogus, vyras, tėtis</Li>
@@ -79,7 +85,9 @@ const Guides_block = () => {
           </MoreInfoWrap>
           :     
           <> 
+          <ImageWrap>
             <Image src={"/images/edvinas.jpg"} alt="Vadovo nuotrauka" />
+            </ImageWrap>
             <Title>Edvinas Rupšys</Title>
             <Ul>
               <Li>Vyrų kalvės paaugliams bendrakūrėjas ir vadovas</Li>
@@ -103,7 +111,9 @@ const Guides_block = () => {
           </MoreInfoWrap>
           :     
           <> 
+          <ImageWrap>
             <Image src={"/images/darius.jpg"} alt="Vadovo nuotrauka" />
+            </ImageWrap>
             <Title>Darius Krasauskas</Title>
             <Ul>
               <Li>Vyras savo žmonai</Li>
@@ -125,7 +135,9 @@ const Guides_block = () => {
           </MoreInfoWrap>
           :     
           <> 
-            <Image src={"/images/adomas.jpg"} alt="Vadovo nuotrauka" />
+            <ImageWrap>
+              <Image src={"/images/adomas.jpg"} alt="Vadovo nuotrauka" />
+            </ImageWrap>
             <Title>Adomas Sviklas</Title>
             <Ul>
               <Li>Skulptorius</Li>
@@ -150,7 +162,9 @@ const Guides_block = () => {
           </MoreInfoWrap>
           :     
           <> 
-            <Image src={"/images/marius.jpg"} alt="Vadovo nuotrauka" />
+            <ImageWrap>
+              <Image style={{height: "460px"}} src={"/images/marius.jpg"} alt="Vadovo nuotrauka" />
+            </ImageWrap>
             <Title>Marius Kaitulis</Title>
             <Ul>
               <Li>Tėtis, vyras, brolis, sūnus, taip pat - fotografas</Li>
@@ -170,7 +184,9 @@ const Guides_block = () => {
           </MoreInfoWrap>
           :     
           <> 
-            {/* <Image src={"/images/darisus.jpg"} alt="Vadovo nuotrauka" /> */}
+            <ImageWrap>
+              <Image src={"/images/deividas.jpg"} alt="Vadovo nuotrauka" />
+            </ImageWrap>
             <Title>Deividas Bubnelis</Title>
             <Ul>
               <Li>Patirtinių žygių vadovas</Li>
@@ -184,11 +200,13 @@ const Guides_block = () => {
       <GuideWrap onClick={() => handleGuideClick("Mantas")}>
         {guideOpened === "Mantas" ?
           <MoreInfoWrap>
-            <div style={{textAlign: "center"}}>Detalus vadovo aprašymas</div>
+            <div style={{textAlign: "center"}}>Tikiu, kad absoliučiai visos problemos yra išsprendžiamos. Aš kviečiu žmonės suprasti savo vidinius konfliktus ir juos spręsti diplomatiškai, be kovos su savimi. Galiausiai, manau, kad lengviausia augti ir tobulėti yra tyloje, kvėpuojant ir leidžiant sau laisvai judėti.</div>
           </MoreInfoWrap>
           :     
           <> 
-            {/* <Image src={"/images/darsius.jpg"} alt="Vadovo nuotrauka" /> */}
+          <ImageWrap>
+            <Image src={"/images/mantas.jpg"} alt="Vadovo nuotrauka" />
+            </ImageWrap>
             <Title>Mantas Blaževičius</Title>
             <Ul>
               <Li>NLP ir koučingo meistras (ICTA)</Li>
@@ -199,8 +217,6 @@ const Guides_block = () => {
           </>
         }
       </GuideWrap>
-
-      {windowWidth < MOBILE_SIZE ? null : <GuideWrap />}
     </Wrap>
   )
 }
@@ -238,12 +254,20 @@ const MoreInfoWrap = styled.div`
   justify-content: center;
   padding: 10px;
 `;
-const Image = styled.img`
+const ImageWrap = styled.div`
+  display: flex;
+  height: 460px;
   width: 300px;
 
   @media (max-width: ${MOBILE_SIZE}px) {
     width: 250px;
   }
+`;
+const Image = styled.img`
+display: flex;
+height: 100%;
+  object-fit: cover;
+  width: 100%;
 `;
 const Title = styled.div`
   font-size: 20px;

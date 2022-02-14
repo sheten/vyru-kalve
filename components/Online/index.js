@@ -11,7 +11,7 @@ const Online = () => {
 
   return (
     <Wrap>
-      <Header isRegistrationButton={true} />
+      <Header isRegistrationButton={true} online={true}/>
 
       <Block_layout>
         <BlockWrap>
@@ -146,6 +146,12 @@ const Online = () => {
           <div>🌐 <strong>Žmonės.lt</strong> <a style={{textDecoration: "underline"}} rel="noreferrer" target="_blank" href="https://www.zmones.lt/naujiena/mindaugas-vidugiris-ka-esminio-pamirsome-siuolaikineje-svietimo-sistemoje.b85f73c7-e654-11e8-86a7-aa000054c883">Mindaugas Vidugiris: ką esminio pamiršome šiuolaikinėje švietimo sistemoje?</a></div>
         </NewslettersWrap>
       </Block_layout>
+
+      <ButtonWrap>
+        <ButtonInnerWrap onClick={() => alert('Nuoroda i apmokejima')}>
+          <Primary_button title="Registracija" />
+        </ButtonInnerWrap>
+      </ButtonWrap>
 
       <Block_layout>
         <div style={{backgroundColor: "#005C71", borderRadius: "5px", padding: "10px 35px", margin: "50px 0"}}>

@@ -7,7 +7,7 @@ import Primary_button from "../Primary_button"
 import { MOBILE_SIZE, PRIMARY_MOBILE_FONT_SIZE } from "../../../config"
 import Registration_block from '../Registration_block';
 
-const Subheader = ({ isRegistrationButton, dates, prices }) => {
+const Subheader = ({ isRegistrationButton, dates, prices, online }) => {
   const [windowWidth, setWindowWidth] = useState(0);
 
   useEffect(() => {
@@ -40,7 +40,7 @@ const Subheader = ({ isRegistrationButton, dates, prices }) => {
           :
           isRegistrationButton ?
             <ButtonWrap>
-              <Primary_button title="Registracija" />
+              <Registration_block title="Registracija" dates={dates} prices={prices} desktopDesign={true} online={online}/>
             </ButtonWrap>
             :
             null
@@ -50,7 +50,7 @@ const Subheader = ({ isRegistrationButton, dates, prices }) => {
       {windowWidth < MOBILE_SIZE ?
         isRegistrationButton ?
           <ButtonWrap style={{marginTop: "20px", width: "300px"}}>
-            <Registration_block title="Registracija" dates={dates} prices={prices} />
+            <Registration_block title="Registracija" dates={dates} prices={prices} online={online} />
           </ButtonWrap>
           :
           null

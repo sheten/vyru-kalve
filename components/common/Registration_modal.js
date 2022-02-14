@@ -3,8 +3,7 @@ import styled from 'styled-components'
 
 import { PRIMARY_COLOR } from "../../config"
 
-const Registration_modal = ({ dates, handleConfirmation, handleModalClose, handleBuyerDataChange, buyerDataMissing, buyerData }) => {
-  const [selectedDate, setSelectedDate] = useState();
+const Registration_modal = ({ dates, prices, handleCampSelection, handlePriceSelection, handleConfirmation, handleModalClose, handleBuyerDataChange, buyerDataMissing, buyerData }) => {
   const [missingInputTitle, setMissingInputTitle] = useState();
 
   useEffect(() => {
@@ -14,43 +13,68 @@ const Registration_modal = ({ dates, handleConfirmation, handleModalClose, handl
   const handleBuyerDataMissing = () => {
     if (buyerData.name === '') handleHighlightInput("name");
     if (buyerData.email === '') handleHighlightInput("email");
-    if (buyerData.phone === '') handleHighlightInput("phone");
+    if (buyerData.campDate === '') handleHighlightInput("camps");
+    if (buyerData.campPrice === undefined) handleHighlightInput("prices");
   };
 
   const handleHighlightInput = (inputName) => {
     setMissingInputTitle(inputName);
   };
   
-  const handleOmnivaLocationChange = (e) => {
-    setSelectedDate(e.target.value);
+  const handleSelectedCamp = (e) => {
+    handleCampSelection(dates[e.target.selectedIndex - 1].dateToCheck)
+  };
+  
+  const handleSelectedPrice = (e) => {
+    handlePriceSelection(prices[e.target.selectedIndex - 1].value)
+  };
+
+  const backgroundClicked = (e) => {
+    if (e.target.id === "wrap") handleModalClose();
   };
 
   return (
-    <Wrap key={missingInputTitle ? missingInputTitle : 1}>
-      <CancelButton onClick={() => handleModalClose()}>X</CancelButton>
-      <Title>Registracijos forma</Title>
+    <>
+      <BackgroundWrap id="wrap" onClick={backgroundClicked} />
 
-      <Input id="email" value={buyerData.email} placeholder={"EL. PAŠTAS *"} onChange={e => handleBuyerDataChange(e)} error={buyerData.email === '' && buyerDataMissing} />
-      <Input id="name" value={buyerData.name} placeholder={"VARDAS PAVARDĖ *"} onChange={e => handleBuyerDataChange(e)} error={buyerData.name === '' && buyerDataMissing} />
-      <Input id="phone" value={buyerData.phone} placeholder={"TELEFONAS *"} onChange={e => handleBuyerDataChange(e)} error={buyerData.phone === '' && buyerDataMissing} />
-      <Select onChange={handleOmnivaLocationChange} name="camps-dates" id="camps">
-        <option value="Pasirinkite data..." selected>Pasirinkite data...</option>
-        {dates.map((date) => (<option key={date.id}>{date.year} {date.month} {date.days}</option>))}
-      </Select>
+      <Wrap key={missingInputTitle ? missingInputTitle : 1}>
+        <CancelButton onClick={() => handleModalClose()}>X</CancelButton>
+        <Title>Registracijos forma</Title>
 
-      <ButtonWrap>
-        <Register onClick={() => handleConfirmation()}>Registruotis</Register>
-      </ButtonWrap>
-    </Wrap>
+        <Input id="name" value={buyerData.name} placeholder={"VARDAS PAVARDĖ *"} onChange={e => handleBuyerDataChange(e)} error={buyerData.name === '' && buyerDataMissing} />
+        <Input id="email" value={buyerData.email} placeholder={"EL. PAŠTAS *"} onChange={e => handleBuyerDataChange(e)} error={buyerData.email === '' && buyerDataMissing} />
+
+        <Select onChange={handleSelectedCamp} name="camps-dates" id="camps" error={buyerData.campDate === '' && buyerDataMissing} >
+          <option selected disabled>Pasirinkite data...</option>
+          {dates.map((date) => (<option key={date.id}>{date.year} {date.month} {date.days}</option>))}
+        </Select>
+
+        <Select onChange={handleSelectedPrice} name="camps-prices" id="prices" error={buyerData.campPrice === undefined && buyerDataMissing} >
+          <option selected disabled>Pasirinkite tipą...</option>
+          {prices.map((price) => (<option key={price.id}>{price.option}</option>))}
+        </Select>
+
+        <ButtonWrap>
+          <Register onClick={() => handleConfirmation()}>Apmokėti</Register>
+        </ButtonWrap>
+      </Wrap>
+    </>
   )
 }
 
+const BackgroundWrap = styled.div`
+  background-color: #16273D95;
+  bottom: 0;
+  cursor: pointer;
+  height: 100%;
+  position: fixed;
+  right: 0;
+  width: 100%;
+  z-index: 5;
+`;
 const Wrap = styled.div`
   align-items: center;
   background-color: ${PRIMARY_COLOR};
-  border-image: linear-gradient(45deg, rgba(255, 230, 0, 1), rgba(250, 166, 3, 0.8), rgba(255, 107, 0, 0.69)) 1;
-  border-style: solid;
-  border-width: 2px;
   box-shadow: 0 0 20px grey;
   border-radius: 5px;
   display: flex;
@@ -85,7 +109,7 @@ const Title = styled.div`
 `;
 const Input = styled.input`
   border: none;
-  border-radius: 6px;
+  border-radius: 3px;
   height: 30px;
   margin-bottom: 5px;
   padding-left: 10px;
@@ -94,8 +118,10 @@ const Input = styled.input`
 `;
 const Select = styled.select`
   border: 1px solid #D1C3B4;
+  border-radius: 3px;
   height: 35px;
   outline: none;
+  border: ${props => props.error ? '2px solid red' : ''};
   width: 250px;
 `;
 
@@ -109,7 +135,7 @@ const ButtonWrap = styled.div`
 const Register = styled.button`
   background-color: #F0774B;
   border: none;
-  border-radius: 6px;
+  border-radius: 3px;
   color: white;
   cursor: pointer;
   font-size: 14px;

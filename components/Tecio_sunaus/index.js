@@ -18,17 +18,26 @@ const Tecio_sunaus = () => {
     setWindowWidth(window.innerWidth);
   }, []);
 
-  const dates = [
+  const dates = []
+
+  const prices = [
+    {id: 0, option: "320 € vienam vyrui", value: 320.00},
+    {id: 1, option: "420 € tėčiui ir sūnui", value: 420.00},
+    {id: 2, option: "520 € (trims šeimos vyrams)", value: 520.00}
+  ]
+
+  const defaultDates = [
     {id: 0, year: "2022", month: "sausio", days: "28 — 30 d.", dateToCheck: "2022-01-28"},
     {id: 1, year: "2022", month: "balandžio", days: "01 — 03 d.", dateToCheck: "2022-04-01"},
     {id: 2, year: "2022", month: "rugpjūčio", days: "12 — 16 d.", dateToCheck: "2022-08-12"}
   ]
 
-  const prices = [
-    {id: 0, option: "320 € vienam vyrui"},
-    {id: 1, option: "420 € tėčiui ir sūnui"},
-    {id: 2, option: "520 € (trims šeimos vyrams)"}
-  ]
+  defaultDates.map(date => {
+    var CampDate = date.dateToCheck;
+    var CurrentDate = new Date();
+    CampDate = new Date(CampDate);
+    if (CampDate > CurrentDate) dates.push(date);
+  })
 
   return (
     <Wrap>

@@ -21,7 +21,10 @@ const Wrap = styled.div`
   justify-content: center;
 `;
 const ComponentWrap = styled.div`
+  align-items: center;
+  display: flex;
   flex: 1;
+  justify-content: center;
   max-width: ${DESKTOPS_SIZE}px;
 
   @media (max-width: ${MOBILE_SIZE}px) {

@@ -7,7 +7,7 @@ export default function OrderFailed() {
     <>
       <Wrap>
         <ComponentWrap>
-          <div>Fail</div>
+          <div>Apmokėjimas buvo nesėkmingas, mėginkite dar kartelį arba susisiekite su atsakingu asmeniu šiuo paštu: blauskas@gmail.com</div>
         </ComponentWrap>
       </Wrap>
     </>
@@ -21,7 +21,10 @@ const Wrap = styled.div`
   justify-content: center;
 `;
 const ComponentWrap = styled.div`
+  align-items: center;
+  display: flex;
   flex: 1;
+  justify-content: center;
   max-width: ${DESKTOPS_SIZE}px;
 
   @media (max-width: ${MOBILE_SIZE}px) {
