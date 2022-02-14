@@ -205,7 +205,7 @@ const Guides_block = () => {
           :     
           <> 
           <ImageWrap>
-            <Image src={"/images/mantas.jpg"} alt="Vadovo nuotrauka" />
+            <Image src={"/images/manto.jpg"} alt="Vadovo nuotrauka" />
             </ImageWrap>
             <Title>Mantas Blaževičius</Title>
             <Ul>

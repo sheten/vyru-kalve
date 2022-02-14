@@ -12,10 +12,12 @@ import { customAlphabet } from 'nanoid';
 const Registration_block = ({dates, prices, desktopDesign, online}) => {
   const dispatch = useDispatch();
   const [openModal, setOpenModal] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
   const [buyerDataMissing, setBuyerDataMissing] = useState(false);
   const [buyerData, setBuyerData] = useState({ email: "", name: "", campDate: "", campPrice: undefined });
 
   const handlePurchaseClick = async () => {
+    setIsLoading(true)
     const buyerDataCheck = buyerData.email !== '' && buyerData.name !== '' && buyerData.campDate !== '' && buyerData.campPrice;
 
     if (buyerDataCheck) {
@@ -38,6 +40,7 @@ const Registration_block = ({dates, prices, desktopDesign, online}) => {
       console.log("YOU NEED TO FILL IN EVERYTHING");
       setBuyerDataMissing(true);
     };
+    setIsLoading(false)
   };
 
   const handleBuyerDataChange = (e) => {
@@ -55,7 +58,7 @@ const Registration_block = ({dates, prices, desktopDesign, online}) => {
 
   return (
     <Wrap>
-    {openModal ? <Registration_modal dates={dates} prices={prices} handleCampSelection={handleCampSelection} handlePriceSelection={handlePriceSelection} handleBuyerDataChange={handleBuyerDataChange} buyerData={buyerData} buyerDataMissing={buyerDataMissing} handleConfirmation={handlePurchaseClick} handleModalClose={()=> setOpenModal(false)} /> : null}
+    {openModal ? <Registration_modal dates={dates} prices={prices} isLoading={isLoading} handleCampSelection={handleCampSelection} handlePriceSelection={handlePriceSelection} handleBuyerDataChange={handleBuyerDataChange} buyerData={buyerData} buyerDataMissing={buyerDataMissing} handleConfirmation={handlePurchaseClick} handleModalClose={()=> setOpenModal(false)} /> : null}
 
       <ButtonWrap desktopDesign={desktopDesign} onClick={() => online ? undefined : setOpenModal(true)}>
         <Primary_button title="Registracija" />

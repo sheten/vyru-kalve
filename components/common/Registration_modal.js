@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react'
+import ClipLoader from "react-spinners/ClipLoader"
 import styled from 'styled-components'
 
 import { PRIMARY_COLOR } from "../../config"
 
-const Registration_modal = ({ dates, prices, handleCampSelection, handlePriceSelection, handleConfirmation, handleModalClose, handleBuyerDataChange, buyerDataMissing, buyerData }) => {
+const Registration_modal = ({ dates, prices, isLoading, handleCampSelection, handlePriceSelection, handleConfirmation, handleModalClose, handleBuyerDataChange, buyerDataMissing, buyerData }) => {
   const [missingInputTitle, setMissingInputTitle] = useState();
 
   useEffect(() => {
