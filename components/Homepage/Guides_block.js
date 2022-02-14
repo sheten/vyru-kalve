@@ -200,7 +200,7 @@ const Guides_block = () => {
       <GuideWrap onClick={() => handleGuideClick("Mantas")}>
         {guideOpened === "Mantas" ?
           <MoreInfoWrap>
-            <div style={{textAlign: "center"}}>Tikiu, kad absoliučiai visos problemos yra išsprendžiamos. Aš kviečiu žmonės suprasti savo vidinius konfliktus ir juos spręsti diplomatiškai, be kovos su savimi. Galiausiai, manau, kad lengviausia augti ir tobulėti yra tyloje, kvėpuojant ir leidžiant sau laisvai judėti.</div>
+            <div style={{textAlign: "center"}}>Tikiu, kad absoliučiai visos problemos yra išsprendžiamos. Aš kviečiu žmonės suprasti savo vidinius konfliktus ir juos spręsti diplomatiškai, be kovos su savimi. Galiausiai, manau, kad lengviausia augti ir tobulėti yra tyloje, kvėpuojant ir leidžiant sau laisvai judėti. </div>
           </MoreInfoWrap>
           :     
           <> 
