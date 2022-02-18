@@ -12,39 +12,42 @@ const Footer = () => {
   }, []);
 
   return (
-    <Wrap>
-      <Image src={"/images/FOOTER_LOGO.png"} alt="LOGO nuotrauka" />
+    <>
+      <Wrap>
+        <Image src={"/images/FOOTER_LOGO.png"} alt="LOGO nuotrauka" />
 
-      <InfoBlock>
-        <div>Informacija:</div>
-        <Link href="/kontaktai" passHref>
-          <Text>Kontaktai</Text>
-        </Link>
-        <Link href="/pinigu-grazinimo-salygos" passHref>
-          <Text>Pinigų grąžinimo sąlygos</Text>
-        </Link>
-        <Link href="/privatumo-politika" passHref>
-          <Text>Privatumo politika</Text>
-        </Link>
-      </InfoBlock>
+        <InfoBlock>
+          <div>Informacija:</div>
+          <Link href="/kontaktai" passHref>
+            <Text>Kontaktai</Text>
+          </Link>
+          <Link href="/pinigu-grazinimo-salygos" passHref>
+            <Text>Pinigų grąžinimo sąlygos</Text>
+          </Link>
+          <Link href="/privatumo-politika" passHref>
+            <Text>Privatumo politika</Text>
+          </Link>
+        </InfoBlock>
 
-      <InfoBlock>
-        <div>Stovyklos:</div>
-        <Link href="/paaugliu-stovykla" passHref>
-          <Text>Stovykla paaugliams</Text>
-        </Link>
+        <InfoBlock>
+          <div>Stovyklos:</div>
+          <Link href="/paaugliu-stovykla" passHref>
+            <Text>Stovykla paaugliams</Text>
+          </Link>
 
-        <Link href="/tecio-sunaus-stovykla" passHref>
-        <Text>Tėčio - sūnaus stovykla</Text>
-        </Link>
+          <Link href="/tecio-sunaus-stovykla" passHref>
+          <Text>Tėčio - sūnaus stovykla</Text>
+          </Link>
 
-        <Link href="/online-kursai" passHref>
-          <Text>Online kursai</Text>
-        </Link>
-      </InfoBlock>
+          <Link href="/online-kursai" passHref>
+            <Text>Online kursai</Text>
+          </Link>
+        </InfoBlock>
 
-      { windowWidth < MOBILE_SIZE ? null : <EmptyBlock />}
-    </Wrap>
+        { windowWidth < MOBILE_SIZE ? null : <EmptyBlock />}
+      </Wrap>
+      <div>© Visos teisės saugomos. Vyrų Kalvė</div>
+    </>
   )
 }
 

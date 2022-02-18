@@ -35,12 +35,13 @@ const Registration_block = ({dates, prices, desktopDesign, online}) => {
         window.open(url, "_self");
       } else {
         alert("Įvyko klaida, pabandykite dar kartą vėliau arba susisiekite su blauskas@gmail.com.");
+        setIsLoading(false)
       };
     } else {
       console.log("YOU NEED TO FILL IN EVERYTHING");
       setBuyerDataMissing(true);
+      setIsLoading(false)
     };
-    setIsLoading(false)
   };
 
   const handleBuyerDataChange = (e) => {

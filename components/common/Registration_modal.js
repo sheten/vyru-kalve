@@ -56,7 +56,7 @@ const Registration_modal = ({ dates, prices, isLoading, handleCampSelection, han
         </Select>
 
         <ButtonWrap>
-          <Register onClick={() => handleConfirmation()}>Apmokėti</Register>
+          <Register onClick={() => handleConfirmation()}>{isLoading ? <ClipLoader size={15}/> : "Apmokėti"}</Register>
         </ButtonWrap>
       </Wrap>
     </>
