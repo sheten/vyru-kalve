@@ -20,7 +20,7 @@ const Online = () => {
           </Title>
 
           <VideoWrap controls>
-            <source src="/images/VIDEO.mov" type="video/mp4" />
+            <source src="/images/test.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </VideoWrap>
 
@@ -66,7 +66,7 @@ const Online = () => {
       </Block_layout>
 
       <ButtonWrap>
-        <ButtonInnerWrap onClick={() => alert('Nuoroda i apmokejima')}>
+        <ButtonInnerWrap onClick={() => window.location.href = "https://buy.stripe.com/dR69DJcL8gY40bS7ss"}>
           <Primary_button title="Registracija" />
         </ButtonInnerWrap>
       </ButtonWrap>
@@ -104,7 +104,7 @@ const Online = () => {
       </Block_layout>
 
       <ButtonWrap>
-        <ButtonInnerWrap onClick={() => alert('Nuoroda i apmokejima')}>
+        <ButtonInnerWrap onClick={() => window.location.href = "https://buy.stripe.com/dR69DJcL8gY40bS7ss"}>
           <Primary_button title="Registracija" />
         </ButtonInnerWrap>
       </ButtonWrap>
@@ -148,7 +148,7 @@ const Online = () => {
       </Block_layout>
 
       <ButtonWrap>
-        <ButtonInnerWrap onClick={() => alert('Nuoroda i apmokejima')}>
+        <ButtonInnerWrap onClick={() => window.location.href = "https://buy.stripe.com/dR69DJcL8gY40bS7ss"}>
           <Primary_button title="Registracija" />
         </ButtonInnerWrap>
       </ButtonWrap>
@@ -177,7 +177,7 @@ const Online = () => {
       </Block_layout>
 
       <ButtonWrap>
-        <ButtonInnerWrap onClick={() => alert('Nuoroda i apmokejima')}>
+        <ButtonInnerWrap onClick={() => window.location.href = "https://buy.stripe.com/dR69DJcL8gY40bS7ss"}>
           <Primary_button title="Registracija" />
         </ButtonInnerWrap>
       </ButtonWrap>

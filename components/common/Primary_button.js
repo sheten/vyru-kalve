@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Primary_button = ({title}) => {
+const Primary_button = ({title, handleClick}) => {
 
   return (
-    <Wrap>
+    <Wrap onClick={handleClick}>
       {title}
     </Wrap>
   )

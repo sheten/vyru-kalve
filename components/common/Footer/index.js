@@ -46,7 +46,7 @@ const Footer = () => {
 
         { windowWidth < MOBILE_SIZE ? null : <EmptyBlock />}
       </Wrap>
-      <div>© Visos teisės saugomos. Vyrų Kalvė</div>
+      <ControlWrap>© Visos teisės saugomos. Vyrų Kalvė</ControlWrap>
     </>
   )
 }
@@ -90,6 +90,13 @@ const A = styled.a`
 `;
 const EmptyBlock = styled.div`
   width: 320px;
+`;
+const ControlWrap = styled.div`
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin: 12px 0;
+  width: 100%;
 `;
 
 export default Footer;

@@ -85,7 +85,6 @@ const LogoImageWrap = styled.div`
   height: ${props => props.isHomepage ? '150px' : '200px'};
   margin-top: ${props => props.isHomepage ? '0' : '10px'};
   text-decoration: none;
-  width: auto;
 
   @media (max-width: ${MOBILE_SIZE}px) {
     height: 100px;

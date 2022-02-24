@@ -13,7 +13,7 @@ const Camp_block = ({ campUrl, title, imageSrc }) => {
         <Image src={imageSrc} alt="Stovyklos nuotrauka" />
         <Title>{title}</Title>
         <ButtonWrap>
-          <Primary_button title="Apie Stovykla" />
+          <Primary_button title="Apie Stovyklą" />
         </ButtonWrap>
       </Wrap>
     </Link>

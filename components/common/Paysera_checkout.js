@@ -5,7 +5,7 @@ import { DOMAIN_URL, TEST } from '../../config';
 var options = {
   projectid: '227920',
   sign_password: '961f1e759d4e9cca6754b1477b3b491a',
-  accepturl: "https://forms.gle/csvJK5WmuR4MM9om6",
+  accepturl: "http://localhost:3000/order-confirmation",
   cancelurl: DOMAIN_URL + '/order-failed',
   callbackurl: 'https://us-central1-vyru-kalve.cloudfunctions.net/acceptCallback',
   test: 1,

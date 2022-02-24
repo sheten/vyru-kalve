@@ -61,7 +61,7 @@ const Registration_block = ({dates, prices, desktopDesign, online}) => {
     <Wrap>
     {openModal ? <Registration_modal dates={dates} prices={prices} isLoading={isLoading} handleCampSelection={handleCampSelection} handlePriceSelection={handlePriceSelection} handleBuyerDataChange={handleBuyerDataChange} buyerData={buyerData} buyerDataMissing={buyerDataMissing} handleConfirmation={handlePurchaseClick} handleModalClose={()=> setOpenModal(false)} /> : null}
 
-      <ButtonWrap desktopDesign={desktopDesign} onClick={() => online ? undefined : setOpenModal(true)}>
+      <ButtonWrap desktopDesign={desktopDesign} onClick={() => online ? window.location.href = "https://buy.stripe.com/dR69DJcL8gY40bS7ss" : setOpenModal(true)}>
         <Primary_button title="Registracija" />
       </ButtonWrap>
     </Wrap>
