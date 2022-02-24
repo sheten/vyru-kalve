@@ -3,7 +3,7 @@ export const PAGE_LAYOUT_MARGINS = 35;
 export const PAGE_LAYOUT_MARGINS_MOBILE = 10;
 
 export const TEST = 1;
-export const DOMAIN_URL = "https://vyru-kalve.vercel.app"
+export const DOMAIN_URL = "https://www.vyrukalve.lt/"
 
 export const PRIMARY_FONT_SIZE = 16;
 export const SECONDARY_FONT_SIZE = 14;
