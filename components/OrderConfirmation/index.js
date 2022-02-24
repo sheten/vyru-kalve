@@ -35,11 +35,13 @@ export default function OrderConfirmation() {
       <Wrap>
         <Header>
           <LogoImageWrap>
-            <LogoImage src={"/images/VYRU_KALVE_3.png"} alt="LOGO" />
+            <LogoImage src={"/images/VYRU_KALVE_1.png"} alt="LOGO" />
           </LogoImageWrap>
         </Header>
 
         <Title>Registracija</Title>
+
+        {/* <Cover_image imageSrc={"/images/formCover.jpeg"} /> */}
 
         <InnerWrap>
           <TextWrap>
@@ -108,8 +110,9 @@ const Header = styled.div`
 const LogoImageWrap = styled.div`
   align-items: center;
   display: flex;
-  height: 180px;
+  height: 200px;
   justify-content: center;
+  margin-top: 20px;
   width: 100%;
 `;
 const LogoImage = styled.img`
