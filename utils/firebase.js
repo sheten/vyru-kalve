@@ -32,9 +32,9 @@ export const sendContactDetails = async ({ name, parentEmail, childEmail, parent
     childHealthStatus,
     backupContacts,
     facebookName,
-    to: ['blauskas@gmail.com'],
+    to: "rupsyse@gmail.com",
     message: {
-      subject: 'Nauja Registracija',
+      subject: `Nauja Registracija ${name}`,
 
       text: `<p>Stovyklautojo vardas pavardė: ${name}</p>
       <p>Registruojančio asmens el. paštas: ${parentEmail}</p>

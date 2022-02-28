@@ -20,7 +20,7 @@ const Online = () => {
           </Title>
 
           <VideoWrap controls>
-            <source src="/images/test.mp4" type="video/mp4" />
+            <source src="/images/Untitled.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </VideoWrap>
 

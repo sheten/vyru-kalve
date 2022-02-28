@@ -11,9 +11,13 @@ export const createNewOrder = createAsyncThunk('createNewOrder',
       id: data.orderid,
       buyerData,
       paid: false,
-      to: "blauskas@gmail.com",
+      to: "rupsyse@gmail.com",
       message: {
-        html: `<p>Sveiki, gavote naują užsakymą: </p>        
+        html: `<p>Sveiki, gavote naują užsakymą:  ${data.orderid}</p>
+          <p>Užsakovo paštas: ${buyerData.email}</p>
+          <p>Užsakovo vardas: ${buyerData.name}</p>
+          <p>Užsakovo pasirinkta data: ${buyerData.campDate}</p>
+          <p>Užsakovo sumokėta suma: ${buyerData.campPrice} Eur</p>
           Geros dienos!`,
         subject: `Užsakymas ${data.orderid}`
       }
