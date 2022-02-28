@@ -13,6 +13,7 @@ const Online = () => {
     <Wrap>
       <Header isRegistrationButton={true} online={true}/>
 
+
       <Block_layout>
         <BlockWrap>
           <Title>
