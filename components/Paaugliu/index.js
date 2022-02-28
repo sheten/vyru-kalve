@@ -13,7 +13,7 @@ import { MOBILE_SIZE, HEADER_MOBILE_FONT_SIZE, PRIMARY_FONT_SIZE, PRIMARY_MOBILE
 
 const Paaugliu = () => {
 
-  const dates = []
+  const dates = [ ]
 
   const prices = [
     {id: 0, option: "nuo 250 € iki 320 € vienam paaugliui"},
