@@ -18,6 +18,7 @@ const Online = () => {
           <Title>
             AŠ ESU TĖTIS - STRATEGIJOS, KURIOS PADĖS SUKURTI STIPRŲ RYŠĮ SU SŪNUMI
           </Title>
+          
 
           <VideoWrap controls>
             <source src="/images/Untitled.mp4" type="video/mp4" />
