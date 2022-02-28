@@ -6,14 +6,13 @@ import Icons_block from "../common/Icons_block"
 import Registration_block from "../common/Registration_block"
 import Gallery_block from "./Gallery_block"
 import Cover_image from "../common/Cover_image"
-import Primary_button from '../common/Primary_button';
 import Footer from "../common/Footer"
 import Block_layout from "../common/Block_layout"
 import { MOBILE_SIZE, HEADER_MOBILE_FONT_SIZE, PRIMARY_FONT_SIZE, PRIMARY_MOBILE_FONT_SIZE } from "../../config"
 
 const Paaugliu = () => {
 
-  const dates = [ ]
+  const dates = []
 
   const prices = [
     {id: 0, option: "nuo 250 € iki 320 € vienam paaugliui"},
