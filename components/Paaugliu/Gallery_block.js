@@ -22,7 +22,7 @@ const Gallery_block = () => {
       <Image src="/images/paaug7.jpg" alt="Nuotrauka" />
       <Image src="/images/paaug8.jpg" alt="Nuotrauka" />
       <Image src="/images/paaug9.jpg" alt="Nuotrauka" />
-      <Image src="/images/paaug10.jpg" alt="Nuotrauka" />
+      <Image src="/images/paaug12.jpg" alt="Nuotrauka" />
     </Wrap>
   )
 }
