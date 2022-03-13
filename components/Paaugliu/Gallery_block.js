@@ -16,6 +16,7 @@ const Gallery_block = () => {
       <Image src="/images/paaug2.jpg" alt="Nuotrauka" />
       <Image src="/images/paaug3.jpeg" alt="Nuotrauka" />
       <Image src="/images/paaug4.jpg" alt="Nuotrauka" />
+      <Image src="/images/paaugliams4.jpg" alt="Nuotrauka" />
       <Image src="/images/paaug5.jpg" alt="Nuotrauka" />
       <Image src="/images/paaug6.jpg" alt="Nuotrauka" />
       <Image src="/images/paaug7.jpg" alt="Nuotrauka" />
