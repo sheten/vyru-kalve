@@ -15,6 +15,17 @@ const Gallery_block = () => {
       <Image src="/images/paaugliams2.jpg" alt="Nuotrauka" />
       <Image src="/images/paaugliams7.jpg" alt="Nuotrauka" />
       <Image src="/images/paaugliams8.jpg" alt="Nuotrauka" />
+      <Image src="/images/paaug1.jpg" alt="Nuotrauka" />
+      <Image src="/images/paaug2.jpg" alt="Nuotrauka" />
+      <Image src="/images/paaug3.jpeg" alt="Nuotrauka" />
+      <Image src="/images/paaug4.jpg" alt="Nuotrauka" />
+      <Image src="/images/paaug5.jpg" alt="Nuotrauka" />
+      <Image src="/images/paaug6.jpg" alt="Nuotrauka" />
+      <Image src="/images/paaug7.jpg" alt="Nuotrauka" />
+      <Image src="/images/paaug8.jpg" alt="Nuotrauka" />
+      <Image src="/images/paaug9.jpg" alt="Nuotrauka" />
+      <Image src="/images/paaug10.jpg" alt="Nuotrauka" />
+      <Image src="/images/paaug11.jpg" alt="Nuotrauka" />
     </Wrap>
   )
 }
@@ -25,11 +36,20 @@ const Wrap = styled.div`
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+  max-height: 650px;
+  overflow-y: scroll;
+  
+  &::-webkit-scrollbar {
+    width: 0;
+    background: transparent;
+}
+  &::-webkit-scrollbar-thumb {
+    background: #FF0000;
+}
 
   @media (max-width: ${MOBILE_SIZE}px) {
     flex-wrap: nowrap;
     justify-content: space-between;
-    overflow: auto;
   }
 `;
 const Image = styled.img`

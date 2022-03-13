@@ -46,14 +46,13 @@ const Paaugliu = () => {
           </Title>
 
           <AboutCampsDescription>
-            Nerimaujate, kad augdamas be tėvo sūnus tinkamai nepasiruoš gyvenimui?<br/>
-            Bijote, kad neradus pavyzdinės vyriškos aplinkos, vaikas pasiduos bendraamžių įtakai ir nueis klystkeliais?
+            Nes nuo pat vaikystės nuolat girdint „Būk vyras“ tampa neaišku, apie ką buvimas vyru yra iš tiesų. O mes padėsime suprasti, ką tai reiškia ir kaip juo tapti. Padėsime berniukams suprasti jų pačių bei juos supančio pasaulio emocijas. Padėsime jiems emocijas atpažinti, įvardinti ir suvokti, iš kur jos ateina. To moko emocinis raštingumas.
             <br/><br/>
-            Lietuvoje - labai daug vienišų mamų, auginančių sūnus. Atėjus paauglystei “geri berniukai” tampa nebesukalbamais vaikinais. Be tinkamo vyro pavyzdžio šeimoje mamoms tampa itin keblu susitvarkyti su paauglystės įsiūbuotu sūnumi.
+            Turime pripažinti ir suprasti, kad kiekvienas berniukas turi vidinį pasaulį. Kad kiekvienas berniukas yra jautrus ir kenčia. Dažnai suaugusiems – tiek sąmoningai, tiek pasąmoningai nelengva pripažinti berniukų emocinį pažeidžiamumą. Kai mes pradėsime mokyti savo sūnus vertinti ir gerbti jų emocinį pasaulį, kai pradėsime juose ugdyti emocinį raštingumą, pamatysime, kaip atsiveria jų širdys…
             <br/><br/>
-            Mes galime padėti jūsų paaugliui susipažinti su jo emociniu pasauliu. Padėti išmokti atpažinti savo bei kitų žmonių emocijas bei jas reikšti tinkamais būdais. Mes galime padėti ir jums, suteikdami  jūsų sūnui vyriškumo pavyzdį jo gyvenime. 
+            Kiekvienas berniukas turi pamatyti ir patikėti, kad vyriškumas – tai atsakomybė už žodžius, mintis ir poelgius. Kad tai tvirta valia, skvarbus mąstymas, pagarba aplinkai, aštrus protas ir karšta, mylinti širdis, o visos emocijos yra svarbi gyvenimo dalis.  
             <br/><br/>
-            Mūsų siekis - kad jūsų sūnų žmonos niekuomet neliktų vienišos mamos.
+            Viso šito išmokti ir pamatyti realius pavyzdžius kviečiame Vyrų kalvėje paaugliams.
           </AboutCampsDescription>
         </BlockWrap>
       </Block_layout>
@@ -69,13 +68,7 @@ const Paaugliu = () => {
           </Title>
 
           <AboutCampsDescription>
-            Jūsų sūnus patirs įvairių naujų patirčių saugioje, palaikančioje, vyriškoje aplinkoje. Šios patirtys ves jūsų sūnų link geresnio savęs bei aplinkinių pažinimo. 
-            <br/><br/>
-            Vaikinas mokysis reikšti savo bei atpažinti kitų žmonių jausmus. Visą savaitgalį jis bus globojamas vyrų mentorių kurie ne tik lydės jį per įvairias patirtis, bet ir patys šiose patirtyse dalyvaus. 
-            <br/><br/>
-            Taip jūsų sūnus pamatys kaip įvairiose situacijose (laimėjime, pralaimėjime, nepatogume ir t.t.) elgiasi, bei reaguoja suaugę vyrai. 
-            <br/><br/>
-            Po tokio patirčių kupino savaitgalio jūsų sūnus grįš įgijęs:
+          Prasmingos ir įsimintinos stovyklos su bendraamžiais ir vyrais, kurie ne tik moko, kaip gyventi, bet patys taip ir gyvena. Kurie patys yra pavyzdžiai savo šeimoje, aplinkoje, visuomenėje. Šios stovyklos vadovai: Vyrų kalvės projekto paaugliams vaikinams vadovas, atsargos karininkas – Edvinas Rupšys ir Vyrų kalvės įkurėjas, profesionalus lektorius, krizių valdymo ekspertas – Mindaugas Vidugiris.
           </AboutCampsDescription>
         </BlockWrap>
       </Block_layout>
@@ -84,24 +77,36 @@ const Paaugliu = () => {
         <BlockWrap>
           <IconsWrap>
             <IconWrap>
+              <Icon src={"/images/axe.svg"} />
+              <IconDescription>Daugybės įvairių užsiėmimų, planavimo užduočių, vyriškumo ir emocinio raštingumo pamokų, veiksmo, sporto mankštų, žygių</IconDescription>            
+            </IconWrap>
+            <IconWrap>
               <Icon src={"/images/pasitikejimas.svg"} />
-              <IconDescription>Pasitikėjimo savo jėgomis</IconDescription>            
+              <IconDescription>Psichologinį atsparumą ugdančių patyrimų;</IconDescription>            
             </IconWrap>
             <IconWrap>
-              <Icon src={"/images/disciplina.svg"} />
-              <IconDescription>Disciplinos</IconDescription>            
-            </IconWrap>
-            <IconWrap>
-              <Icon src={"/images/team2.svg"} />
-              <IconDescription>Pagarbos sau ir aplinkai</IconDescription>            
+              <Icon src={"/images/atjauta.svg"} />
+              <IconDescription>Pagarbos ir atjautos pamokų bei didžiulės, žodžiais sunkiai apibūdinamos patirties</IconDescription>            
             </IconWrap>
             <IconWrap>
               <Icon src={"/images/veikti.svg"} />
-              <IconDescription>Atsakomybės veikti</IconDescription>            
+              <IconDescription>Daug prasmingo darbo ir dar daugiau juoko</IconDescription>            
             </IconWrap>
             <IconWrap>
-              <Icon src={"/images/compassion.svg"} />
-              <IconDescription>Naujų draugų</IconDescription>            
+              <Icon src={"/images/disciplina.svg"} />
+              <IconDescription>Žinių apie Išgyvenimą ekstremaliomis aplinkybėmis</IconDescription>            
+            </IconWrap>
+            <IconWrap>
+              <Icon src={"/images/bendravimas.svg"} />
+              <IconDescription>Bendravimo, tikslo pasiekimo paslapčių</IconDescription>            
+            </IconWrap>
+            <IconWrap>
+              <Icon src={"/images/tylos.svg"} />
+              <IconDescription>Tylos, kad išgirstum, kaip plaka tavo ir kito širdis</IconDescription>            
+            </IconWrap>
+            <IconWrap>
+              <Icon src={"/images/teamwork-2.svg"} />
+              <IconDescription>Įsimintino savaitgalio su tikrais vyrais, kurie gyvena svajonėmis, dega idėjomis ir patys atsakingai kuria savo gyvenimą. Bonusas – JOKIŲ merginų.</IconDescription>            
             </IconWrap>
           </IconsWrap>
         </BlockWrap>
@@ -132,24 +137,6 @@ const Paaugliu = () => {
               <IconDescription>Galimybė prisijungti prie palaikančios grupės, kuri reguliariai, ištisus metus, susitikinės ir gyvai, ir online</IconDescription>            
             </IconWrap>
           </IconsWrap>
-        </BlockWrap>
-      </Block_layout>
-
-      <Block_layout>
-        <BlockWrap>
-          <Title> Mes suprantame ne tik jūsų sūnų, bet ir jus.</Title>
-          <AboutCampsDescription>
-            Atstoti dvi roles šeimoje (mamos ir tėčio) gali būti labai sunki, varginanti užduotis. Ir dažniausiai mamoms, vienoms auginančioms sūnų, tenka aukoti savo švelniąją - moterišką prigimtį.
-            <br/><br/>
-            Jūs suvokiate kokia svarbi yra vyro rolė paauglio gyvenime ir dėl šios priežasties prisiimate šią auką. Mes jums galime palengvinti dalią.
-            <br/><br/>
-            Po šio savaitgalio jūs įgysite:
-            <ul>
-              <li>Užtikrintumą, kad jūsų sūnus turi reikalingą vyrišką pavyzdį savo gyvenime.</li><br/>
-              <li>Ramybę, žinant, kad nuo šiol į jūsų sūnaus klausimus ieškoti atsakymų nereiks jums vienai.</li><br/>
-              <li>Realią vyrišką pagalbą, kurią mentoriai sukaupė per asmenines patirtis bei ilgametį darbą jaunimo stovyklose.</li>
-            </ul>
-          </AboutCampsDescription>
         </BlockWrap>
       </Block_layout>
 
