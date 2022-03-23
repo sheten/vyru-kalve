@@ -17,7 +17,7 @@ const Footer = () => {
         <Image src={"/images/FOOTER_LOGO.png"} alt="LOGO nuotrauka" />
 
         <InfoBlock>
-          <div>Informacija:</div>
+          <div><strong>Informacija:</strong></div>
           <Link href="/kontaktai" passHref>
             <Text>Kontaktai</Text>
           </Link>
@@ -30,7 +30,7 @@ const Footer = () => {
         </InfoBlock>
 
         <InfoBlock>
-          <div>Stovyklos:</div>
+          <div><strong>Stovyklos:</strong></div>
           <Link href="/paaugliu-stovykla" passHref>
             <Text>Stovykla paaugliams</Text>
           </Link>

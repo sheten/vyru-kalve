@@ -9,6 +9,7 @@ import Cover_image from "../common/Cover_image"
 import Footer from "../common/Footer"
 import Block_layout from "../common/Block_layout"
 import { MOBILE_SIZE, HEADER_MOBILE_FONT_SIZE, PRIMARY_FONT_SIZE, PRIMARY_MOBILE_FONT_SIZE } from "../../config"
+import { Pages } from "../../utils/helpers"
 
 const Paaugliu = () => {
 
@@ -19,11 +20,11 @@ const Paaugliu = () => {
   ]
 
   const defaultDates = [
-    {id: 0, year: "2022", month: "vasario", days: "25 — 27 d.", dateToCheck: "2022-02-25"},
-    {id: 1, year: "2022", month: "balandžio", days: "22 — 24 d.", dateToCheck: "2022-04-22"},
-    {id: 2, year: "2022", month: "birželio", days: "10 — 12 d.", dateToCheck: "2022-06-10"},
-    {id: 3, year: "2022", month: "liepa", days: "17 — 23 d.", dateToCheck: "2022-07-17"},
-    {id: 4, year: "2022", month: "rugpjūčio", days: "21 — 26 d.", dateToCheck: "2022-08-21"},
+    {id: 0, year: "2022", month: "vasario", days: "25—27 d. (250€)", price: 250, dateToCheck: "2022-02-25"},
+    {id: 1, year: "2022", month: "balandžio", days: "22—24 d. (250€)", price: 250, dateToCheck: "2022-04-22"},
+    {id: 2, year: "2022", month: "birželio", days: "10-12 d. (250€)", price: 250, dateToCheck: "2022-06-10"},
+    {id: 3, year: "2022", month: "liepa", days: "17-23 d. (320€)", price: 320, dateToCheck: "2022-07-17"},
+    {id: 4, year: "2022", month: "rugpjūčio", days: "21-26 d. (320€)", price: 320, dateToCheck: "2022-08-21"},
   ]
 
   defaultDates.map(date => {
@@ -35,7 +36,7 @@ const Paaugliu = () => {
 
   return (
     <Wrap>
-      <Header isRegistrationButton={true} isCalendar={true} dates={dates} prices={prices}/>
+      <Header isRegistrationButton={true} isCalendar={true} dates={dates} prices={prices} page={Pages.paaugliu}/>
 
       <Cover_image imageSrc={"/images/PAAUGLIU_COVER.png"} />
 
@@ -113,7 +114,7 @@ const Paaugliu = () => {
       </Block_layout>
 
       <Block_layout>
-        <Registration_block dates={dates} prices={prices} />
+        <Registration_block dates={dates} prices={prices} page={Pages.paaugliu} />
       </Block_layout>
 
       <Block_layout>
@@ -174,7 +175,7 @@ const Paaugliu = () => {
       </PricesWrap>
 
       <Block_layout>
-        <Registration_block dates={dates} prices={prices} />
+        <Registration_block dates={dates} prices={prices} page={Pages.paaugliu} />
       </Block_layout>
 
       <Block_layout>
@@ -212,7 +213,7 @@ const Paaugliu = () => {
         </BlockWrap>
       </Block_layout>
 
-      <Registration_block dates={dates} prices={prices} />
+      <Registration_block dates={dates} prices={prices} page={Pages.paaugliu} />
 
       <Footer />
     </Wrap>

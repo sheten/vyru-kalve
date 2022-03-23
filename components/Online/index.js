@@ -6,12 +6,13 @@ import Primary_button from "../common/Primary_button"
 import Footer from "../common/Footer"
 import Block_layout from "../common/Block_layout"
 import { MOBILE_SIZE, HEADER_MOBILE_FONT_SIZE, PRIMARY_MOBILE_FONT_SIZE, PRIMARY_FONT_SIZE } from "../../config"
+import { Pages } from "../../utils/helpers"
 
 const Online = () => {
 
   return (
     <Wrap>
-      <Header isRegistrationButton={true} online={true}/>
+      <Header isRegistrationButton={true} page={Pages.online}/>
 
       <Block_layout>
         <BlockWrap>

@@ -2,7 +2,7 @@ import { useState } from 'react';
 import styled from 'styled-components';
 import { sendContactDetails } from '../../utils/firebase';
 
-import { PRIMARY_COLOR, DESKTOPS_SIZE, MOBILE_SIZE, LAPTOPS_SIZE } from "../../config"
+import { PRIMARY_COLOR, MOBILE_SIZE } from "../../config"
 
 export default function OrderConfirmation() {
   const [formData, setFormData] = useState({

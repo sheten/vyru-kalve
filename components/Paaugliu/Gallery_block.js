@@ -41,7 +41,7 @@ const Wrap = styled.div`
     background: transparent;
 }
   &::-webkit-scrollbar-thumb {
-    background: #FF0000;
+    background: grey;
 }
 
   @media (max-width: ${MOBILE_SIZE}px) {

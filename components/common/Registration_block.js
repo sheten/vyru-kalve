@@ -8,8 +8,9 @@ import { TEST } from "../../config"
 import { createNewOrder } from "../../redux/paymentsSlice"
 import { getPayseraPaymentUrl } from "./Paysera_checkout"
 import { customAlphabet } from 'nanoid';
+import { Pages } from "../../utils/helpers";
 
-const Registration_block = ({dates, prices, desktopDesign, online}) => {
+const Registration_block = ({dates, prices, desktopDesign, page}) => {
   const dispatch = useDispatch();
   const [openModal, setOpenModal] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
@@ -59,9 +60,25 @@ const Registration_block = ({dates, prices, desktopDesign, online}) => {
 
   return (
     <Wrap>
-    {openModal ? <Registration_modal dates={dates} prices={prices} isLoading={isLoading} handleCampSelection={handleCampSelection} handlePriceSelection={handlePriceSelection} handleBuyerDataChange={handleBuyerDataChange} buyerData={buyerData} buyerDataMissing={buyerDataMissing} handleConfirmation={handlePurchaseClick} handleModalClose={()=> setOpenModal(false)} /> : null}
+    {openModal ? 
+      <Registration_modal 
+        dates={dates}
+        prices={prices}
+        isLoading={isLoading}
+        handleCampSelection={handleCampSelection}
+        handlePriceSelection={handlePriceSelection}
+        handleBuyerDataChange={handleBuyerDataChange}
+        buyerData={buyerData}
+        buyerDataMissing={buyerDataMissing}
+        handleConfirmation={handlePurchaseClick}
+        handleModalClose={()=> setOpenModal(false)}
+        page={page}
+      />
+      :
+      null
+      }
 
-      <ButtonWrap desktopDesign={desktopDesign} onClick={() => online ? window.location.href = "https://buy.stripe.com/dR69DJcL8gY40bS7ss" : setOpenModal(true)}>
+      <ButtonWrap desktopDesign={desktopDesign} onClick={() => page === Pages.online ? window.location.href = "https://buy.stripe.com/dR69DJcL8gY40bS7ss" : setOpenModal(true)}>
         <Primary_button title="Registracija" />
       </ButtonWrap>
     </Wrap>

@@ -8,7 +8,7 @@ var options = {
   accepturl: DOMAIN_URL  + "/order-confirmation",
   cancelurl: DOMAIN_URL + '/order-failed',
   callbackurl: 'https://us-central1-vyru-kalve.cloudfunctions.net/acceptCallback',
-  test: 1,
+  test: TEST? 1 : 0,
 };
 
 const getPayseraPaymentUrl = (buyerData, orderid) => {

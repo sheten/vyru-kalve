@@ -2,10 +2,13 @@ import React, { useEffect, useState } from 'react'
 import ClipLoader from "react-spinners/ClipLoader"
 import styled from 'styled-components'
 
-import { PRIMARY_COLOR } from "../../config"
+import { PRIMARY_COLOR } from "../../config";
+import { Pages } from "../../utils/helpers"
 
-const Registration_modal = ({ dates, prices, isLoading, handleCampSelection, handlePriceSelection, handleConfirmation, handleModalClose, handleBuyerDataChange, buyerDataMissing, buyerData }) => {
+const Registration_modal = ({ dates, prices, isLoading, handleCampSelection, handlePriceSelection, handleConfirmation, handleModalClose, handleBuyerDataChange, buyerDataMissing, buyerData, page }) => {
   const [missingInputTitle, setMissingInputTitle] = useState();
+
+  const numArray=[1,2,3,4,5,6]
 
   useEffect(() => {
     if (buyerDataMissing) handleBuyerDataMissing();
@@ -34,13 +37,18 @@ const Registration_modal = ({ dates, prices, isLoading, handleCampSelection, han
     if (e.target.id === "wrap") handleModalClose();
   };
 
+  const handleNumArraySelect = (e) => {
+    const found = dates.find(date => date.dateToCheck === buyerData.campDate);
+    handlePriceSelection(found.price * e.target.selectedIndex)
+  }
+
   return (
     <>
       <BackgroundWrap id="wrap" onClick={backgroundClicked} />
 
       <Wrap key={missingInputTitle ? missingInputTitle : 1}>
         <CancelButton onClick={() => handleModalClose()}>X</CancelButton>
-        <Title>Registracijos forma</Title>
+        <Title>Apmokėjimo forma</Title>
 
         <Input id="name" value={buyerData.name} placeholder={"VARDAS PAVARDĖ *"} onChange={e => handleBuyerDataChange(e)} error={buyerData.name === '' && buyerDataMissing} />
         <Input id="email" value={buyerData.email} placeholder={"EL. PAŠTAS *"} onChange={e => handleBuyerDataChange(e)} error={buyerData.email === '' && buyerDataMissing} />
@@ -50,10 +58,17 @@ const Registration_modal = ({ dates, prices, isLoading, handleCampSelection, han
           {dates.map((date) => (<option key={date.id}>{date.year} {date.month} {date.days}</option>))}
         </Select>
 
-        <Select onChange={handleSelectedPrice} name="camps-prices" id="prices" error={buyerData.campPrice === undefined && buyerDataMissing} >
-          <option selected disabled>Pasirinkite tipą...</option>
-          {prices.map((price) => (<option key={price.id}>{price.option}</option>))}
-        </Select>
+        {page === Pages.paaugliu ? 
+          <Select onChange={handleNumArraySelect} name="camps-prices" id="prices" error={buyerData.campPrice === undefined && buyerDataMissing} >
+            <option selected disabled>Pasirinkite stovyklautojų skaičių...</option>
+            {numArray.map((num) => (<option key={num}>{num}</option>))}
+          </Select>
+          :
+          <Select onChange={handleSelectedPrice} name="camps-prices" id="prices" error={buyerData.campPrice === undefined && buyerDataMissing} >
+            <option selected disabled>Pasirinkite tipą...</option>
+            {prices.map((price) => (<option key={price.id}>{price.option}</option>))}
+          </Select>
+        }
 
         <ButtonWrap>
           <Register onClick={() => handleConfirmation()}>{isLoading ? <ClipLoader size={15}/> : "Apmokėti"}</Register>

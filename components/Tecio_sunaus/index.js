@@ -6,10 +6,10 @@ import Icons_block from "../common/Icons_block"
 import Registration_block from "../common/Registration_block"
 import Gallery_block from "./Gallery_block"
 import Cover_image from "../common/Cover_image"
-import Primary_button from '../common/Primary_button';
 import Footer from "../common/Footer"
 import Block_layout from "../common/Block_layout"
 import { MOBILE_SIZE, HEADER_MOBILE_FONT_SIZE, PRIMARY_MOBILE_FONT_SIZE, PRIMARY_FONT_SIZE } from "../../config"
+import { Pages } from "../../utils/helpers"
 
 const Tecio_sunaus = () => {
   const [windowWidth, setWindowWidth] = useState(0);
@@ -41,7 +41,7 @@ const Tecio_sunaus = () => {
 
   return (
     <Wrap>
-      <Header isRegistrationButton={true} isCalendar={true} dates={dates} prices={prices} logoType="tetis" />
+      <Header isRegistrationButton={true} isCalendar={true} dates={dates} prices={prices} logoType="tetis" page={Pages.tecio} />
 
       <Cover_image imageSrc={"/images/TEVU_SUNU_COVER.png"} />
 
@@ -88,7 +88,7 @@ const Tecio_sunaus = () => {
       </Block_layout>
 
       <Block_layout>
-        <Registration_block dates={dates} prices={prices} />
+        <Registration_block dates={dates} prices={prices} page={Pages.tecio}  />
       </Block_layout>
 
       <Block_layout>
@@ -157,7 +157,7 @@ const Tecio_sunaus = () => {
       </PricesWrap>
 
       <Block_layout>
-        <Registration_block dates={dates} prices={prices} />
+        <Registration_block dates={dates} prices={prices} page={Pages.tecio} />
       </Block_layout>
 
       <VideoWrap controls >
@@ -175,7 +175,7 @@ const Tecio_sunaus = () => {
         </BlockWrap>
       </Block_layout>
 
-      <Registration_block dates={dates} prices={prices} />
+      <Registration_block dates={dates} prices={prices} page={Pages.tecio} />
 
       <Footer />
     </Wrap>
