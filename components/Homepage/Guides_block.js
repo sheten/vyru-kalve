@@ -253,6 +253,7 @@ const MoreInfoWrap = styled.div`
   height: 100%;
   justify-content: center;
   padding: 10px;
+  width: 300px;
 `;
 const ImageWrap = styled.div`
   display: flex;

@@ -2,8 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import Main from "./Main"
-import Subheader from "./Subheader"
-import { MOBILE_SIZE } from "../../../config"
+import Subheader from "./Subheader";
 
 const Header = ({ isRegistrationButton, isCalendar, isHomepage, dates, prices, logoType, page }) => {
 
@@ -23,16 +22,6 @@ const Wrap = styled.div`
   height: auto;
   justify-content: space-around;
   width: 100%;
-`;
-const Title = styled.div`
-  font-size: 30px;
-  font-weight: bold;
-  margin: 20px 0;
-  text-align: center;
-
-  @media (max-width: ${MOBILE_SIZE}px) {
-    font-size: 20px;
-  }
 `;
 
 export default Header;

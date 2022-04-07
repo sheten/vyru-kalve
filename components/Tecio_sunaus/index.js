@@ -46,7 +46,7 @@ const Tecio_sunaus = () => {
       <Cover_image imageSrc={"/images/TEVU_SUNU_COVER.png"} />
 
       <Block_layout>
-        <BlockWrap>
+        <BlockWrap>         
           <Title>
             KODĖL TĖČIO IR SŪNAUS STOVYKLA?
           </Title>
@@ -181,7 +181,6 @@ const Tecio_sunaus = () => {
     </Wrap>
   )
 }
-
 const Wrap = styled.div`
   display: flex;
   color: white;
