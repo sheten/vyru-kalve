@@ -169,7 +169,7 @@ const Guides_block = () => {
             <Ul>
               <Li>Tėtis, vyras, brolis, sūnus, taip pat - fotografas</Li>
               <Li>Veidoskaitos specialistas</Li>
-              <Li>Kasdienybėje intensyviai praktikuojantis jogą, tylą ir savęs pažinimą</Li>
+              <Li>Kasdienybėje praktikuojantis jogą, tylą ir savęs pažinimą</Li>
               <Li>Sveikos mitybos ir aktyvaus gyvenimo būdo propaguotojas</Li>
             </Ul>
             <div style={{color: "grey"}}>☝️ Paspausk, kad pažintum artimiau...</div>
@@ -240,7 +240,7 @@ const GuideWrap = styled.div`
   display: flex;
   cursor: pointer;
   flex-direction: column;
-  height: 710px;
+  height: 715px;
   margin: 20px;
   width: 320px;
 `;
@@ -265,8 +265,8 @@ const ImageWrap = styled.div`
   }
 `;
 const Image = styled.img`
-display: flex;
-height: 100%;
+  display: flex;
+  height: 100%;
   object-fit: cover;
   width: 100%;
 `;
@@ -276,6 +276,7 @@ const Title = styled.div`
 `;
 const Ul = styled.ul`
   margin: 0;
+  padding-left: 10px;
   width: 100%;
 `;
 const Li = styled.li`

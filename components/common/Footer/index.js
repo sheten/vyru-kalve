@@ -10,7 +10,7 @@ const Footer = () => {
   useEffect(() => {
     setWindowWidth(window.innerWidth);
   }, []);
-
+  
   return (
     <>
       <Wrap>
@@ -44,7 +44,7 @@ const Footer = () => {
           </Link>
         </InfoBlock>
 
-        { windowWidth < MOBILE_SIZE ? null : <EmptyBlock />}
+        {/* { windowWidth < MOBILE_SIZE ? null : <EmptyBlock />} */}
       </Wrap>
       <ControlWrap>© Visos teisės saugomos. Vyrų Kalvė</ControlWrap>
     </>
