@@ -7,6 +7,7 @@ import Registration_modal from "./Registration_modal"
 import { TEST } from "../../config"
 import { createNewOrder } from "../../redux/paymentsSlice"
 import { getPayseraPaymentUrl } from "./Paysera_checkout"
+import { PAYSERA_PAAUGLIU_OPTIONS, PAYSERA_TECIO_SUNAUS_OPTIONS } from '../../config';
 import { customAlphabet } from 'nanoid';
 import { Pages } from "../../utils/helpers";
 
@@ -31,7 +32,7 @@ const Registration_block = ({dates, prices, desktopDesign, page}) => {
       console.log("RES", res.payload);
       if (res.payload === "OK") {
         var url = "";
-        url = getPayseraPaymentUrl(buyerData, orderid);
+        url = getPayseraPaymentUrl(buyerData, orderid, page === Pages.paaugliu? PAYSERA_PAAUGLIU_OPTIONS : PAYSERA_TECIO_SUNAUS_OPTIONS);
         console.log("URL'as:", url);
         window.open(url, "_self");
       } else {

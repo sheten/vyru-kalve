@@ -19,43 +19,36 @@ const app = initializeApp(firebaseConfig);
 const firestore = getFirestore();
 const storage = getStorage();
 
-export const sendContactDetails = async ({ name, parentEmail, childEmail, parentPhone, childPhone, address, childHealthStatus, backupContacts, facebookName }) => {
-  console.log("hello from send")
+export const sendContactDetails = async (formData, registratorName, registratorEmail, registratorPhone) => {
+  console.log("hello from send", formData)
+  var textCode = `
+  <p>Registruojančio asmens vardas pavardė: ${registratorName}</p>
+  <p>Registruojančio asmens el. paštas: ${registratorEmail}</p>
+  <p>Registruojančio asmens telefono numeris: ${registratorPhone}</p>
+  <p>-------</p>`;
+
+  formData.map(el => {
+    var singlePerson = `    
+    <p>Stovyklautojas nr.: ${el.person}</p>
+    <p>Stovyklautojo nr. ${el.person} vardas pavardė: ${el.name}</p>
+    <p>Stovyklautojo nr. ${el.person} gimimo diena: ${el.birthday}</p>
+    <p>Stovyklautojo nr. ${el.person} el. paštas: ${el.personEmail}</p>
+    <p>Stovyklautojo nr. ${el.person} telefono numeris: ${el.personPhone}</p>
+    <p>Stovyklautojo nr. ${el.person} gyvenamosios vietos adresas: ${el.address}</p>
+    <p>Informacija apie dalyvio nr. ${el.person} fizinės, psichinės, dvasinės sveikatos būklę. (Alergijos, turėtos operacijos, traumos, baimės, padididėjęs jautrumas, vartoti ar vartojami vaistai): ${el.childHealthStatus}</p>
+    <p>Prašome įvardinti 2 (du) asmenis, kurie, esant būtinybei, turi teisę pasiimti dalyvį iš stovyklos. (Nurodyti vardą, pavardę ir telefono numerį. Pilnamečiai dalyviai nurodo vieną asmenį, į kurį galima būtų kreiptis ligos ar nelaimingo atsitikimo atveju): ${el.backupContacts}</p>
+    <p>Stovyklautojo nr. ${el.person} Facebook vardas: ${el.facebookName}</p>
+    <p>-------</p>`
+    textCode = textCode + singlePerson;
+  })
 
   const docData = {
-    name,
-    parentEmail,
-    childEmail,
-    parentPhone,
-    childPhone,
-    address,
-    childHealthStatus,
-    backupContacts,
-    facebookName,
     // to: "rupsyse@gmail.com",
-      to: "blauskas@gmail.com",
+    to: "blauskas@gmail.com",
     message: {
-      subject: `Nauja Registracija ${name}`,
-
-      text: `<p>Stovyklautojo vardas pavardė: ${name}</p>
-      <p>Registruojančio asmens el. paštas: ${parentEmail}</p>
-      <p>Stovyklautojo el. paštas: ${childEmail}</p>
-      <p>Registruojančio asmens telefono numeris: ${parentPhone}</p>
-      <p>Stovyklautojo telefono numeris: ${childPhone}</p>
-      <p>Stovyklautojo gyvenamosios vietos adresas: ${address}</p>
-      <p>Informacija apie dalyvio fizinės, psichinės, dvasinės sveikatos būklę. (Alergijos, turėtos operacijos, traumos, baimės, padididėjęs jautrumas, vartoti ar vartojami vaistai): ${childHealthStatus}</p>
-      <p>Prašome įvardinti 2 (du) asmenis, kurie, esant būtinybei, turi teisę pasiimti dalyvį iš stovyklos. (Nurodyti vardą, pavardę ir telefono numerį. Pilnamečiai dalyviai nurodo vieną asmenį, į kurį galima būtų kreiptis ligos ar nelaimingo atsitikimo atveju): ${backupContacts}</p>
-      <p>Stovyklautojo Facebook vardas: ${facebookName}</p>`,
-
-      html: `<p>Stovyklautojo vardas pavardė: ${name}</p>
-      <p>Registruojančio asmens el. paštas: ${parentEmail}</p>
-      <p>Stovyklautojo el. paštas: ${childEmail}</p>
-      <p>Registruojančio asmens telefono numeris: ${parentPhone}</p>
-      <p>Stovyklautojo telefono numeris: ${childPhone}</p>
-      <p>Stovyklautojo gyvenamosios vietos adresas: ${address}</p>
-      <p>Informacija apie dalyvio fizinės, psichinės, dvasinės sveikatos būklę. (Alergijos, turėtos operacijos, traumos, baimės, padididėjęs jautrumas, vartoti ar vartojami vaistai): ${childHealthStatus}</p>
-      <p>Prašome įvardinti 2 (du) asmenis, kurie, esant būtinybei, turi teisę pasiimti dalyvį iš stovyklos. (Nurodyti vardą, pavardę ir telefono numerį. Pilnamečiai dalyviai nurodo vieną asmenį, į kurį galima būtų kreiptis ligos ar nelaimingo atsitikimo atveju): ${backupContacts}</p>
-      <p>Stovyklautojo Facebook vardas: ${facebookName}</p>`,
+      subject: `Nauja Registracija, registravo: ${registratorName}`,
+      text: textCode,
+      html: textCode,
     }
   };
 
@@ -66,7 +59,6 @@ export const sendContactDetails = async ({ name, parentEmail, childEmail, parent
   } catch (e) {
     console.error("Error adding document: ", e);
   }
-  console.log("yay")
 }
 
 export { firestore, storage }

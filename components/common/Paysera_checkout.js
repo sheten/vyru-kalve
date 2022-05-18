@@ -1,17 +1,8 @@
 import Paysera from 'paysera-nodejs';
 import { useEffect, useState } from 'react';
-import { DOMAIN_URL, TEST } from '../../config';
+import { PAYSERA_PAAUGLIU_OPTIONS } from '../../config';
 
-var options = {
-  projectid: '227920',
-  sign_password: '961f1e759d4e9cca6754b1477b3b491a',
-  accepturl: DOMAIN_URL  + "/order-confirmation",
-  cancelurl: DOMAIN_URL + '/order-failed',
-  callbackurl: 'https://us-central1-vyru-kalve.cloudfunctions.net/acceptCallback',
-  test: TEST? 1 : 0,
-};
-
-const getPayseraPaymentUrl = (buyerData, orderid) => {
+const getPayseraPaymentUrl = (buyerData, orderid, options) => {
   const paysera = new Paysera(options);
 
   var params = {
@@ -26,7 +17,7 @@ const getPayseraPaymentUrl = (buyerData, orderid) => {
 }
 
 const validatePayseraOrder = (request) => {
-  const paysera = new Paysera(options);
+  const paysera = new Paysera("????");
   var isValid = paysera.checkCallback(request);
   if (isValid) {
     // Since callback seems valid decode callback data
@@ -42,7 +33,7 @@ const PayseraCheckout = ({ amount }) => {
   var [urlToGo, setUrlToGo] = useState();
 
   useEffect(() => {
-    const paysera = new Paysera(options);
+    const paysera = new Paysera("????");
     console.log("Amount", amount)
 
     var params = {
