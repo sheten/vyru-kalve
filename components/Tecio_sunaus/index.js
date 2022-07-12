@@ -21,7 +21,7 @@ const Tecio_sunaus = () => {
   const dates = []
 
   const prices = [
-    {id: 0, option: "320 € vienam vyrui", value: 320.00},
+    {id: 0, option: "350 € vienam vyrui", value: 350.00},
     {id: 1, option: "420 € tėčiui ir sūnui", value: 420.00},
     {id: 2, option: "520 € (trims šeimos vyrams)", value: 520.00}
   ]

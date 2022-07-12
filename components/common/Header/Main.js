@@ -18,8 +18,11 @@ const Main = ({ isCalendar, isHomepage, dates, logoType }) => {
       var GivenDate = dates[i].dateToCheck;
       var CurrentDate = new Date();
       GivenDate = new Date(GivenDate);
+      const diffTime = Math.abs(GivenDate - CurrentDate);
+      const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24)); 
+      console.log('diffDays',diffDays);
   
-      if(GivenDate > CurrentDate){
+      if (GivenDate > CurrentDate && diffDays > 7){
         setUpcomingDate(dates[i].year + " " + dates[i].month + " " + dates[i].days)
         break;
       }
