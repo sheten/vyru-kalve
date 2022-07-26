@@ -21,15 +21,18 @@ const Tecio_sunaus = () => {
   const dates = []
 
   const prices = [
-    {id: 0, option: "320 € vienam vyrui", value: 320.00},
-    {id: 1, option: "420 € tėčiui ir sūnui", value: 420.00},
-    {id: 2, option: "520 € (trims šeimos vyrams)", value: 520.00}
+    {id: 0, option: "480 € tėčiui ir sūnui", value: 480.00},
+    {id: 1, option: "580 € (trims šeimos vyrams)", value: 580.00},
+    {id: 2, option: "680 € (keturiems šeimos vyrams)", value: 680.00}
   ]
 
   const defaultDates = [
     {id: 0, year: "2022", month: "sausio", days: "28 — 30 d.", dateToCheck: "2022-01-28"},
     {id: 1, year: "2022", month: "balandžio", days: "01 — 03 d.", dateToCheck: "2022-04-01"},
-    {id: 2, year: "2022", month: "rugpjūčio", days: "12 — 16 d.", dateToCheck: "2022-08-12"}
+    {id: 2, year: "2022", month: "rugpjūčio", days: "12 — 16 d.", dateToCheck: "2022-07-12"},
+    {id: 3, year: "2022", month: "spalio", days: "14 — 16 d.", dateToCheck: "2022-10-14"},
+    {id: 4, year: "2023", month: "vasario", days: "24 — 26 d.", dateToCheck: "2023-02-24"},
+    {id: 5, year: "2023", month: "kovo", days: "31 — balandžio 02 d.", dateToCheck: "2023-03-31"},
   ]
 
   defaultDates.map(date => {

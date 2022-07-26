@@ -33,12 +33,12 @@ export default function TecioSunausOrderConfirmation() {
 
     var isInvalid = checkArray.includes(false);
     if (isInvalid) {
-      alert("Norint užsiregistruoti reikia užpildyti visus * pažymėtus laukelius.")
+      alert("Nepavyko, norint užsiregistruoti reikia užpildyti visus * (Privalomas) pažymėtus laukelius.")
     }
     else {
       await sendContactDetails(formData, registratorName, registratorEmail, registratorPhone);
       alert("Registracija sėkminga, mes su Jumis susisieksime!")
-      // window.location.href = '/'
+      window.location.href = '/'
     }    
   };
 
@@ -72,47 +72,49 @@ export default function TecioSunausOrderConfirmation() {
       }
       arrayOfPeople.push(emptyObject)
     }
+    console.log("arrayOfPeople",arrayOfPeople);
     setFormData(arrayOfPeople)
+    console.log("formData",formData);
   }
 
   return (
-    <>
-      <Wrap>
-        <Header>
-          <LogoImageWrap>
-            <LogoImage src={"/images/VYRU_KALVE_1.png"} alt="LOGO" />
-          </LogoImageWrap>
-        </Header>
+    <Wrap>
+      <Header>
+        <LogoImageWrap>
+          <LogoImage src={"/images/VYRU_KALVE_1.png"} alt="LOGO" />
+        </LogoImageWrap>
+      </Header>
 
-        <Title>Registracija</Title>
+      <Title>Registracija</Title>
 
-        <InnerWrap>
-          <TextWrap>
-            <Label>Registruojančio asmens vardas ir pavardė *</Label>
-            <Input name="registratorName" value={registratorName} onChange={(e) => setRegistratorName(e.target.value)} type="text" placeholder="Jūsų atsakymas * (Privalomas)" />
-          </TextWrap>
-          <TextWrap>
-            <Label>Registruojančio asmens el. pašto adresas *</Label>
-            <Input name="registratorEmail" value={registratorEmail} onChange={(e) => setRegistratorEmail(e.target.value)} type="text" placeholder="Jūsų atsakymas * (Privalomas)" />
-          </TextWrap>
-          <TextWrap>
-            <Label>Registruojančio asmens telefono numeris *</Label>
-            <Input name="registratorPhone" value={registratorPhone} onChange={(e) => setRegistratorPhone(e.target.value)} type="text" placeholder="Jūsų atsakymas * (Privalomas)" />
-          </TextWrap>
-          <TextWrap>
-            <Label>Pasirinkite stovyklautojų skaičių *</Label>
-            <Select name="peopleAmount" id="peopleAmount" onChange={handlePeopleChange}>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-            </Select>
-          </TextWrap>
-          
-          {formData.map((personFormData) => {
+      <InnerWrap>
+        <TextWrap>
+          <Label>Registruojančio asmens vardas ir pavardė *</Label>
+          <Input name="registratorName" value={registratorName} onChange={(e) => setRegistratorName(e.target.value)} type="text" placeholder="Jūsų atsakymas * (Privalomas)" />
+        </TextWrap>
+        <TextWrap>
+          <Label>Registruojančio asmens el. pašto adresas *</Label>
+          <Input name="registratorEmail" value={registratorEmail} onChange={(e) => setRegistratorEmail(e.target.value)} type="text" placeholder="Jūsų atsakymas * (Privalomas)" />
+        </TextWrap>
+        <TextWrap>
+          <Label>Registruojančio asmens telefono numeris *</Label>
+          <Input name="registratorPhone" value={registratorPhone} onChange={(e) => setRegistratorPhone(e.target.value)} type="text" placeholder="Jūsų atsakymas * (Privalomas)" />
+        </TextWrap>
+        <TextWrap>
+          <Label>Pasirinkite stovyklautojų skaičių *</Label>
+          <Select name="peopleAmount" id="peopleAmount" onChange={handlePeopleChange}>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </Select>
+        </TextWrap>
+
+        <div key={formData.length}>          
+          {formData.map((personFormData, i) => {
             return (
-              <>
+              <div key={i}>
                 <BreakLine/>
 
                 <FinalText>Stovyklautojas nr. {personFormData.person}</FinalText>
@@ -149,15 +151,15 @@ export default function TecioSunausOrderConfirmation() {
                   <Label>Stovyklautojo Facebook vardas</Label>
                   <Input name="facebookName" value={formData.facebookName} onChange={(e) => updateFormData(e, personFormData.person)} type="text" placeholder="Jūsų atsakymas" />
                 </TextWrap>
-              </>
+              </div>
             )
           })}
-          <FinalText>Greitu metu su Jumis susisieksime :)</FinalText>
+        </div>
+        <FinalText>Greitu metu su Jumis susisieksime :)</FinalText>
 
-          <Button onClick={handleSubmit}>Pateikti</Button>
-        </InnerWrap>
-      </Wrap>
-    </>
+        <Button onClick={handleSubmit}>Pateikti</Button>
+      </InnerWrap>
+    </Wrap>
   )
 }
 

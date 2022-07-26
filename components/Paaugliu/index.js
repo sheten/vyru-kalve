@@ -16,7 +16,7 @@ const Paaugliu = () => {
   const dates = []
 
   const prices = [
-    {id: 0, option: "nuo 250 € iki 320 € vienam paaugliui"},
+    {id: 0, option: "nuo 300 € iki 320 € vienam paaugliui"},
   ]
 
   const defaultDates = [
@@ -25,6 +25,7 @@ const Paaugliu = () => {
     {id: 2, year: "2022", month: "birželio", days: "10-12 d. (250€)", price: 250, dateToCheck: "2022-06-10"},
     {id: 3, year: "2022", month: "liepa", days: "17-23 d. (320€)", price: 320, dateToCheck: "2022-07-17"},
     {id: 4, year: "2022", month: "rugpjūčio", days: "21-26 d. (320€)", price: 320, dateToCheck: "2022-08-21"},
+    {id: 5, year: "2022", month: "lapkričio", days: "18-20 d. (300€)", price: 300, dateToCheck: "2022-11-18"},
   ]
 
   defaultDates.map(date => {
